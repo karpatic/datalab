@@ -12,6 +12,9 @@ entries:
     - output: web,pdf
       title: Getting started with Github
       url: /github
+    - output: web,pdf
+      title: Getting started with Colabs and Python
+      url: /colabs
     output: web
     title: datalabs
   output: web
