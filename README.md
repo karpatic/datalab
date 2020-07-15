@@ -1,5 +1,5 @@
 # Developers Guidebook
-> This can help guide you on your pythonic development journey. 
+> This can help guide you on your pythonic development journey.
 
 
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/) 
@@ -25,7 +25,10 @@ Visit the github pages [version](https://karpatic.github.io/dataplay/) if you ar
 
 While any chapter may be picked up and read as an insular topic; it is suggested to start from the begining.
 
+The [Datalabs](https://karpatic.github.io/datalabs/) Guidebook use modules created from its sister, the [Dataplay](https://karpatic.github.io/dataplay/) Handbook.
+
 Tutorials and documentation on those modules can be found there.
+
 
 ## Legal
 

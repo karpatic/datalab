@@ -412,7 +412,11 @@ sidebar: home_sidebar
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&#34;/content/drive&#34;, force_remount=True).
+<pre>Go to this URL in a browser: https://accounts.google.com/o/oauth2/auth?client_id=947318989803-6bn6qk8qdgf4n4g3pfee6491hc0brc4i.apps.googleusercontent.com&amp;redirect_uri=urn%3aietf%3awg%3aoauth%3a2.0%3aoob&amp;response_type=code&amp;scope=email%20https%3a%2f%2fwww.googleapis.com%2fauth%2fdocs.test%20https%3a%2f%2fwww.googleapis.com%2fauth%2fdrive%20https%3a%2f%2fwww.googleapis.com%2fauth%2fdrive.photos.readonly%20https%3a%2f%2fwww.googleapis.com%2fauth%2fpeopleapi.readonly
+
+Enter your authorization code:
+··········
+Mounted at /content/drive
 </pre>
 </div>
 </div>
@@ -455,23 +459,6 @@ cd drive/&#39;My Drive&#39;/
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
 </pre></div>
 
@@ -485,9 +472,8 @@ cd drive/&#39;My Drive&#39;/
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre><span class="ansi-blue-intense-fg ansi-bold">build</span>/           <span class="ansi-blue-intense-fg ansi-bold">dataplay.egg-info</span>/  LICENSE      <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/    setup.py
-CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">dist</span>/               Makefile     README.md
-<span class="ansi-blue-intense-fg ansi-bold">dataplay</span>/        <span class="ansi-blue-intense-fg ansi-bold">docs</span>/               MANIFEST.in  settings.ini
+<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/    setup.py
+<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  settings.ini
 </pre>
 </div>
 </div>
@@ -519,6 +505,20 @@ CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">dist</span>/      
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/drive/My Drive/dataplay
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -529,7 +529,7 @@ CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">dist</span>/      
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">./</span><span class="n">datalabs</span><span class="o">/</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># cd ./datalabs/</span>
 </pre></div>
 
     </div>
@@ -542,8 +542,7 @@ CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">dist</span>/      
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[Errno 2] No such file or directory: &#39;./datalabs/&#39;
-/content/drive/My Drive/dataplay
+<pre>/content/drive/My Drive/datalabs
 </pre>
 </div>
 </div>
@@ -574,9 +573,8 @@ CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">dist</span>/      
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre><span class="ansi-blue-intense-fg ansi-bold">build</span>/           <span class="ansi-blue-intense-fg ansi-bold">dataplay.egg-info</span>/  LICENSE      <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/    setup.py
-CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">dist</span>/               Makefile     README.md
-<span class="ansi-blue-intense-fg ansi-bold">dataplay</span>/        <span class="ansi-blue-intense-fg ansi-bold">docs</span>/               MANIFEST.in  settings.ini
+<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/    setup.py
+<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  settings.ini
 </pre>
 </div>
 </div>
@@ -1682,6 +1680,37 @@ Converted index.ipynb.
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">../</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/drive/My Drive/datalabs
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
 </pre></div>
 
@@ -1728,11 +1757,8 @@ Converted index.ipynb.
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>converting: /content/drive/My Drive/datalabs/notebooks/00_github.ipynb
-converting: /content/drive/My Drive/datalabs/notebooks/01_colabs.ipynb
-converting: /content/drive/My Drive/datalabs/notebooks/02_scooterExploration.ipynb
+<pre>converting: /content/drive/My Drive/datalabs/notebooks/03_nbdev.ipynb
 converting: /content/drive/My Drive/datalabs/notebooks/index.ipynb
-converting: /content/drive/My Drive/datalabs/notebooks/03_nbdev.ipynb
 converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
 </pre>
 </div>
@@ -1913,7 +1939,7 @@ converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;Had uploaded with my github password and just wanated to start fresh.&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;Updated Readme&quot;</span>
 </pre></div>
 
     </div>
@@ -1926,9 +1952,14 @@ converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master 8a82638] Had uploaded with my github password and just wanated to start fresh.
- 2 files changed, 21 insertions(+), 1930 deletions(-)
- rewrite notebooks/03_nbdev.ipynb (99%)
+<pre>On branch master
+Your branch is up to date with &#39;ORIGIN/master&#39;.
+
+Untracked files:
+	<span class="ansi-red-fg">.gitconfig</span>
+	<span class="ansi-red-fg">.pypirc</span>
+
+nothing added to commit but untracked files present
 </pre>
 </div>
 </div>
@@ -1959,14 +1990,14 @@ converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Counting objects: 208, done.
+<pre>Counting objects: 26, done.
 Delta compression using up to 2 threads.
-Compressing objects: 100% (126/126), done.
-Writing objects: 100% (208/208), 1.21 MiB | 6.33 MiB/s, done.
-Total 208 (delta 69), reused 198 (delta 64)
-remote: Resolving deltas: 100% (69/69), done.
-To https://github.com/karpatic/datalabs.git
- * [new branch]      master -&gt; master
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (26/26), 3.62 MiB | 6.09 MiB/s, done.
+Total 26 (delta 10), reused 0 (delta 0)
+remote: Resolving deltas: 100% (10/10), completed with 10 local objects.
+To https://github.com/karpatic/dataplay.git
+   6347707..308fe40  master -&gt; master
 Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;ORIGIN&#39;.
 </pre>
 </div>
@@ -2156,8 +2187,8 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Old version: 0.0.1
-New version: 0.0.2
+<pre>Old version: 0.0.5
+New version: 0.0.6
 </pre>
 </div>
 </div>
@@ -2206,167 +2237,200 @@ New version: 0.0.2
 python setup.py sdist bdist_wheel
 running sdist
 running egg_info
-writing createdfromdrive.egg-info/PKG-INFO
-writing dependency_links to createdfromdrive.egg-info/dependency_links.txt
-writing entry points to createdfromdrive.egg-info/entry_points.txt
-writing top-level names to createdfromdrive.egg-info/top_level.txt
+writing dataplay.egg-info/PKG-INFO
+writing dependency_links to dataplay.egg-info/dependency_links.txt
+writing entry points to dataplay.egg-info/entry_points.txt
+writing top-level names to dataplay.egg-info/top_level.txt
 reading manifest template &#39;MANIFEST.in&#39;
 warning: no previously-included files matching &#39;__pycache__&#39; found under directory &#39;*&#39;
-writing manifest file &#39;createdfromdrive.egg-info/SOURCES.txt&#39;
+writing manifest file &#39;dataplay.egg-info/SOURCES.txt&#39;
 running check
-creating createdfromdrive-0.0.2
-creating createdfromdrive-0.0.2/.github
-creating createdfromdrive-0.0.2/.github/workflows
-creating createdfromdrive-0.0.2/createdfromdrive
-creating createdfromdrive-0.0.2/createdfromdrive.egg-info
-creating createdfromdrive-0.0.2/docs
-creating createdfromdrive-0.0.2/docs/_data
-creating createdfromdrive-0.0.2/docs/_data/sidebars
-creating createdfromdrive-0.0.2/docs/_includes
-creating createdfromdrive-0.0.2/docs/_layouts
-creating createdfromdrive-0.0.2/docs/css
-creating createdfromdrive-0.0.2/docs/css/fonts
-creating createdfromdrive-0.0.2/docs/fonts
-creating createdfromdrive-0.0.2/docs/images
-creating createdfromdrive-0.0.2/docs/js
-creating createdfromdrive-0.0.2/docs/licenses
-creating createdfromdrive-0.0.2/images
-copying files to createdfromdrive-0.0.2...
-copying .gitignore -&gt; createdfromdrive-0.0.2
-copying 00_core.ipynb -&gt; createdfromdrive-0.0.2
-copying CONTRIBUTING.md -&gt; createdfromdrive-0.0.2
-copying LICENSE -&gt; createdfromdrive-0.0.2
-copying MANIFEST.in -&gt; createdfromdrive-0.0.2
-copying Makefile -&gt; createdfromdrive-0.0.2
-copying README.md -&gt; createdfromdrive-0.0.2
-copying index.ipynb -&gt; createdfromdrive-0.0.2
-copying myfile.txt -&gt; createdfromdrive-0.0.2
-copying settings.ini -&gt; createdfromdrive-0.0.2
-copying setup.py -&gt; createdfromdrive-0.0.2
-copying .github/workflows/main.yml -&gt; createdfromdrive-0.0.2/.github/workflows
-copying createdfromdrive/__init__.py -&gt; createdfromdrive-0.0.2/createdfromdrive
-copying createdfromdrive/_nbdev.py -&gt; createdfromdrive-0.0.2/createdfromdrive
-copying createdfromdrive/core.py -&gt; createdfromdrive-0.0.2/createdfromdrive
-copying createdfromdrive.egg-info/PKG-INFO -&gt; createdfromdrive-0.0.2/createdfromdrive.egg-info
-copying createdfromdrive.egg-info/SOURCES.txt -&gt; createdfromdrive-0.0.2/createdfromdrive.egg-info
-copying createdfromdrive.egg-info/dependency_links.txt -&gt; createdfromdrive-0.0.2/createdfromdrive.egg-info
-copying createdfromdrive.egg-info/entry_points.txt -&gt; createdfromdrive-0.0.2/createdfromdrive.egg-info
-copying createdfromdrive.egg-info/not-zip-safe -&gt; createdfromdrive-0.0.2/createdfromdrive.egg-info
-copying createdfromdrive.egg-info/top_level.txt -&gt; createdfromdrive-0.0.2/createdfromdrive.egg-info
-copying docs/.gitignore -&gt; createdfromdrive-0.0.2/docs
-copying docs/Gemfile -&gt; createdfromdrive-0.0.2/docs
-copying docs/Gemfile.lock -&gt; createdfromdrive-0.0.2/docs
-copying docs/_config.yml -&gt; createdfromdrive-0.0.2/docs
-copying docs/core.html -&gt; createdfromdrive-0.0.2/docs
-copying docs/feed.xml -&gt; createdfromdrive-0.0.2/docs
-copying docs/index.html -&gt; createdfromdrive-0.0.2/docs
-copying docs/sidebar.json -&gt; createdfromdrive-0.0.2/docs
-copying docs/sitemap.xml -&gt; createdfromdrive-0.0.2/docs
-copying docs/tooltips.json -&gt; createdfromdrive-0.0.2/docs
-copying docs/_data/alerts.yml -&gt; createdfromdrive-0.0.2/docs/_data
-copying docs/_data/definitions.yml -&gt; createdfromdrive-0.0.2/docs/_data
-copying docs/_data/glossary.yml -&gt; createdfromdrive-0.0.2/docs/_data
-copying docs/_data/tags.yml -&gt; createdfromdrive-0.0.2/docs/_data
-copying docs/_data/terms.yml -&gt; createdfromdrive-0.0.2/docs/_data
-copying docs/_data/topnav.yml -&gt; createdfromdrive-0.0.2/docs/_data
-copying docs/_data/sidebars/home_sidebar.yml -&gt; createdfromdrive-0.0.2/docs/_data/sidebars
-copying docs/_includes/archive.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/callout.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/footer.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/google_analytics.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/head.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/head_print.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/image.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/important.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/initialize_shuffle.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/inline_image.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/links.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/note.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/search_google_custom.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/search_simple_jekyll.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/sidebar.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/tip.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/toc.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/topnav.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_includes/warning.html -&gt; createdfromdrive-0.0.2/docs/_includes
-copying docs/_layouts/default.html -&gt; createdfromdrive-0.0.2/docs/_layouts
-copying docs/_layouts/default_print.html -&gt; createdfromdrive-0.0.2/docs/_layouts
-copying docs/_layouts/none.html -&gt; createdfromdrive-0.0.2/docs/_layouts
-copying docs/_layouts/page.html -&gt; createdfromdrive-0.0.2/docs/_layouts
-copying docs/_layouts/page_print.html -&gt; createdfromdrive-0.0.2/docs/_layouts
-copying docs/css/bootstrap.min.css -&gt; createdfromdrive-0.0.2/docs/css
-copying docs/css/boxshadowproperties.css -&gt; createdfromdrive-0.0.2/docs/css
-copying docs/css/customstyles.css -&gt; createdfromdrive-0.0.2/docs/css
-copying docs/css/font-awesome.min.css -&gt; createdfromdrive-0.0.2/docs/css
-copying docs/css/modern-business.css -&gt; createdfromdrive-0.0.2/docs/css
-copying docs/css/printstyles.css -&gt; createdfromdrive-0.0.2/docs/css
-copying docs/css/syntax.css -&gt; createdfromdrive-0.0.2/docs/css
-copying docs/css/theme-blue.css -&gt; createdfromdrive-0.0.2/docs/css
-copying docs/css/theme-green.css -&gt; createdfromdrive-0.0.2/docs/css
-copying docs/css/fonts/FontAwesome.otf -&gt; createdfromdrive-0.0.2/docs/css/fonts
-copying docs/css/fonts/fontawesome-webfont.eot -&gt; createdfromdrive-0.0.2/docs/css/fonts
-copying docs/css/fonts/fontawesome-webfont.svg -&gt; createdfromdrive-0.0.2/docs/css/fonts
-copying docs/css/fonts/fontawesome-webfont.ttf -&gt; createdfromdrive-0.0.2/docs/css/fonts
-copying docs/css/fonts/fontawesome-webfont.woff -&gt; createdfromdrive-0.0.2/docs/css/fonts
-copying docs/css/fonts/fontawesome-webfont.woff2 -&gt; createdfromdrive-0.0.2/docs/css/fonts
-copying docs/fonts/FontAwesome.otf -&gt; createdfromdrive-0.0.2/docs/fonts
-copying docs/fonts/fontawesome-webfont.eot -&gt; createdfromdrive-0.0.2/docs/fonts
-copying docs/fonts/fontawesome-webfont.svg -&gt; createdfromdrive-0.0.2/docs/fonts
-copying docs/fonts/fontawesome-webfont.ttf -&gt; createdfromdrive-0.0.2/docs/fonts
-copying docs/fonts/fontawesome-webfont.woff -&gt; createdfromdrive-0.0.2/docs/fonts
-copying docs/fonts/glyphicons-halflings-regular.eot -&gt; createdfromdrive-0.0.2/docs/fonts
-copying docs/fonts/glyphicons-halflings-regular.svg -&gt; createdfromdrive-0.0.2/docs/fonts
-copying docs/fonts/glyphicons-halflings-regular.ttf -&gt; createdfromdrive-0.0.2/docs/fonts
-copying docs/fonts/glyphicons-halflings-regular.woff -&gt; createdfromdrive-0.0.2/docs/fonts
-copying docs/fonts/glyphicons-halflings-regular.woff2 -&gt; createdfromdrive-0.0.2/docs/fonts
-copying docs/images/A_Sunday_on_La_Grande_Jatte,_Georges_Seurat,_1884.jpg -&gt; createdfromdrive-0.0.2/docs/images
-copying docs/images/company_logo.png -&gt; createdfromdrive-0.0.2/docs/images
-copying docs/images/company_logo_big.png -&gt; createdfromdrive-0.0.2/docs/images
-copying docs/images/doc_example.png -&gt; createdfromdrive-0.0.2/docs/images
-copying docs/images/export_example.png -&gt; createdfromdrive-0.0.2/docs/images
-copying docs/images/favicon.ico -&gt; createdfromdrive-0.0.2/docs/images
-copying docs/images/workflowarrow.png -&gt; createdfromdrive-0.0.2/docs/images
-copying docs/js/customscripts.js -&gt; createdfromdrive-0.0.2/docs/js
-copying docs/js/jekyll-search.js -&gt; createdfromdrive-0.0.2/docs/js
-copying docs/js/jquery.ba-throttle-debounce.min.js -&gt; createdfromdrive-0.0.2/docs/js
-copying docs/js/jquery.navgoco.min.js -&gt; createdfromdrive-0.0.2/docs/js
-copying docs/js/jquery.shuffle.min.js -&gt; createdfromdrive-0.0.2/docs/js
-copying docs/js/toc.js -&gt; createdfromdrive-0.0.2/docs/js
-copying docs/licenses/LICENSE -&gt; createdfromdrive-0.0.2/docs/licenses
-copying docs/licenses/LICENSE-BSD-NAVGOCO.txt -&gt; createdfromdrive-0.0.2/docs/licenses
-copying images/A_Sunday_on_La_Grande_Jatte,_Georges_Seurat,_1884.jpg -&gt; createdfromdrive-0.0.2/images
-copying images/cake_swing.mp4 -&gt; createdfromdrive-0.0.2/images
-Writing createdfromdrive-0.0.2/setup.cfg
+creating dataplay-0.0.6
+creating dataplay-0.0.6/dataplay
+creating dataplay-0.0.6/dataplay.egg-info
+creating dataplay-0.0.6/dataplay/__pycache__
+creating dataplay-0.0.6/docs
+creating dataplay-0.0.6/docs/_data
+creating dataplay-0.0.6/docs/_data/sidebars
+creating dataplay-0.0.6/docs/_includes
+creating dataplay-0.0.6/docs/_layouts
+creating dataplay-0.0.6/docs/css
+creating dataplay-0.0.6/docs/css/fonts
+creating dataplay-0.0.6/docs/fonts
+creating dataplay-0.0.6/docs/images
+creating dataplay-0.0.6/docs/js
+creating dataplay-0.0.6/docs/licenses
+creating dataplay-0.0.6/notebooks
+copying files to dataplay-0.0.6...
+copying CONTRIBUTING.md -&gt; dataplay-0.0.6
+copying LICENSE -&gt; dataplay-0.0.6
+copying MANIFEST.in -&gt; dataplay-0.0.6
+copying Makefile -&gt; dataplay-0.0.6
+copying README.md -&gt; dataplay-0.0.6
+copying settings.ini -&gt; dataplay-0.0.6
+copying setup.py -&gt; dataplay-0.0.6
+copying dataplay/__init__.py -&gt; dataplay-0.0.6/dataplay
+copying dataplay/_nbdev.py -&gt; dataplay-0.0.6/dataplay
+copying dataplay/acsDownload.py -&gt; dataplay-0.0.6/dataplay
+copying dataplay/geoms.py -&gt; dataplay-0.0.6/dataplay
+copying dataplay/merge.py -&gt; dataplay-0.0.6/dataplay
+copying dataplay.egg-info/PKG-INFO -&gt; dataplay-0.0.6/dataplay.egg-info
+copying dataplay.egg-info/SOURCES.txt -&gt; dataplay-0.0.6/dataplay.egg-info
+copying dataplay.egg-info/dependency_links.txt -&gt; dataplay-0.0.6/dataplay.egg-info
+copying dataplay.egg-info/entry_points.txt -&gt; dataplay-0.0.6/dataplay.egg-info
+copying dataplay.egg-info/not-zip-safe -&gt; dataplay-0.0.6/dataplay.egg-info
+copying dataplay.egg-info/top_level.txt -&gt; dataplay-0.0.6/dataplay.egg-info
+copying dataplay/__pycache__/__init__.cpython-36.pyc -&gt; dataplay-0.0.6/dataplay/__pycache__
+copying dataplay/__pycache__/_nbdev.cpython-36.pyc -&gt; dataplay-0.0.6/dataplay/__pycache__
+copying dataplay/__pycache__/acsDownload.cpython-36.pyc -&gt; dataplay-0.0.6/dataplay/__pycache__
+copying dataplay/__pycache__/geoms.cpython-36.pyc -&gt; dataplay-0.0.6/dataplay/__pycache__
+copying dataplay/__pycache__/merge.cpython-36.pyc -&gt; dataplay-0.0.6/dataplay/__pycache__
+copying docs/.gitignore -&gt; dataplay-0.0.6/docs
+copying docs/ACS_Explore_and_Download.html -&gt; dataplay-0.0.6/docs
+copying docs/ACS_From_Download_To_Gif.html -&gt; dataplay-0.0.6/docs
+copying docs/Animated_Map_Change_in_Value_over_Time.html -&gt; dataplay-0.0.6/docs
+copying docs/Gemfile -&gt; dataplay-0.0.6/docs
+copying docs/Map_Basics_Intake_and_Operations.html -&gt; dataplay-0.0.6/docs
+copying docs/Merge_Data.html -&gt; dataplay-0.0.6/docs
+copying docs/_config.yml -&gt; dataplay-0.0.6/docs
+copying docs/feed.xml -&gt; dataplay-0.0.6/docs
+copying docs/index.html -&gt; dataplay-0.0.6/docs
+copying docs/sidebar.json -&gt; dataplay-0.0.6/docs
+copying docs/sitemap.xml -&gt; dataplay-0.0.6/docs
+copying docs/tooltips.json -&gt; dataplay-0.0.6/docs
+copying docs/_data/alerts.yml -&gt; dataplay-0.0.6/docs/_data
+copying docs/_data/definitions.yml -&gt; dataplay-0.0.6/docs/_data
+copying docs/_data/glossary.yml -&gt; dataplay-0.0.6/docs/_data
+copying docs/_data/tags.yml -&gt; dataplay-0.0.6/docs/_data
+copying docs/_data/terms.yml -&gt; dataplay-0.0.6/docs/_data
+copying docs/_data/topnav.yml -&gt; dataplay-0.0.6/docs/_data
+copying docs/_data/sidebars/home_sidebar.yml -&gt; dataplay-0.0.6/docs/_data/sidebars
+copying docs/_includes/archive.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/callout.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/footer.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/google_analytics.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/head.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/head_print.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/image.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/important.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/initialize_shuffle.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/inline_image.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/links.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/note.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/search_google_custom.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/search_simple_jekyll.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/sidebar.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/tip.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/toc.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/topnav.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_includes/warning.html -&gt; dataplay-0.0.6/docs/_includes
+copying docs/_layouts/default.html -&gt; dataplay-0.0.6/docs/_layouts
+copying docs/_layouts/default_print.html -&gt; dataplay-0.0.6/docs/_layouts
+copying docs/_layouts/none.html -&gt; dataplay-0.0.6/docs/_layouts
+copying docs/_layouts/page.html -&gt; dataplay-0.0.6/docs/_layouts
+copying docs/_layouts/page_print.html -&gt; dataplay-0.0.6/docs/_layouts
+copying docs/css/bootstrap.min.css -&gt; dataplay-0.0.6/docs/css
+copying docs/css/boxshadowproperties.css -&gt; dataplay-0.0.6/docs/css
+copying docs/css/customstyles.css -&gt; dataplay-0.0.6/docs/css
+copying docs/css/font-awesome.min.css -&gt; dataplay-0.0.6/docs/css
+copying docs/css/modern-business.css -&gt; dataplay-0.0.6/docs/css
+copying docs/css/printstyles.css -&gt; dataplay-0.0.6/docs/css
+copying docs/css/syntax.css -&gt; dataplay-0.0.6/docs/css
+copying docs/css/theme-blue.css -&gt; dataplay-0.0.6/docs/css
+copying docs/css/theme-green.css -&gt; dataplay-0.0.6/docs/css
+copying docs/css/fonts/FontAwesome.otf -&gt; dataplay-0.0.6/docs/css/fonts
+copying docs/css/fonts/fontawesome-webfont.eot -&gt; dataplay-0.0.6/docs/css/fonts
+copying docs/css/fonts/fontawesome-webfont.svg -&gt; dataplay-0.0.6/docs/css/fonts
+copying docs/css/fonts/fontawesome-webfont.ttf -&gt; dataplay-0.0.6/docs/css/fonts
+copying docs/css/fonts/fontawesome-webfont.woff -&gt; dataplay-0.0.6/docs/css/fonts
+copying docs/css/fonts/fontawesome-webfont.woff2 -&gt; dataplay-0.0.6/docs/css/fonts
+copying docs/fonts/FontAwesome.otf -&gt; dataplay-0.0.6/docs/fonts
+copying docs/fonts/fontawesome-webfont.eot -&gt; dataplay-0.0.6/docs/fonts
+copying docs/fonts/fontawesome-webfont.svg -&gt; dataplay-0.0.6/docs/fonts
+copying docs/fonts/fontawesome-webfont.ttf -&gt; dataplay-0.0.6/docs/fonts
+copying docs/fonts/fontawesome-webfont.woff -&gt; dataplay-0.0.6/docs/fonts
+copying docs/fonts/glyphicons-halflings-regular.eot -&gt; dataplay-0.0.6/docs/fonts
+copying docs/fonts/glyphicons-halflings-regular.svg -&gt; dataplay-0.0.6/docs/fonts
+copying docs/fonts/glyphicons-halflings-regular.ttf -&gt; dataplay-0.0.6/docs/fonts
+copying docs/fonts/glyphicons-halflings-regular.woff -&gt; dataplay-0.0.6/docs/fonts
+copying docs/fonts/glyphicons-halflings-regular.woff2 -&gt; dataplay-0.0.6/docs/fonts
+copying docs/images/company_logo.png -&gt; dataplay-0.0.6/docs/images
+copying docs/images/company_logo_big.png -&gt; dataplay-0.0.6/docs/images
+copying docs/images/doc_example.png -&gt; dataplay-0.0.6/docs/images
+copying docs/images/export_example.png -&gt; dataplay-0.0.6/docs/images
+copying docs/images/favicon.ico -&gt; dataplay-0.0.6/docs/images
+copying docs/images/workflowarrow.png -&gt; dataplay-0.0.6/docs/images
+copying docs/js/customscripts.js -&gt; dataplay-0.0.6/docs/js
+copying docs/js/jekyll-search.js -&gt; dataplay-0.0.6/docs/js
+copying docs/js/jquery.ba-throttle-debounce.min.js -&gt; dataplay-0.0.6/docs/js
+copying docs/js/jquery.navgoco.min.js -&gt; dataplay-0.0.6/docs/js
+copying docs/js/jquery.shuffle.min.js -&gt; dataplay-0.0.6/docs/js
+copying docs/js/toc.js -&gt; dataplay-0.0.6/docs/js
+copying docs/licenses/LICENSE -&gt; dataplay-0.0.6/docs/licenses
+copying docs/licenses/LICENSE-BSD-NAVGOCO.txt -&gt; dataplay-0.0.6/docs/licenses
+copying notebooks/.gitattributes -&gt; dataplay-0.0.6/notebooks
+copying notebooks/.last_checked -&gt; dataplay-0.0.6/notebooks
+copying notebooks/01_ACS_Explore_and_Download.ipynb -&gt; dataplay-0.0.6/notebooks
+copying notebooks/02_Merge_Data.ipynb -&gt; dataplay-0.0.6/notebooks
+copying notebooks/03_Map_Basics_Intake_and_Operations.ipynb -&gt; dataplay-0.0.6/notebooks
+copying notebooks/04_Animated_Map_Change_in_Value_over_Time.ipynb -&gt; dataplay-0.0.6/notebooks
+copying notebooks/05_ACS_From_Download_To_Gif.ipynb -&gt; dataplay-0.0.6/notebooks
+copying notebooks/index.ipynb -&gt; dataplay-0.0.6/notebooks
+Writing dataplay-0.0.6/setup.cfg
 creating dist
 Creating tar archive
-removing &#39;createdfromdrive-0.0.2&#39; (and everything under it)
+removing &#39;dataplay-0.0.6&#39; (and everything under it)
 running bdist_wheel
 running build
 running build_py
-copying createdfromdrive/__init__.py -&gt; build/lib/createdfromdrive
+copying dataplay/geoms.py -&gt; build/lib/dataplay
+copying dataplay/__init__.py -&gt; build/lib/dataplay
+copying dataplay/merge.py -&gt; build/lib/dataplay
+copying dataplay/acsDownload.py -&gt; build/lib/dataplay
+copying dataplay/_nbdev.py -&gt; build/lib/dataplay
+copying dataplay/__pycache__/__init__.cpython-36.pyc -&gt; build/lib/dataplay/__pycache__
+copying dataplay/__pycache__/_nbdev.cpython-36.pyc -&gt; build/lib/dataplay/__pycache__
+copying dataplay/__pycache__/acsDownload.cpython-36.pyc -&gt; build/lib/dataplay/__pycache__
+copying dataplay/__pycache__/geoms.cpython-36.pyc -&gt; build/lib/dataplay/__pycache__
+copying dataplay/__pycache__/merge.cpython-36.pyc -&gt; build/lib/dataplay/__pycache__
 installing to build/bdist.linux-x86_64/wheel
 running install
 running install_lib
 creating build/bdist.linux-x86_64/wheel
-creating build/bdist.linux-x86_64/wheel/createdfromdrive
-copying build/lib/createdfromdrive/core.py -&gt; build/bdist.linux-x86_64/wheel/createdfromdrive
-copying build/lib/createdfromdrive/_nbdev.py -&gt; build/bdist.linux-x86_64/wheel/createdfromdrive
-copying build/lib/createdfromdrive/__init__.py -&gt; build/bdist.linux-x86_64/wheel/createdfromdrive
+creating build/bdist.linux-x86_64/wheel/dataplay
+copying build/lib/dataplay/__init__.py -&gt; build/bdist.linux-x86_64/wheel/dataplay
+copying build/lib/dataplay/merge.py -&gt; build/bdist.linux-x86_64/wheel/dataplay
+copying build/lib/dataplay/geoms.py -&gt; build/bdist.linux-x86_64/wheel/dataplay
+copying build/lib/dataplay/acsDownload.py -&gt; build/bdist.linux-x86_64/wheel/dataplay
+copying build/lib/dataplay/_nbdev.py -&gt; build/bdist.linux-x86_64/wheel/dataplay
+creating build/bdist.linux-x86_64/wheel/dataplay/__pycache__
+copying build/lib/dataplay/__pycache__/_nbdev.cpython-36.pyc -&gt; build/bdist.linux-x86_64/wheel/dataplay/__pycache__
+copying build/lib/dataplay/__pycache__/acsDownload.cpython-36.pyc -&gt; build/bdist.linux-x86_64/wheel/dataplay/__pycache__
+copying build/lib/dataplay/__pycache__/merge.cpython-36.pyc -&gt; build/bdist.linux-x86_64/wheel/dataplay/__pycache__
+copying build/lib/dataplay/__pycache__/__init__.cpython-36.pyc -&gt; build/bdist.linux-x86_64/wheel/dataplay/__pycache__
+copying build/lib/dataplay/__pycache__/geoms.cpython-36.pyc -&gt; build/bdist.linux-x86_64/wheel/dataplay/__pycache__
 running install_egg_info
-Copying createdfromdrive.egg-info to build/bdist.linux-x86_64/wheel/createdfromdrive-0.0.2-py3.6.egg-info
+Copying dataplay.egg-info to build/bdist.linux-x86_64/wheel/dataplay-0.0.6-py3.6.egg-info
 running install_scripts
 adding license file &#34;LICENSE&#34; (matched pattern &#34;LICEN[CS]E*&#34;)
-creating build/bdist.linux-x86_64/wheel/createdfromdrive-0.0.2.dist-info/WHEEL
-creating &#39;dist/createdfromdrive-0.0.2-py3-none-any.whl&#39; and adding &#39;build/bdist.linux-x86_64/wheel&#39; to it
-adding &#39;createdfromdrive/__init__.py&#39;
-adding &#39;createdfromdrive/_nbdev.py&#39;
-adding &#39;createdfromdrive/core.py&#39;
-adding &#39;createdfromdrive-0.0.2.dist-info/LICENSE&#39;
-adding &#39;createdfromdrive-0.0.2.dist-info/METADATA&#39;
-adding &#39;createdfromdrive-0.0.2.dist-info/WHEEL&#39;
-adding &#39;createdfromdrive-0.0.2.dist-info/entry_points.txt&#39;
-adding &#39;createdfromdrive-0.0.2.dist-info/top_level.txt&#39;
-adding &#39;createdfromdrive-0.0.2.dist-info/RECORD&#39;
+creating build/bdist.linux-x86_64/wheel/dataplay-0.0.6.dist-info/WHEEL
+creating &#39;dist/dataplay-0.0.6-py3-none-any.whl&#39; and adding &#39;build/bdist.linux-x86_64/wheel&#39; to it
+adding &#39;dataplay/__init__.py&#39;
+adding &#39;dataplay/_nbdev.py&#39;
+adding &#39;dataplay/acsDownload.py&#39;
+adding &#39;dataplay/geoms.py&#39;
+adding &#39;dataplay/merge.py&#39;
+adding &#39;dataplay/__pycache__/__init__.cpython-36.pyc&#39;
+adding &#39;dataplay/__pycache__/_nbdev.cpython-36.pyc&#39;
+adding &#39;dataplay/__pycache__/acsDownload.cpython-36.pyc&#39;
+adding &#39;dataplay/__pycache__/geoms.cpython-36.pyc&#39;
+adding &#39;dataplay/__pycache__/merge.cpython-36.pyc&#39;
+adding &#39;dataplay-0.0.6.dist-info/LICENSE&#39;
+adding &#39;dataplay-0.0.6.dist-info/METADATA&#39;
+adding &#39;dataplay-0.0.6.dist-info/WHEEL&#39;
+adding &#39;dataplay-0.0.6.dist-info/entry_points.txt&#39;
+adding &#39;dataplay-0.0.6.dist-info/top_level.txt&#39;
+adding &#39;dataplay-0.0.6.dist-info/RECORD&#39;
 removing build/bdist.linux-x86_64/wheel
 twine upload --repository pypi dist/*
 Uploading distributions to https://upload.pypi.org/legacy/
@@ -2374,13 +2438,13 @@ Enter your username: karpatic
 /usr/local/lib/python3.6/dist-packages/twine/auth.py:72: UserWarning: No recommended backend was available. Install a recommended 3rd party backend package; or, install the keyrings.alt package if you want to use the non-recommended backends. See https://pypi.org/project/keyring for details.
   warnings.warn(str(exc))
 Enter your password: 
-Uploading createdfromdrive-0.0.2-py3-none-any.whl
-100% 12.6k/12.6k [00:01&lt;00:00, 10.3kB/s]
-Uploading createdfromdrive-0.0.2.tar.gz
-100% 37.5M/37.5M [00:03&lt;00:00, 10.4MB/s]
+Uploading dataplay-0.0.6-py3-none-any.whl
+100% 35.3k/35.3k [00:01&lt;00:00, 34.0kB/s]
+Uploading dataplay-0.0.6.tar.gz
+100% 2.98M/2.98M [00:01&lt;00:00, 1.93MB/s]
 
 View at:
-https://pypi.org/project/createdfromdrive/0.0.2/
+https://pypi.org/project/dataplay/0.0.6/
 </pre>
 </div>
 </div>
