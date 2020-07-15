@@ -441,24 +441,11 @@ Mounted at /content/drive
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">capture</span>
+cd drive/&#39;My Drive&#39;/
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre><span class="ansi-blue-intense-fg ansi-bold">drive</span>/  <span class="ansi-blue-intense-fg ansi-bold">sample_data</span>/
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -472,11 +459,28 @@ Mounted at /content/drive
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">capture</span>
-cd drive/&#39;My Drive&#39;/colabs/
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> <span class="ansi-blue-intense-fg ansi-bold">Bnia</span>/                       <span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/                         <span class="ansi-blue-intense-fg ansi-bold">Personal</span>/
+<span class="ansi-blue-intense-fg ansi-bold">&#39;Colab Notebooks&#39;</span>/           <span class="ansi-blue-intense-fg ansi-bold">dataplay</span>/                         <span class="ansi-blue-intense-fg ansi-bold">System</span>/
+ CovidBaltimore.ipynb        <span class="ansi-blue-intense-fg ansi-bold">feelsgoodgoods</span>/                   <span class="ansi-blue-intense-fg ansi-bold">vitalSigns</span>/
+<span class="ansi-blue-intense-fg ansi-bold">&#39;CReading Slides Visuals&#39;</span>/   <span class="ansi-blue-intense-fg ansi-bold">labs</span>/
+ <span class="ansi-blue-intense-fg ansi-bold">DATA</span>/                       <span class="ansi-blue-intense-fg ansi-bold">Misc_old_code_for_old_projects</span>/
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -504,20 +508,6 @@ cd drive/&#39;My Drive&#39;/colabs/
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>/content/drive/My Drive/colabs/dataplay
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -541,7 +531,7 @@ cd drive/&#39;My Drive&#39;/colabs/
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>/content/drive/My Drive/colabs/datalabs
+<pre>/content/drive/My Drive/datalabs
 </pre>
 </div>
 </div>
@@ -572,41 +562,8 @@ cd drive/&#39;My Drive&#39;/colabs/
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/        LICENSE   MANIFEST.in  README.md     setup.py
-<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        index.ipynb  Makefile  <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/   settings.ini
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git pull ORIGIN master
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>From https://github.com/karpatic/datalabs
- * branch            master     -&gt; FETCH_HEAD
-Already up to date.
+<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/  settings.ini
+<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  README.md   setup.py
 </pre>
 </div>
 </div>
