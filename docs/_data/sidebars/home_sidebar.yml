@@ -19,7 +19,7 @@ entries:
       title: Scooter Exploration
       url: /scooterExploration
     - output: web,pdf
-      title: Getting started with Nbdev
+      title: Nbdev
       url: /nbdev
     output: web
     title: datalabs

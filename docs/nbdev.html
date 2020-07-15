@@ -1,6 +1,6 @@
 ---
 
-title: Getting started with Nbdev
+title: Nbdev
 
 keywords: fastai
 sidebar: home_sidebar
@@ -504,6 +504,20 @@ cd drive/&#39;My Drive&#39;/colabs/
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/drive/My Drive/colabs/dataplay
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -514,7 +528,7 @@ cd drive/&#39;My Drive&#39;/colabs/
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># cd ./datalab/</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># cd ./datalabs/</span>
 </pre></div>
 
     </div>
@@ -527,7 +541,7 @@ cd drive/&#39;My Drive&#39;/colabs/
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>/content/drive/My Drive/colabs/datalab
+<pre>/content/drive/My Drive/colabs/datalabs
 </pre>
 </div>
 </div>
@@ -558,10 +572,41 @@ cd drive/&#39;My Drive&#39;/colabs/
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>00_github.ipynb              CONTRIBUTING.md  LICENSE      settings.ini
-01_colabs.ipynb              <span class="ansi-blue-intense-fg ansi-bold">datalab</span>/         Makefile     setup.py
-02_scooterExploration.ipynb  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/            MANIFEST.in
-03_nbdev.ipynb               index.ipynb      README.md
+<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/        LICENSE   MANIFEST.in  README.md     setup.py
+<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        index.ipynb  Makefile  <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/   settings.ini
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git pull ORIGIN master
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>From https://github.com/karpatic/datalabs
+ * branch            master     -&gt; FETCH_HEAD
+Already up to date.
 </pre>
 </div>
 </div>
@@ -730,6 +775,37 @@ CONTRIBUTING.md  index.ipynb  MANIFEST.in  settings.ini
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">../</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/drive/My Drive/colabs
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> nbdev_new -h
 </pre></div>
 
@@ -803,7 +879,7 @@ optional arguments:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">capture</span> 
-! nbdev_new &#39;datalabs&#39;
+! nbdev_new &#39;test123&#39;
 </pre></div>
 
     </div>
@@ -827,7 +903,7 @@ optional arguments:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="n">datalabs</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">test123</span>
 </pre></div>
 
     </div>
@@ -840,7 +916,7 @@ optional arguments:
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>/content/drive/My Drive/colabs/datalabs
+<pre>/content/drive/My Drive/colabs/test123
 </pre>
 </div>
 </div>
@@ -974,7 +1050,7 @@ CONTRIBUTING.md  index.ipynb  MANIFEST.in  settings.ini
 <span class="c1">#@markdown Forms support many types of fields.</span>
 
 <span class="c1"># Name of the project</span>
-<span class="n">folder_name</span> <span class="o">=</span> <span class="s2">&quot;datalabs&quot;</span>  <span class="c1">#@param {type:&quot;string&quot;}</span>
+<span class="n">folder_name</span> <span class="o">=</span> <span class="s2">&quot;test123&quot;</span>  <span class="c1">#@param {type:&quot;string&quot;}</span>
 <span class="n">company_name</span> <span class="o">=</span> <span class="s2">&quot;BNIA-JFI&quot;</span> <span class="c1">#@param {type:&quot;string&quot;}</span>
 <span class="c1"># Github Username</span>
 <span class="n">github_username</span> <span class="o">=</span> <span class="s1">&#39;karpatic&#39;</span>  <span class="c1">#@param {type:&quot;string&quot;}</span>
@@ -984,9 +1060,9 @@ CONTRIBUTING.md  index.ipynb  MANIFEST.in  settings.ini
 <span class="n">author</span> <span class="o">=</span> <span class="s2">&quot;Charles Karpati&quot;</span>  <span class="c1">#@param {type:&quot;string&quot;}</span>
 <span class="n">author_email</span> <span class="o">=</span> <span class="s1">&#39;charles.karpati@gmail.com&#39;</span> <span class="c1">#@param {type:&quot;string&quot;}</span>
 <span class="c1"># Where are your notebooks? Currently at the basepath</span>
-<span class="n">path_to_locate_notebooks</span> <span class="o">=</span> <span class="s2">&quot;no&quot;</span>  <span class="c1">#@param {type:&quot;string&quot;}</span>
+<span class="n">path_to_locate_notebooks</span> <span class="o">=</span> <span class="s2">&quot;notebooks&quot;</span>  <span class="c1">#@param {type:&quot;string&quot;}</span>
 <span class="c1"># Where should documentation be put? {type:&quot;string&quot;}</span>
-<span class="n">path_to_place_documentation</span> <span class="o">=</span> <span class="s2">&quot;docs&quot;</span> <span class="c1">#@param</span>
+<span class="n">path_to_place_documentation</span> <span class="o">=</span> <span class="s2">&quot;docs&quot;</span> <span class="c1">#@param {type:&quot;string&quot;}</span>
 <span class="c1">#@markdown ---</span>
 
 <span class="n">user</span><span class="o">=</span><span class="n">github_username</span>
@@ -1102,6 +1178,90 @@ CONTRIBUTING.md  index.ipynb  MANIFEST.in  settings.ini
 </div>
 </div>
 </div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> mkdir ./notebooks
+<span class="o">!</span> mv ./00_core.ipynb ./notebooks/
+<span class="o">!</span> mv index.ipynb ./notebooks/
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> mkdir ./notebooks
+<span class="o">!</span> rm ./00_core.ipynb
+<span class="o">!</span> mv index.ipynb ./notebooks/
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>rm: cannot remove &#39;./00_core.ipynb&#39;: No such file or directory
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CONTRIBUTING.md  LICENSE      <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/  settings.ini
+<span class="ansi-blue-intense-fg ansi-bold">docs</span>/            MANIFEST.in  README.md   setup.py
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Create-the-library-and-documentation">Create the library and documentation<a class="anchor-link" href="#Create-the-library-and-documentation"> </a></h4>
@@ -1146,9 +1306,8 @@ CONTRIBUTING.md  index.ipynb  MANIFEST.in  settings.ini
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CovidBaltimore.ipynb  <span class="ansi-blue-intense-fg ansi-bold">datalab</span>/   miscGithub_tobedeleted_eventually.ipynb
-<span class="ansi-blue-intense-fg ansi-bold">createdfromdrive</span>/     <span class="ansi-blue-intense-fg ansi-bold">dataplay</span>/  <span class="ansi-blue-intense-fg ansi-bold">Misc_old_code_for_old_projects</span>/
-<span class="ansi-blue-intense-fg ansi-bold">DATA</span>/                 <span class="ansi-blue-intense-fg ansi-bold">labs</span>/      <span class="ansi-blue-intense-fg ansi-bold">vitalSigns</span>/
+<pre>CONTRIBUTING.md  LICENSE      <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/  settings.ini
+<span class="ansi-blue-intense-fg ansi-bold">docs</span>/            MANIFEST.in  README.md   setup.py
 </pre>
 </div>
 </div>
@@ -1179,7 +1338,7 @@ CONTRIBUTING.md  index.ipynb  MANIFEST.in  settings.ini
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Converted core.py.
+<pre>Converted index.ipynb.
 </pre>
 </div>
 </div>
@@ -1210,9 +1369,8 @@ CONTRIBUTING.md  index.ipynb  MANIFEST.in  settings.ini
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>00_core.ipynb      <span class="ansi-blue-intense-fg ansi-bold">docs</span>/        Makefile     README.md
-CONTRIBUTING.md    index.ipynb  MANIFEST.in  settings.ini
-<span class="ansi-blue-intense-fg ansi-bold">createdfromdrive</span>/  LICENSE      myfile.txt   setup.py
+<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/  settings.ini
+<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  README.md   setup.py
 </pre>
 </div>
 </div>
@@ -1262,7 +1420,7 @@ CONTRIBUTING.md    index.ipynb  MANIFEST.in  settings.ini
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">createdfromdrive</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">datalabs</span>
 </pre></div>
 
     </div>
@@ -1275,7 +1433,7 @@ CONTRIBUTING.md    index.ipynb  MANIFEST.in  settings.ini
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>/content/drive/My Drive/colabs/createdfromdrive
+<pre>/content/drive/My Drive/colabs/datalabs
 </pre>
 </div>
 </div>
@@ -1306,9 +1464,8 @@ CONTRIBUTING.md    index.ipynb  MANIFEST.in  settings.ini
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>00_core.ipynb      <span class="ansi-blue-intense-fg ansi-bold">docs</span>/        Makefile     README.md
-CONTRIBUTING.md    index.ipynb  MANIFEST.in  settings.ini
-<span class="ansi-blue-intense-fg ansi-bold">createdfromdrive</span>/  LICENSE      myfile.txt   setup.py
+<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/  settings.ini
+<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  README.md   setup.py
 </pre>
 </div>
 </div>
@@ -1345,7 +1502,7 @@ CONTRIBUTING.md    index.ipynb  MANIFEST.in  settings.ini
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Reinitialized existing Git repository in /content/drive/My Drive/colabs/createdfromdrive/.git/
+<pre>Reinitialized existing Git repository in /content/drive/My Drive/colabs/datalabs/.git/
 </pre>
 </div>
 </div>
@@ -1390,11 +1547,24 @@ CONTRIBUTING.md    index.ipynb  MANIFEST.in  settings.ini
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Make the replacements where needed and run this! be sure to remove our password once ran.</span>
 
-<span class="o">!</span> git remote add ORIGIN https://karpatic:Tke2113Umbc@github.com/karpatic/createdfromdrive.git
 <span class="c1"># ! git remote add ORIGIN https://&lt;USER NAME&gt;:&lt;passwrd&gt;@github.com/&lt;USER NAME&gt;/&lt;REPO NAME&gt;.git</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>fatal: remote ORIGIN already exists.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1555,10 +1725,8 @@ Converted index.ipynb.
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>00_github.ipynb              CONTRIBUTING.md  LICENSE      settings.ini
-01_colabs.ipynb              <span class="ansi-blue-intense-fg ansi-bold">datalab</span>/         Makefile     setup.py
-02_scooterExploration.ipynb  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/            MANIFEST.in
-03_nbdev.ipynb               index.ipynb      README.md
+<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/        LICENSE   MANIFEST.in  README.md     setup.py
+<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        index.ipynb  Makefile  <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/   settings.ini
 </pre>
 </div>
 </div>
@@ -1590,9 +1758,8 @@ Converted index.ipynb.
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>converting: /content/drive/My Drive/colabs/datalab/03_nbdev.ipynb
-converting: /content/drive/My Drive/colabs/datalab/02_scooterExploration.ipynb
-converting /content/drive/My Drive/colabs/datalab/index.ipynb to README.md
+<pre>converting: /content/drive/My Drive/colabs/datalabs/notebooks/03_nbdev.ipynb
+converting /content/drive/My Drive/colabs/datalabs/notebooks/index.ipynb to README.md
 </pre>
 </div>
 </div>
@@ -1623,10 +1790,8 @@ converting /content/drive/My Drive/colabs/datalab/index.ipynb to README.md
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>00_github.ipynb              CONTRIBUTING.md  LICENSE      settings.ini
-01_colabs.ipynb              <span class="ansi-blue-intense-fg ansi-bold">datalab</span>/         Makefile     setup.py
-02_scooterExploration.ipynb  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/            MANIFEST.in
-03_nbdev.ipynb               index.ipynb      README.md
+<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/        LICENSE   MANIFEST.in  README.md     setup.py
+<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        index.ipynb  Makefile  <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/   settings.ini
 </pre>
 </div>
 </div>
@@ -1721,10 +1886,8 @@ converting /content/drive/My Drive/colabs/datalab/index.ipynb to README.md
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>00_github.ipynb              CONTRIBUTING.md  LICENSE      settings.ini
-01_colabs.ipynb              <span class="ansi-blue-intense-fg ansi-bold">datalab</span>/         Makefile     setup.py
-02_scooterExploration.ipynb  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/            MANIFEST.in
-03_nbdev.ipynb               index.ipynb      README.md
+<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/        LICENSE   MANIFEST.in  README.md     setup.py
+<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        index.ipynb  Makefile  <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/   settings.ini
 </pre>
 </div>
 </div>
@@ -1776,7 +1939,7 @@ converting /content/drive/My Drive/colabs/datalab/index.ipynb to README.md
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;test push with new readme&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;Upload Nbdev chapter&quot;</span>
 </pre></div>
 
     </div>
@@ -1789,8 +1952,11 @@ converting /content/drive/My Drive/colabs/datalab/index.ipynb to README.md
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master 099ecfd] test push with new readme
- 5 files changed, 90 insertions(+), 109 deletions(-)
+<pre>[master b80174b] Upload Nbdev chapter
+ 6 files changed, 3909 insertions(+), 3 deletions(-)
+ create mode 100644 datalabs/core.py
+ create mode 100644 docs/nbdev.html
+ create mode 100644 notebooks/03_nbdev.ipynb
 </pre>
 </div>
 </div>
@@ -1821,15 +1987,66 @@ converting /content/drive/My Drive/colabs/datalab/index.ipynb to README.md
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Counting objects: 8, done.
+<pre>Counting objects: 188, done.
 Delta compression using up to 2 threads.
-Compressing objects: 100% (8/8), done.
-Writing objects: 100% (8/8), 1.68 KiB | 574.00 KiB/s, done.
-Total 8 (delta 6), reused 0 (delta 0)
-remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
-To https://github.com/karpatic/datalab.git
-   8923c7d..099ecfd  master -&gt; master
+Compressing objects: 100% (171/171), done.
+Writing objects: 100% (188/188), 1.20 MiB | 2.92 MiB/s, done.
+Total 188 (delta 54), reused 0 (delta 0)
+remote: Resolving deltas: 100% (54/54), done.
+To https://github.com/karpatic/datalabs.git
+ + 701ee33...b80174b master -&gt; master (forced update)
 Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;ORIGIN&#39;.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git remote rm ORIGIN
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git pull ORIGIN master
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>From https://github.com/karpatic/datalabs
+ * branch            master     -&gt; FETCH_HEAD
+ * [new branch]      master     -&gt; ORIGIN/master
+Already up to date.
 </pre>
 </div>
 </div>
@@ -1850,6 +2067,76 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If Github pages does not show consult this <a href="https://docs.github.com/en/github/working-with-github-pages/troubleshooting-jekyll-build-errors-for-github-pages-sites#troubleshooting-build-errors">guide</a>. Typically this is a problem with the markdown.</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/  settings.ini
+<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  README.md   setup.py
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> mv ./02_scooterExploration.ipynb ./docs/
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>mv: cannot stat &#39;./02_scooterExploration.ipynb&#39;: No such file or directory
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="PyPI">PyPI<a class="anchor-link" href="#PyPI"> </a></h1>
