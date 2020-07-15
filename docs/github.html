@@ -1,6 +1,6 @@
 ---
 
-title: Getting started with Github
+title: Github
 
 keywords: fastai
 sidebar: home_sidebar
@@ -36,7 +36,13 @@ description: "In this chapter we will learn about Github and explore some of its
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="We-will-cover">We will cover<a class="anchor-link" href="#We-will-cover"> </a></h2><p>Version Control</p>
+<h2 id="Whats-Covered">Whats Covered<a class="anchor-link" href="#Whats-Covered"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="We-will-cover-in-this-lab">We will cover in this lab<a class="anchor-link" href="#We-will-cover-in-this-lab"> </a></h3><p>Version Control</p>
 <ul>
 <li>What is it?</li>
 <li>Why do we need it?</li>
@@ -56,11 +62,11 @@ description: "In this chapter we will learn about Github and explore some of its
 <li>Commiting from Colab </li>
 <li>Create a repo from an existing <a href="https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line">project</a></li>
 </ul>
-<h2 id="What-will-be-cover-in-later-chapters">What will be cover in later chapters<a class="anchor-link" href="#What-will-be-cover-in-later-chapters"> </a></h2><ul>
+<h3 id="What-will-be-cover-in-later-chapters">What will be cover in later chapters<a class="anchor-link" href="#What-will-be-cover-in-later-chapters"> </a></h3><ul>
 <li>The CLI</li>
 <li>Github <a href="https://docs.github.com/en/github/working-with-github-pages">Pages</a> and <a href="https://docs.github.com/en/github/working-with-github-pages/adding-a-theme-to-your-github-pages-site-using-jekyll">Jeckyll</a></li>
 </ul>
-<h2 id="What-will-not-be-covered-but-is-noteworthy">What will not be covered but is noteworthy<a class="anchor-link" href="#What-will-not-be-covered-but-is-noteworthy"> </a></h2><ul>
+<h3 id="What-will-not-be-covered-but-is-noteworthy">What will not be covered but is noteworthy<a class="anchor-link" href="#What-will-not-be-covered-but-is-noteworthy"> </a></h3><ul>
 <li>Browser <a href="https://github.com/collections/github-browser-extensions">Extensions</a></li>
 <li>Github's <a href="https://torrocus.com/blog/special-github-repository/">special</a> 'profile' repository</li>
 <li>Github Projects - Dev/mgmt tools and Collaborative Kanbanboards all wired up to respond to git commits. </li>
@@ -80,14 +86,11 @@ description: "In this chapter we will learn about Github and explore some of its
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>What is it?</p>
-<blockquote><p>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later - Chacon and Straub, Pro Git</p>
+<h3 id="What-is-it?">What is it?<a class="anchor-link" href="#What-is-it?"> </a></h3><blockquote><p>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later - Chacon and Straub, Pro Git</p>
 </blockquote>
-<p>Why do we need it?</p>
-<blockquote><p>Many people’s version-control method of choice is to copy files into another directory (perhaps a time-stamped directory, if they’re clever). This approach is very common because it is so simple, but it is also incredibly error prone. It is easy to forget which directory you’re in and accidentally write to the wrong file or copy over files you don’t mean to... The next major issue that people encounter is that they need to collaborate with developers on other systems. - Chacon and Straub, Pro Git</p>
+<h3 id="Why-do-we-need-it?">Why do we need it?<a class="anchor-link" href="#Why-do-we-need-it?"> </a></h3><blockquote><p>Many people’s version-control method of choice is to copy files into another directory (perhaps a time-stamped directory, if they’re clever). This approach is very common because it is so simple, but it is also incredibly error prone. It is easy to forget which directory you’re in and accidentally write to the wrong file or copy over files you don’t mean to... The next major issue that people encounter is that they need to collaborate with developers on other systems. - Chacon and Straub, Pro Git</p>
 </blockquote>
-<p>How is it done?</p>
-<blockquote><p>This is where Distributed Version Control Systems (DVCSs) step in. In a DVCS (such as Git, Mercurial, Bazaar or Darcs), clients don’t just check out the latest snapshot of the files; rather, they fully mirror the repository, including its full history. Thus, if any server dies, and these systems were collaborating via that server, any of the client repositories can be copied back up to the server to restore it. Every clone is really a full backup of all the data.  - Chacon and Straub, Pro Git</p>
+<h3 id="How-is-it-done?">How is it done?<a class="anchor-link" href="#How-is-it-done?"> </a></h3><blockquote><p>This is where Distributed Version Control Systems (DVCSs) step in. In a DVCS (such as Git, Mercurial, Bazaar or Darcs), clients don’t just check out the latest snapshot of the files; rather, they fully mirror the repository, including its full history. Thus, if any server dies, and these systems were collaborating via that server, any of the client repositories can be copied back up to the server to restore it. Every clone is really a full backup of all the data.  - Chacon and Straub, Pro Git</p>
 </blockquote>
 
 </div>
@@ -195,8 +198,7 @@ description: "In this chapter we will learn about Github and explore some of its
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>2a. Navigate to the '+' Menu Button and click "New Repository"</strong></p>
-<p><strong>Other features in here:</strong></p>
+<h4 id="2a.-Navigate-to-the-'+'-Menu-Button-and-click-&quot;New-Repository&quot;"><strong>2a. Navigate to the '+' Menu Button and click "New Repository"</strong><a class="anchor-link" href="#2a.-Navigate-to-the-'+'-Menu-Button-and-click-&quot;New-Repository&quot;"> </a></h4><p><strong>Other features in here:</strong></p>
 <ul>
 <li>'<a href="https://help.github.com/en/github/writing-on-github/creating-gists">New Gist</a>' - <strong>(Free)</strong> - Save something quick!</li>
 <li><ul>
@@ -212,8 +214,7 @@ description: "In this chapter we will learn about Github and explore some of its
 <li>'<a href="https://github.com/features/project-management/">New Project</a>' - <strong>(Free and paid)</strong>, for project management.</li>
 </ul>
 <p><br><img src="https://charleskarpati.com/img/NewRepoPic.png" height="200"/></p>
-<p><strong>2b. Complete the form that appears with your information.</strong></p>
-<ul>
+<h4 id="2b.-Complete-the-form-that-appears-with-your-information."><strong>2b. Complete the form that appears with your information.</strong><a class="anchor-link" href="#2b.-Complete-the-form-that-appears-with-your-information."> </a></h4><ul>
 <li>Be sure to click "Initialize this repository with a README".</li>
 <li>A sample is provided below.<br><br><img src="https://charleskarpati.com/img/githubCreateRepository.png" height="700"/></li>
 </ul>
@@ -230,8 +231,7 @@ description: "In this chapter we will learn about Github and explore some of its
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>3a. At this point, you should be looking at something like this:</strong></p>
-<ul>
+<h4 id="3a.-At-this-point,-you-should-be-looking-at-something-like-this:"><strong>3a. At this point, you should be looking at something like this:</strong><a class="anchor-link" href="#3a.-At-this-point,-you-should-be-looking-at-something-like-this:"> </a></h4><ul>
 <li><strong>Green</strong> (topright) - Quick links</li>
 <li><strong>Mint/Pistachio</strong> (topleft) - Basepath / ProjectName</li>
 <li><strong>Purple</strong> (second most topright)</li>
@@ -297,8 +297,7 @@ description: "In this chapter we will learn about Github and explore some of its
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>**3b. You are now looking at the contents of the readme file.</p>
-<ul>
+<h4 id="3b.-You-are-now-looking-at-the-contents-of-the-readme-file."><strong>3b</strong>. You are now looking at the contents of the readme file.<a class="anchor-link" href="#3b.-You-are-now-looking-at-the-contents-of-the-readme-file."> </a></h4><ul>
 <li><ul>
 <li>You can edit the document using HTML, Markdown or plaintext. </li>
 </ul>

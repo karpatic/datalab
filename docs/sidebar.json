@@ -1,8 +1,8 @@
 {
   "datalabs": {
     "Overview": "/",
-    "Getting started with Github": "/github",
-    "Getting started with Colabs and Python": "/colabs",
-    "Introduction": "/scooterExploration"
+    "Github": "/github",
+    "Python and Colabs": "/colabs",
+    "Scooter Exploration": "/scooterExploration"
   }
 }

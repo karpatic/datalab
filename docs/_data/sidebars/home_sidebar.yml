@@ -10,13 +10,13 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: Getting started with Github
+      title: Github
       url: /github
     - output: web,pdf
-      title: Getting started with Colabs and Python
+      title: Python and Colabs
       url: /colabs
     - output: web,pdf
-      title: Introduction
+      title: Scooter Exploration
       url: /scooterExploration
     output: web
     title: datalabs
