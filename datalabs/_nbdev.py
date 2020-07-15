@@ -2,9 +2,9 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {}
+index = {"hello_world": "03_nbdev.ipynb"}
 
-modules = []
+modules = ["core.py"]
 
 doc_url = "https://karpatic.github.io/datalabs/"
 
