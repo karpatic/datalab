@@ -1,5 +1,5 @@
-# Developers Handbook
-> This notebook contains notes and labs to help you get started on your pythonic journey. 
+# Developers Guidebook
+> This can help guide you on your pythonic development journey. 
 
 
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/) 
@@ -21,9 +21,9 @@
 
 Everything writtin in this book picks up from where previous chapters left off. 
 
-While any chapter may be picked up and read as an insular topic; it is suggested to start from the begining.
+Visit the github pages [version](https://karpatic.github.io/dataplay/) if you are viewing this from [github](https://github.com/karpatic/datalabs) a github repo
 
-Labs in Handbook use modules created from it's sister guidebook, the [Guidebook](https://karpatic.github.io/dataplay/).
+While any chapter may be picked up and read as an insular topic; it is suggested to start from the begining.
 
 Tutorials and documentation on those modules can be found there.
 
