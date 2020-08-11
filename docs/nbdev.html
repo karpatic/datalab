@@ -504,21 +504,6 @@ Example:
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The above content copy and pasted into a textcell:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This line demonstrates example content with a footnote marker {% fn 1 %}</p>
-<p>{{ 'And this is the actual footnote.' | fndetail: 1 }}</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>3. An 'images' folder</strong> can be used to conjure up pictures like so:</p>
 <p><code>![](images/company_logo.png)</code></p>
 <p>These images will be added to added and displayed in the docs</p>
@@ -1594,21 +1579,6 @@ cd drive/&#39;My Drive&#39;/
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/  settings.ini
-<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  README.md   setup.py
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -1756,7 +1726,15 @@ Converted index.ipynb.
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;IPython.core.display.HTML object&gt;
 &lt;IPython.core.display.HTML object&gt;
+converting: /content/drive/My Drive/datalabs/notebooks/02_scooterExploration.ipynb
+converting: /content/drive/My Drive/datalabs/notebooks/01_colabs.ipynb
+converting: /content/drive/My Drive/datalabs/notebooks/00_github.ipynb
+converting: /content/drive/My Drive/datalabs/notebooks/index.ipynb
 converting: /content/drive/My Drive/datalabs/notebooks/03_nbdev.ipynb
+&lt;IPython.core.display.HTML object&gt;
+&lt;IPython.core.display.HTML object&gt;
+&lt;IPython.core.display.HTML object&gt;
+&lt;IPython.core.display.HTML object&gt;
 &lt;IPython.core.display.HTML object&gt;
 &lt;IPython.core.display.HTML object&gt;
 converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
@@ -1832,60 +1810,28 @@ converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> nbdev_install_git_hooks
-</pre></div>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> nbdev_clean_nbs
+<span class="o">!</span> nbdev_fix_merge notebooks/00_github.ipynb
+<span class="o">!</span> nbdev_fix_merge notebooks/01_colabs.ipynb
+<span class="o">!</span> nbdev_fix_merge notebooks/02_scooterExploration.ipynb
+<span class="o">!</span> nbdev_fix_merge notebooks/03_nbdev.ipynb
+<span class="o">!</span> nbdev_fix_merge notebooks/index.ipynb
 
-    </div>
-</div>
-</div>
+<span class="c1"># https://github.com/fastai/nbdev/blob/master/nbdev/merge.py#L91</span>
+<span class="c1"># http://nbdev.fast.ai/merge/</span>
+<span class="c1"># https://forums.fast.ai/t/fastai-nbstripout-stripping-notebook-outputs-and-metadata-for-git-storage/20355</span>
+<span class="c1"># https://nbdev.fast.ai/export2html/</span>
+<span class="c1"># https://pypi.org/project/nbd-colab/</span>
+<span class="c1"># https://forums.fast.ai/t/fastai-nbstripout-stripping-notebook-outputs-and-metadata-for-git-storage/20355/20</span>
+<span class="c1"># https://nbconvert.readthedocs.io/en/latest/</span>
+<span class="c1"># https://github.com/kynan/nbstripout</span>
+<span class="c1"># https://hallmx.github.io/nbds_colab//</span>
 
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> nbdev_fix_merge -h
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install --upgrade nbstripout # install nbstripout bin
-
-<span class="o">!</span>nbstripout --install # install Git hook in current repo
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> nbdev_fix_merge notebooks/index.ipynb
+<span class="c1"># fix_conflicts(&#39;notebooks/index.ipynb&#39;) # This is ran as a method within nbdev_fix_merge</span>
+<span class="c1"># from nbdev.export import *</span>
+<span class="c1"># from nbdev.merge import *</span>
+<span class="c1"># tst_nb = read_nb(&#39;notebooks/index.ipynb&#39;)</span>
+<span class="c1"># print(tst_nb)</span>
 </pre></div>
 
     </div>
@@ -1898,118 +1844,12 @@ converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Traceback (most recent call last):
-  File &#34;/usr/local/bin/nbdev_fix_merge&#34;, line 8, in &lt;module&gt;
-    sys.exit(nbdev_fix_merge())
-  File &#34;/usr/local/lib/python3.6/dist-packages/fastscript/core.py&#34;, line 76, in _f
-    func(**args.__dict__)
-  File &#34;/usr/local/lib/python3.6/dist-packages/nbdev/cli.py&#34;, line 275, in nbdev_fix_merge
-    fix_conflicts(fname, fast=fast, trust_us=trust_us)
-  File &#34;/usr/local/lib/python3.6/dist-packages/nbdev/merge.py&#34;, line 96, in fix_conflicts
-    start,cells,end = extract_cells(raw_text)
-  File &#34;/usr/local/lib/python3.6/dist-packages/nbdev/merge.py&#34;, line 14, in extract_cells
-    while not lines[i].startswith(&#39; &#34;cells&#34;&#39;): i+=1
-IndexError: list index out of range
+<pre>Succesfully merged conflicts!
+Succesfully merged conflicts!
+Succesfully merged conflicts!
+Succesfully merged conflicts!
+Succesfully merged conflicts!
 </pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nbdev.export</span> <span class="k">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">nbdev.merge</span> <span class="k">import</span> <span class="o">*</span>
-<span class="n">tst_nb</span> <span class="o">=</span> <span class="n">read_nb</span><span class="p">(</span><span class="s1">&#39;notebooks/index.ipynb&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">tst_nb</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-
-<span class="ansi-red-fg">FileNotFoundError</span>Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-3-4161882da9d0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">from</span> nbdev<span class="ansi-blue-fg">.</span>export <span class="ansi-green-fg">import</span> <span class="ansi-blue-fg">*</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">from</span> nbdev<span class="ansi-blue-fg">.</span>merge <span class="ansi-green-fg">import</span> <span class="ansi-blue-fg">*</span>
-<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>tst_nb <span class="ansi-blue-fg">=</span> read_nb<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;notebooks/index.ipynb&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span>tst_nb<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.6/dist-packages/nbdev/export.py</span> in <span class="ansi-cyan-fg">read_nb</span><span class="ansi-blue-fg">(fname)</span>
-<span class="ansi-green-intense-fg ansi-bold">     21</span> <span class="ansi-green-fg">def</span> read_nb<span class="ansi-blue-fg">(</span>fname<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">     22</span>     <span class="ansi-blue-fg">&#34;Read the notebook in `fname`.&#34;</span>
-<span class="ansi-green-fg">---&gt; 23</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">with</span> open<span class="ansi-blue-fg">(</span>Path<span class="ansi-blue-fg">(</span>fname<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;r&#39;</span><span class="ansi-blue-fg">,</span> encoding<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;utf8&#39;</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> f<span class="ansi-blue-fg">:</span> <span class="ansi-green-fg">return</span> nbformat<span class="ansi-blue-fg">.</span>reads<span class="ansi-blue-fg">(</span>f<span class="ansi-blue-fg">.</span>read<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> as_version<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     24</span> 
-<span class="ansi-green-intense-fg ansi-bold">     25</span> <span class="ansi-red-fg"># Cell</span>
-
-<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;notebooks/index.ipynb&#39;</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fix_conflicts</span><span class="p">(</span><span class="s1">&#39;notebooks/index.ipynb&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">IndexError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-53-894e13b64d9f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>fix_conflicts<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;notebooks/index.ipynb&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.6/dist-packages/nbdev/merge.py</span> in <span class="ansi-cyan-fg">fix_conflicts</span><span class="ansi-blue-fg">(fname, fast, trust_us)</span>
-<span class="ansi-green-intense-fg ansi-bold">     94</span>     shutil<span class="ansi-blue-fg">.</span>copy<span class="ansi-blue-fg">(</span>fname<span class="ansi-blue-fg">,</span> fname<span class="ansi-blue-fg">.</span>with_suffix<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;.ipynb.bak&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     95</span>     <span class="ansi-green-fg">with</span> open<span class="ansi-blue-fg">(</span>fname<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;r&#39;</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> f<span class="ansi-blue-fg">:</span> raw_text <span class="ansi-blue-fg">=</span> f<span class="ansi-blue-fg">.</span>read<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 96</span><span class="ansi-red-fg">     </span>start<span class="ansi-blue-fg">,</span>cells<span class="ansi-blue-fg">,</span>end <span class="ansi-blue-fg">=</span> extract_cells<span class="ansi-blue-fg">(</span>raw_text<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     97</span>     res <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span>start<span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">     98</span>     cf<span class="ansi-blue-fg">,</span>names<span class="ansi-blue-fg">,</span>prev<span class="ansi-blue-fg">,</span>added <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">[</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span><span class="ansi-green-fg">False</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.6/dist-packages/nbdev/merge.py</span> in <span class="ansi-cyan-fg">extract_cells</span><span class="ansi-blue-fg">(raw_txt)</span>
-<span class="ansi-green-intense-fg ansi-bold">     12</span>     cells <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">     13</span>     i <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0</span>
-<span class="ansi-green-fg">---&gt; 14</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">while</span> <span class="ansi-green-fg">not</span> lines<span class="ansi-blue-fg">[</span>i<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>startswith<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39; &#34;cells&#34;&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span> i<span class="ansi-blue-fg">+=</span><span class="ansi-cyan-fg">1</span>
-<span class="ansi-green-intense-fg ansi-bold">     15</span>     i <span class="ansi-blue-fg">+=</span> <span class="ansi-cyan-fg">1</span>
-<span class="ansi-green-intense-fg ansi-bold">     16</span>     start <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;\n&#39;</span><span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span>lines<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span>i<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">IndexError</span>: list index out of range</pre>
 </div>
 </div>
 
@@ -2050,43 +1890,10 @@ IndexError: list index out of range
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git add *
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>/usr/bin/python3: No module named nbstripout
-error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed 1
-error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -2166,7 +1973,7 @@ error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;clearedAllOutputsToHopefullyFixGitActionsIssuesP2&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;nbdev_clean_nbs and nbdev_fix_merge&quot;</span>
 </pre></div>
 
     </div>
@@ -2179,13 +1986,34 @@ error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master 83a9543] clearedAllOutputsToHopefullyFixGitActionsIssuesP2
- 2 files changed, 4 insertions(+), 556 deletions(-)
- rewrite notebooks/03_nbdev.ipynb (69%)
+<pre>[master 5ff0d72] nbdev_clean_nbs and nbdev_fix_merge
+ 7 files changed, 4921 insertions(+), 10 deletions(-)
+ rewrite notebooks/00_github.ipynb (100%)
+ rewrite notebooks/01_colabs.ipynb (99%)
+ rewrite notebooks/02_scooterExploration.ipynb (99%)
+ rewrite notebooks/03_nbdev.ipynb (99%)
+ rewrite notebooks/index.ipynb (100%)
 </pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -2212,18 +2040,18 @@ error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Counting objects: 6, done.
+<pre>Counting objects: 11, done.
 Delta compression using up to 2 threads.
-Compressing objects: 100% (6/6), done.
-Writing objects: 100% (6/6), 1.41 KiB | 719.00 KiB/s, done.
-Total 6 (delta 5), reused 0 (delta 0)
-remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 16.68 KiB | 1.04 MiB/s, done.
+Total 11 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas: 100% (8/8), completed with 8 local objects.
 remote: 
 remote: GitHub found 1 vulnerability on karpatic/datalabs&#39;s default branch (1 high). To find out more, visit:
 remote:      https://github.com/karpatic/datalabs/network/alert/docs/Gemfile.lock/kramdown/open
 remote: 
 To https://github.com/karpatic/datalabs.git
-   675a806..83a9543  master -&gt; master
+   83a9543..5ff0d72  master -&gt; master
 Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;ORIGIN&#39;.
 </pre>
 </div>
