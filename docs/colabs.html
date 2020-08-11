@@ -106,8 +106,7 @@ sidebar: home_sidebar
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># the hash symbol at the front of this line means its a comment.</span>
-<span class="c1"># comments show up in green and will not be interpreted upon code execution. </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># comments show up in green and will not be interpreted upon code execution. </span>
 <span class="c1"># In this example we will perform a simple computation to see its output below</span>
 
 <span class="mi">1</span>  <span class="o">+</span> <span class="mi">1</span>
@@ -143,8 +142,7 @@ sidebar: home_sidebar
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Notice how the output is now stored in the </span>
-<span class="c1"># &#39;madeUpVariable&#39; and &#39;evenMoreMadeUpVariable&#39; variables</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># &#39;madeUpVariable&#39; and &#39;evenMoreMadeUpVariable&#39; variables</span>
 <span class="c1"># and will not show give an output below.</span>
 <span class="n">madeUpVariable</span> <span class="o">=</span> <span class="mi">1</span>  <span class="o">+</span> <span class="mi">1</span>
 <span class="n">evenMoreMadeUpVariable</span> <span class="o">=</span> <span class="mf">13.5</span>
@@ -164,8 +162,7 @@ sidebar: home_sidebar
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Variable values persist across blocks (both above and below).</span>
-<span class="c1"># So always make sure your variables use the correct values!</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># So always make sure your variables use the correct values!</span>
 
 <span class="c1"># Also, Take note! </span>
 <span class="c1"># Output is hidden unless placed on the last line or </span>
@@ -212,9 +209,16 @@ sidebar: home_sidebar
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>Colab notebooks allow you to combine executable code and rich text in a single document, along with images, HTML, LaTeX and more. When you create your own Colab notebooks, they are stored in your Google Drive account. You can easily share your Colab notebooks with co-workers or friends, allowing them to comment on your notebooks or even edit them. To learn more, see Overview of Colab. To create a new Colab notebook you can use the File menu above, or use the following link:create a new Colab notebook.
+<blockquote><p>Colab notebooks allow you to combine <a href="#markup">markup</a>, executable code, and text into a single document, along with images, HTML, LaTeX and more. When you create your own Colab notebooks, they are stored in your Google Drive account. You can easily share your Colab notebooks with co-workers or friends, allowing them to comment on your notebooks or even edit them. To learn more, see Overview of Colab. To create a new Colab notebook you can use the File menu above, or use the following link:create a new Colab notebook.
 Colab notebooks are Jupyter notebooks that are hosted by Colab. To learn more about the Jupyter project, see jupyter.org.</p>
 </blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>All blockquotes in the section above was pulled from the header's link</em></p>
 
 </div>
 </div>
@@ -227,7 +231,7 @@ Colab notebooks are Jupyter notebooks that are hosted by Colab. To learn more ab
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Links to everything you need can be found in your menu bar.</p>
+<p>Everything you need can be found in your menu bar.</p>
 <p>A brief outline below:</p>
 
 </div>
@@ -310,15 +314,23 @@ Colab notebooks are Jupyter notebooks that are hosted by Colab. To learn more ab
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Many features in this article are accessible from the Menu Bar and is covered there.</p>
+<p><em>Features in the header link's article are accessible from the Menu Bar.</em></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>Colaboratory shares the notion of magics from Jupyter. There are shorthand annotations that change how a cell's text is executed.</p>
+<blockquote><p>Colaboratory... magics... are shorthand annotations that change how a cell's text is executed.</p>
 </blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Much more on this is covered <a href="#magics">below</a>. But...</p>
+<p>Observe what you can do with it:</p>
 
 </div>
 </div>
@@ -331,7 +343,9 @@ Colab notebooks are Jupyter notebooks that are hosted by Colab. To learn more ab
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">html</span>
-&lt;marquee style=&#39;width: 30%; color: blue;&#39;&gt;&lt;b&gt;Whee!&lt;/b&gt;&lt;/marquee&gt;
+&lt;marquee style=&#39;width: 30%; color: blue;&#39;&gt;
+    Here, we use python magics in the first line of this code-block to have the remaining lines display HTML
+&lt;/marquee&gt;
 </pre></div>
 
     </div>
@@ -345,7 +359,9 @@ Colab notebooks are Jupyter notebooks that are hosted by Colab. To learn more ab
 
 
 <div class="output_html rendered_html output_subarea ">
-<marquee style='width: 30%; color: blue;'><b>Whee!</b></marquee>
+<marquee style='width: 30%; color: blue;'>
+    Here, we use python magics in the first line of this code-block to have the remaining lines display HTML
+</marquee>
 </div>
 
 </div>
@@ -358,8 +374,8 @@ Colab notebooks are Jupyter notebooks that are hosted by Colab. To learn more ab
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Execute terminal <a href="https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.05-IPython-And-Shell-Commands.ipynb">commands</a> straight from a code block!</p>
-<p>preface your terminal command with a "!" so the interpreter knows the command is not python.</p>
+<p>As well, With magics, you can execute terminal <a href="https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.05-IPython-And-Shell-Commands.ipynb">commands</a> straight from a code block!</p>
+<p>preface your terminal command with a "!" so the interpreter knows the text is not python.</p>
 
 </div>
 </div>
@@ -381,6 +397,13 @@ Colab notebooks are Jupyter notebooks that are hosted by Colab. To learn more ab
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Stand alone, single line terminal commands to not actually need to be prefaced with an <code>!</code></p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -388,8 +411,31 @@ Colab notebooks are Jupyter notebooks that are hosted by Colab. To learn more ab
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Terminal commands can even be stored as python variables!</span>
-<span class="n">cow</span> <span class="o">=</span> <span class="o">!</span>ls
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The output responce from the execution of a of terminal command can even be stored as python variables!</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cow</span> <span class="o">=</span> <span class="o">!</span>ls
 <span class="n">cow</span>
 </pre></div>
 
@@ -418,8 +464,14 @@ Colab notebooks are Jupyter notebooks that are hosted by Colab. To learn more ab
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>More Tricks</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>More on <a href="https://www.tutorialspoint.com/google_colab/google_colab_magics.htm">magics</a> </li>
 <li>Other advanced code <a href="https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/">tricks</a></li>
 <li>Hosting notebooks online using github and <a href="https://mybinder.org/">mybinder</a></li>
 <li>Notebooks can also be <strong>colab</strong>oratively edited by sharing a link on Google Drive</li>
@@ -431,19 +483,96 @@ Colab notebooks are Jupyter notebooks that are hosted by Colab. To learn more ab
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Markdown-Guide">Markdown <a href="https://colab.research.google.com/notebooks/markdown_guide.ipynb">Guide</a><a class="anchor-link" href="#Markdown-Guide"> </a></h3>
+<h3 id="-Markup"><a name="markup" /> Markup<a class="anchor-link" href="#-Markup"> </a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>While not covered, all text cells are written using markdown</p>
-<p>More information here:</p>
+<blockquote><p>In computer text processing, a markup language is a system for annotating a document in a way that is syntactically distinguishable from the text,[1] meaning when the document is processed for display, the markup language is not shown, and is only used to format the text. -<a href="https://en.wikipedia.org/wiki/Markup_language">wikipedia</a></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Markdown-Guide"><a name="markdown" />Markdown <a href="https://colab.research.google.com/notebooks/markdown_guide.ipynb">Guide</a><a class="anchor-link" href="#Markdown-Guide"> </a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A) <strong>Markdown is the name given to markup used for making text rich-text</strong>.</p>
+<p>B) Text cells (not code-cells) in <strong>colab will automatically understand markdown</strong> and display it appropriately.</p>
+<p>C) Within Colabs, <b><u><i>many HTML elements can readily be rendered</i></u></b>  within markdown cells like the enriched text in this sentence.</p>
 <ul>
+<li>This is not a given on other markdown viewers and can be prevented by encapsulating the html <strong><code>&lt;u&gt;with backticks&lt;/u&gt;</code></strong> . </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Badges</strong></p>
+<p>Badges are (typically) action-enabled icons used to call attention to the reader.</p>
+<p>These are often displayed using HTML or Markdown.</p>
+<p>Pick a template and create your own badge from <a href="https://shields.io/category/social">shields.io</a> to get started!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>More on Markdown</strong>:</p>
+<ul>
+<li>Markdown Vs. <a href="https://stackoverflow.com/questions/24041/markdown-vs-markup-are-they-related#:~:text=Markdown%20is%20a%20play%20on,Markdown%22%20is%20a%20proper%20noun.&amp;text=Markup%20is%20a%20general%20term,library%20that%20generates%20HTML%20markup.">Markup</a></li>
 <li>Generic Github <a href="https://guides.github.com/features/mastering-markdown/">Guide</a></li>
 <li><a href="https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">Basic</a> writing and formatting syntax</li>
 <li>Writing on <a href="https://help.github.com/en/github/writing-on-github">GitHub</a></li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Flags:--Magics-and-Comments">Flags: <a name="magics" /> Magics and Comments<a class="anchor-link" href="#Flags:--Magics-and-Comments"> </a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A. <strong>'Flags' are a special form of shorthand annotation that change how code-block's are executed</strong>.</p>
+<p>B. These annotations augment the <a href="https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FInterpreter_%28computing%29">interpreter</a>s handling of a cell or line.</p>
+<p>C. Flags are placed <a href="https://ipython.readthedocs.io/en/stable/interactive/magics.html#cell-magics">on the first line</a> or on a <a href="https://ipython.readthedocs.io/en/stable/interactive/magics.html#line-magics">per line basis</a> depending on intent</p>
+<p>D. There exists two types of Flags: Comment and <a href="https://www.tutorialspoint.com/google_colab/google_colab_magics.htm">Magics</a></p>
+<p>1) <strong>Magics</strong> is often identified by two <code>%</code>'s at the top of the document followed by the intendid magical affect.</p>
+<p>2) <strong>Comments</strong> use a single <code>#</code> and are less favored since the <code>#</code> symbol is already <a href="https://en.wikipedia.org/wiki/Function_overloading">overloaded</a>.</p>
+<ul>
+<li>Under normal circumstances, a <code>#</code> will preface a numeral, whats more,</li>
+<li>Markdown uses <code>#</code>'s to denote a header element.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Common Uses</strong>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A) Create section titles from within a codeblock using <code>#@title &lt;TITLENAME&gt;</code></p>
+<p>B) Suppress cell output using <code>%%capture</code>.</p>
+<p>C) Execute terminal commands in a cell by prefacing it with the <code>!</code> line-magics.</p>
+<p>D) Comment-ify a line in your code using the <code>#</code>' prefix.</p>
+<p>E) Render the cell as <code>%%html</code> or <code>%%javascript</code> or a single line with <code>#@markdown</code>.</p>
+<p>F) Creating input forms by placing the line-magics <code>#@param {type:"DATA-TYPE"}</code> at the end of a variable declaration.</p>
 
 </div>
 </div>
@@ -538,8 +667,7 @@ Colab notebooks are Jupyter notebooks that are hosted by Colab. To learn more ab
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import a module</span>
-<span class="kn">import</span> <span class="nn">json</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 
 <span class="c1"># create some data as text or a &#39;String&#39;:</span>
 <span class="n">x</span> <span class="o">=</span>  <span class="s1">&#39;{ &quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30, &quot;city&quot;:&quot;New York&quot;}&#39;</span>
@@ -729,8 +857,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.6/dist-pack
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Now that pandas has been installed on the virtual enviornment. </span>
-<span class="c1"># Import it as a module into your codes memory! A bit redundent I know.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import it as a module into your codes memory! A bit redundent I know.</span>
 <span class="c1"># In this instance we are assigning the pandas module to the variable &#39;pd&#39;</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
@@ -757,8 +884,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.6/dist-pack
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># to use the pandas module, we refer to it by its namespace</span>
-<span class="c1"># In this example, we use the pandas &#39;read_json&#39; function to prepare our json for data play.  </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># In this example, we use the pandas &#39;read_json&#39; function to prepare our json for data play.  </span>
 <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;{&quot;row 1&quot;:{&quot;col 1&quot;:&quot;a&quot;,&quot;col 2&quot;:&quot;b&quot;},&quot;row 2&quot;:{&quot;col 1&quot;:&quot;c&quot;,&quot;col 2&quot;:&quot;d&quot;}}&#39;</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -850,8 +976,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.6/dist-pack
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Show the first row</span>
-<span class="n">newlyCreatedDataframeVariable</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">newlyCreatedDataframeVariable</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -918,8 +1043,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.6/dist-pack
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># make a copy of the dataset</span>
-<span class="n">variable2</span> <span class="o">=</span> <span class="n">newlyCreatedDataframeVariable</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">variable2</span> <span class="o">=</span> <span class="n">newlyCreatedDataframeVariable</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -936,8 +1060,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.6/dist-pack
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Show the first row</span>
-<span class="n">variable2</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">variable2</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1039,8 +1162,7 @@ Name: col 1, dtype: object</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This would save the file as a CSV onto wherever the virtual enviornment is mounted.</span>
-<span class="c1"># This may be the temporary mount-point, or google drive/ local hard drive.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This may be the temporary mount-point, or google drive/ local hard drive.</span>
 <span class="c1">#variable2.to_csv(index=False)</span>
 </pre></div>
 
@@ -1092,8 +1214,7 @@ Name: col 1, dtype: object</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Run this. </span>
-<span class="c1"># Click the link that shows itself. </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Click the link that shows itself. </span>
 <span class="c1"># Give permission. </span>
 <span class="c1"># Copy the link and paste it back here.</span>
 <span class="kn">from</span> <span class="nn">google.colab</span> <span class="k">import</span> <span class="n">drive</span>
@@ -1256,8 +1377,7 @@ Name: col 1, dtype: object</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Example form fields</span>
-<span class="c1">#@markdown Forms support many types of fields.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@markdown Forms support many types of fields.</span>
 
 <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;concrete.csv&#39;</span>  <span class="c1">#@param</span>
 <span class="n">displayColumn</span> <span class="o">=</span> <span class="s1">&#39;Cement&#39;</span>  <span class="c1">#@param {type: &quot;string&quot;}</span>
@@ -1556,6 +1676,17 @@ Requirement already satisfied: numpy&gt;=1.13.3 in /usr/local/lib/python3.6/dist
 
 <div class="output_area">
 
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/usr/local/lib/python3.6/dist-packages/dataplay/acsDownload.py:27: FutureWarning: Passing a negative integer is deprecated in version 1.0 and will not be supported in future version. Instead, use None to not limit the column width.
+  pd.set_option(&#39;display.max_colwidth&#39;, -1)
+/usr/local/lib/python3.6/dist-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use &#34;pip install psycopg2-binary&#34; instead. For details see: &lt;http://initd.org/psycopg/docs/install.html#binary-install-from-pypi&gt;.
+  &#34;&#34;&#34;)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Number of Columns 17
 </pre>
@@ -1696,8 +1827,7 @@ Requirement already satisfied: numpy&gt;=1.13.3 in /usr/local/lib/python3.6/dist
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get the Second dataset. </span>
-<span class="c1"># Our Example dataset contains Polygon Geometry information. </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Our Example dataset contains Polygon Geometry information. </span>
 <span class="c1"># We want to merge this over to our principle dataset. we will grab it by matching on either CSA or Tract</span>
 
 <span class="c1"># The url listed below is public.</span>
@@ -1815,6 +1945,34 @@ https://docs.google.com/spreadsheets/d/e/2PACX-1vREwwa_s8Ix39OYGnnS_wA8flOoEkU7r
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-6-e4e322a6a7cd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> dataplay<span class="ansi-blue-fg">.</span>mergeData
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;dataplay.mergeData&#39;
+
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span><span class="ansi-green-fg">
+NOTE: If your import is failing due to a missing package, you can
+manually install dependencies using either !pip or !apt.
+
+To view examples of installing some common dependencies, click the
+&#34;Open Examples&#34; button below.
+</span><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -1825,8 +1983,7 @@ https://docs.google.com/spreadsheets/d/e/2PACX-1vREwwa_s8Ix39OYGnnS_wA8flOoEkU7r
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Table: FDIC Baltimore Banks</span>
-<span class="c1"># Columns: Bank Name, Address(es), Census Tract</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Columns: Bank Name, Address(es), Census Tract</span>
 <span class="n">left_ds</span> <span class="o">=</span> <span class="s1">&#39;https://docs.google.com/spreadsheets/d/e/2PACX-1vSHFrRSHva1f82ZQ7Uxwf3A1phqljj1oa2duGlZDM1vLtrm1GI5yHmpVX2ilTfMHQ/pub?gid=601362340&amp;single=true&amp;output=csv&#39;</span>
 <span class="n">left_col</span> <span class="o">=</span> <span class="s1">&#39;Census Tract&#39;</span>
 

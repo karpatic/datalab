@@ -1,12 +1,12 @@
 ---
-
+toc: true
 title: Nbdev
-
+image: images/fastai_logo.png
 keywords: fastai
 sidebar: home_sidebar
 
-
-
+summary: "In this chapter we learn about publishing python notebooks with nbdev. "
+description: "In this chapter we learn about publishing python notebooks with nbdev. "
 ---
 <!--
 
@@ -29,7 +29,21 @@ sidebar: home_sidebar
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>In this chapter we learn about publishing python notebooks with nbdev. A <a href="http://nbdev.fast.ai/tutorial/">guide</a> is also provided by the authors.</p>
+<h2 id="(Non-Technical)-Introduction">(Non-Technical) Introduction<a class="anchor-link" href="#(Non-Technical)-Introduction"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Fastai, the org that created this tool, helps empower others by lowering the barrier of entry when breaking into software (AI) development.</p>
+<p>In their own words:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>Nbdev is a tool that allows you to fully develop a library in Jupyter Notebooks, putting all your code, tests and documentation in one place. -<a href="http://nbdev.fast.ai/">Nbdev</a></p>
 </blockquote>
 
 </div>
@@ -37,14 +51,22 @@ sidebar: home_sidebar
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction"> </a></h2>
+<p>Some (not all) of the tools <strong>fastai provides</strong>:</p>
+<ul>
+<li><a href="https://github.com/fastai/nbdev">Nbdev</a> - For software development and documentation</li>
+<li><a href="https://github.com/fastai/fastpages">Fastpages</a> - Works like Nbdev but for blogging</li>
+<li><a href="https://github.com/fastai/fastscript">Fastscript</a> - Convert a python function to a CLI script</li>
+<li><a href="https://github.com/fastai/fastprogress">Fastprogress</a> - Reveals a progress bar for long processes</li>
+<li><a href="https://github.com/fastai/fastai">FastiAi</a> - Data convenience tools and AI models</li>
+<li><a href="https://course.fast.ai/">FastAi Course</a> - V3. A practical deep-learning course</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>nbdev is a library that allows you to fully develop a library in Jupyter Notebooks, putting all your code, tests and documentation in one place. -<a href="http://nbdev.fast.ai/">nbdev</a></p>
-</blockquote>
+<p>Use one of these products? Tweet <a href="https://www.fast.ai/about/#founders">@jeremyphoward</a> the product of your work!</p>
 
 </div>
 </div>
@@ -57,33 +79,51 @@ sidebar: home_sidebar
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li><strong>Publish Notebooks</strong> as a module on pypi </li>
-</ol>
+<p><em>Specifics covered later</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1) <strong>Publish notebooks</strong> as a module on pypi</p>
 <ul>
-<li>"Flag" cells to <a href="http://nbdev.fast.ai/export/">export</a> them as part of the python library</li>
+<li>A) "Flag" cells to <a href="http://nbdev.fast.ai/export/">export</a> them as part of the python library</li>
 </ul>
-<ol>
-<li>Use <code>pip install &lt;nameOfModule&gt;</code> for <strong>use in the terminal</strong> or as a part of a script**</li>
-</ol>
+<p>2) <strong>Install it anywhere</strong>: <code>pip install &lt;nameOfModule&gt;</code></p>
 <ul>
-<li>Retrieve a command line help interface by typing <code>! &lt;NameofMdule&gt; -h</code></li>
+<li>A) This can be used in conjunction with Fastscript to create CLI scripts</li>
+<li>B) The CLI help interface is reachble by typing <code>! &lt;NameofMdule&gt; -h</code></li>
 </ul>
-<ol>
-<li><strong>Convert notebooks</strong> to html or markdown "documenation" </li>
-</ol>
+<p>3) <strong>Convert notebooks to documenation</strong> in html and markdown</p>
 <ul>
-<li>"Flag" cells to hide them from the documentation</li>
-<li>Host the documentation on github pages so they are always up to date</li>
-<li>Have documentation magically created and link to respective github functions</li>
-<li>Generate a Github and Pypi README.md file automatically from an index.ipynb</li>
-<li>Generate a website homepage from that same very index.ipynb</li>
-<li>Modify <a href="https://jekyllrb.com/">Jekyll</a> templates that denote the html documents design </li>
-<li>Store photos in an images folder for use in your notebook and have it copied to your website</li>
+<li>A) Use the index.ipynb to auto-generate a homepage</li>
+<li>B) Use the index.ipynb to auto-generate a Github and PyPi README.md file</li>
+<li>C) Have backticked function auto link to a functions github sourcecode</li>
+<li>D) Host the documentation on github pages so they are always up to date</li>
+<li>E) "Flag" cells to collapse or hide the cells (or the output) from the documentation</li>
+<li>F) Personalize the <a href="https://jekyllrb.com/">Jekyll</a> website templates used to make the site</li>
+<li>G) Store photos in an images folder for use in your notebook and have it copied to your website</li>
 </ul>
-<ol>
-<li>Have modules <strong>update in realtime</strong> across notebooks when developing=</li>
-</ol>
+<p>4) <strong>Use created modules across notebooks in realtime</strong></p>
+<ul>
+<li>A) Auto-reload modules across notebooks during development if any part of the module is updated </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Fun-Facts">Fun Facts<a class="anchor-link" href="#Fun-Facts"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Nbdev library and tutorial is actually written using a notebook.</p>
+<p>The Nbdev library and tutorial get created and published by running the notebook on itself!</p>
+<p>If you check, you'd see that their <a href="http://nbdev.fast.ai/">tutorial</a> is actually being hosted on <a href="https://github.com/fastai/nbdev/tree/master/docs">github</a> pages.</p>
 
 </div>
 </div>
@@ -112,22 +152,7 @@ sidebar: home_sidebar
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Fun-Facts">Fun Facts<a class="anchor-link" href="#Fun-Facts"> </a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The Nbdev library and tutorial is actually written using a notebook.</p>
-<p>The Nbdev library and tutorial get created and published by running the notebook on itself!</p>
-<p>If you check, you'd see that their <a href="http://nbdev.fast.ai/">tutorial</a> is actually being hosted on <a href="https://github.com/fastai/nbdev/tree/master/docs">github</a> pages.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Overview">Overview<a class="anchor-link" href="#Overview"> </a></h2>
+<h2 id="(Technical)-Overview">(Technical) Overview<a class="anchor-link" href="#(Technical)-Overview"> </a></h2>
 </div>
 </div>
 </div>
@@ -140,7 +165,7 @@ sidebar: home_sidebar
 </li>
 <li><p>Python Notebooks will automatically be located and processed for publication and deployment.</p>
 </li>
-<li><p>Placing nbdev specific ""Flags" (aka <a href="https://ipython.readthedocs.io/en/stable/interactive/magics.html#">"Magic"</a>) and "Mark Up" in cells will tell nbdev how to treat those cells</p>
+<li><p>Nbdev specific "Flags" (Either the Comment or <a href="https://ipython.readthedocs.io/en/stable/interactive/magics.html#">"Magic"</a> variety ) tell nbdev how to treat cells</p>
 </li>
 <li><p>Photos stored in the 'images' folder will be copied over to your publication folder</p>
 </li>
@@ -151,7 +176,7 @@ sidebar: home_sidebar
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Nbdev-Terminal-Commands">Nbdev Terminal Commands<a class="anchor-link" href="#Nbdev-Terminal-Commands"> </a></h3>
+<h3 id="Nbdev-Terminal-Commands"><a name="nbcmd" />Nbdev Terminal Commands<a class="anchor-link" href="#Nbdev-Terminal-Commands"> </a></h3>
 </div>
 </div>
 </div>
@@ -165,28 +190,54 @@ sidebar: home_sidebar
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Create</p>
-<ul>
+<p>{% include important.html content='Information in this section is incomplete! Quotes found here-in came from Nbdev&#8217;s <a href="https://nbdev.fast.ai/cli/#nbdev_nb2md">official documentation</a> from which you will derive much more insight with respect to using these functions.' %}</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Create">Create<a class="anchor-link" href="#Create"> </a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><ul>
 <li><code>nbdev_new</code> creates a new nbdev project</li>
 <li><code>nbdev_update_lib</code> propagates any change in the library back to the notebooks</li>
 </ul>
-<p>Compile</p>
-<ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Compile">Compile<a class="anchor-link" href="#Compile"> </a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><ul>
 <li><code>nbdev_nb2md</code> converts a notebook to a markdown file</li>
 <li><code>nbdev_build_docs</code> builds the documentation from the notebooks</li>
 <li><code>nbdev_build_lib</code> builds the library from the notebooks</li>
-<li><code>nbdev_bump_version</code>/ <code>nbdev_bump</code> increments version in settings.py by one. This must be ran for uploads to work on pypi</li>
+<li><code>nbdev_bump_version</code>/ <code>nbdev_bump</code> increments version in settings.py by one</li>
 </ul>
-<p>Publish</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>nbdev ignores any file that starts with an underscore</em></p>
+<p><em>Version Bumping must be performed each time prior to uploading to pypi</em></p>
+<p>Combine commands with with regular expressions for more power!</p>
 <ul>
-<li><code>nbdev_clean_nbs</code> removes all superfluous metadata form the notebooks, to avoid merge conflicts</li>
-<li><code>nbdev_install_git_hooks</code> installs the git hooks that use <code>nbdev_fix_merge</code> and <code>nbdev_diff_nbs</code> automatically on each commit/merge. Only needs to be ran once on project creation</li>
-</ul>
-<p>Check</p>
-<ul>
-<li><code>nbdev_read_nbs</code> reads all notebooks to make sure none are broken</li>
-<li><code>nbdev_trust_nbs</code> trusts all notebooks (so that the HTML content is shown)</li>
-<li><code>nbdev_upgrade</code> updates an existing nbdev project to use the latest features</li>
+<li>A commands like <code>nbdev_build_docs --fname=[!test]*.ipynb</code> will run all files except ones with filenames that start with 'test'</li>
 </ul>
 
 </div>
@@ -194,7 +245,56 @@ sidebar: home_sidebar
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Nbdev-Flags-(Mark-Up/-Cell-Magic)">Nbdev Flags (Mark Up/ Cell Magic)<a class="anchor-link" href="#Nbdev-Flags-(Mark-Up/-Cell-Magic)"> </a></h3>
+<h4 id="Publish">Publish<a class="anchor-link" href="#Publish"> </a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><ul>
+<li><code>nbdev_clean_nbs</code> removes all superfluous metadata form the notebooks, to avoid merge conflicts</li>
+<li><code>nbdev_install_git_hooks</code> installs the git hooks that use ( <code>nbdev_fix_merge</code> and <code>nbdev_diff_nbs</code>) automatically on each commit/merge.</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>Githooks needs to be ran once on project creation for them to be set up perminantly</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Check">Check<a class="anchor-link" href="#Check"> </a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><ul>
+<li><code>nbdev_read_nbs</code> reads all notebooks to make sure none are broken</li>
+<li><code>nbdev_trust_nbs</code> trusts all notebooks (so that the HTML content is shown)</li>
+<li><code>nbdev_upgrade</code> updates an existing nbdev project to use the latest features</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>nbdev_upgrade can be run any time there are new updates. It only needs to be ran once per update.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="-Nbdev-Flags-(Mark-Up/-Cell-Magic)"><a name="nbflags" /> Nbdev Flags (Mark Up/ Cell Magic)<a class="anchor-link" href="#-Nbdev-Flags-(Mark-Up/-Cell-Magic)"> </a></h3>
 </div>
 </div>
 </div>
@@ -208,34 +308,85 @@ sidebar: home_sidebar
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There are certain special comments that, when placed as the first line of a cell, provide important information to nbdev.</p>
-<p>This is called <a href="https://www.tutorialspoint.com/jupyter/ipython_magic_commands.htm">magic</a>. Nbdev combines Magic and Markup to do some pretty cool things.</p>
+<p>Nbdev scripts rely on special <a href="https://nbdev.fast.ai/tutorial/#nbdev-flags">comments <strong>or</strong> magics</a> (your choice) for cell-level handling of notebooks.</p>
+<p>The list shown below was obtained from <a href="https://pete88b.github.io/fastpages/nbdev/fastai/jupyter/2020/06/02/nbdev-magic.html">here</a>.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Collapse">Collapse<a class="anchor-link" href="#Collapse"> </a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><ul>
-<li>Placing #collapse_show as a comment in a code cell will inlcude your code under a collapsable element that is open by default.</li>
-<li>Placing #collapse or #collapse_hide will include your code in a collapsable element that is closed by default.</li>
-<li>Placing #collapse_output as a comment in code cell will hide the output under a collapsable element that is closed by default.</li>
-<li>Add show_doc for each exported function or class <a href="http://nbdev.fast.ai/showdoc/#show_doc-">http://nbdev.fast.ai/showdoc/#show_doc-</a> The default sidebar lists all html pages with their respective title, except the index that is named "Overview". To build a custom sidebar, set the flag custom_sidebar in your settings.ini to True then change the sidebar.json file in the doc_folder to your liking. Otherwise, the sidebar is updated at each doc build.</li>
-</ul>
-</blockquote>
+<table>
+<thead><tr>
+<th>Comment flag</th>
+<th>Magic flag</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default_exp</code></td>
+<td><code>nbdev_default_export</code></td>
+<td>Define the name of the module everything should be exported in</td>
+</tr>
+<tr>
+<td><code>exports</code></td>
+<td><code>nbdev_export_and_show</code></td>
+<td>Export and show code in the docs</td>
+</tr>
+<tr>
+<td><code>exporti</code></td>
+<td><code>nbdev_export_internal</code></td>
+<td>Export but don’t show in docs and don’t add to <code>__all__</code></td>
+</tr>
+<tr>
+<td><code>export</code></td>
+<td><code>nbdev_export</code></td>
+<td>Export but don’t show in docs</td>
+</tr>
+<tr>
+<td><code>hide_input</code></td>
+<td><code>nbdev_hide_input</code></td>
+<td>Do not show input of a test cell in docs</td>
+</tr>
+<tr>
+<td><code>hide_output</code></td>
+<td><code>nbdev_hide_output</code></td>
+<td>Do not show output of a test cell in docs</td>
+</tr>
+<tr>
+<td><code>hide</code></td>
+<td><code>nbdev_hide</code></td>
+<td>Do not show a test cell or markdown in docs</td>
+</tr>
+<tr>
+<td><code>default_cls_lvl</code></td>
+<td><code>nbdev_default_class_level</code></td>
+<td>Define the default toc level of classes</td>
+</tr>
+<tr>
+<td><code>collapse_output</code> or <code>collapse-output</code></td>
+<td><code>nbdev_collapse_output</code></td>
+<td>Inlcude output in the docs under a collapsable element</td>
+</tr>
+<tr>
+<td><code>collapse_show</code> or <code>collapse-show</code></td>
+<td><code>nbdev_collapse_input open</code></td>
+<td>Inlcude intput in the docs under a collapsable element that is open by default</td>
+</tr>
+<tr>
+<td><code>collapse_hide</code> or <code>collapse-hide</code></td>
+<td><code>nbdev_collapse_input</code></td>
+<td>Inlcude intput in the docs under a collapsable element</td>
+</tr>
+<tr>
+<td><code>collapse</code></td>
+<td><code>nbdev_collapse_input</code></td>
+<td>Inlcude intput in the docs under a collapsable element</td>
+</tr>
+</tbody>
+</table>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exports">Exports<a class="anchor-link" href="#Exports"> </a></h4>
 </div>
 </div>
 </div>
@@ -248,52 +399,151 @@ sidebar: home_sidebar
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For any cells that you want to be included in your python module, type <em>#export</em> as the first line of that cell.</p>
+<p>Text-cells ignore all but <code>#hide</code> flags, use it for "developer-only" markdown notes that are hidden from HTML docs.</p>
 
 </div>
 </div>
 </div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Comments will show in the docs if the special comment is not the 1st thing in the cell.</p>
+<p>To gain access to <a href="https://pete88b.github.io/fastpages/nbdev/fastai/jupyter/2020/06/02/nbdev-magic.html">Nbdev's new 'magics'</a> you my find it neccesary to:</p>
+<ol>
+<li>Execute the command <code>nbdev_upgrade</code>, only once, and then..</li>
+<li>Add <code>from nbdev import *</code> to the top of a notebook in a code-cell.</li>
+</ol>
 
 </div>
-    {% endraw %}
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>0</strong>. <strong>Automated Documentation</strong> :</p>
 
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Functions and Classes have are automatically documented.</p>
+<p>Class methods are not shown by default, though, so use <a href="http://nbdev.fast.ai/showdoc/#show_doc"><code>show_doc(class.method</code>)</a> to do this.</p>
 
-<div class="output_wrapper">
-<div class="output">
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>1</strong>: <strong>Automated Document Hyperlinking</strong> :</p>
+<p>Nbdev will hyperlink any text cell with a backticked function name to it's sourcode on github (only if its an exported function).</p>
 
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="hello_world" class="doc_header"><code>hello_world</code><a href="https://github.com/karpatic/datalabs/tree/master/datalabs/core.py#L6" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>hello_world</code>(<strong><code>to</code></strong>)</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>2</strong>: <strong>Autoreloading</strong> : (I have note tried)</p>
+<blockquote><p>Since you'll be often updating your modules from one notebook, and using them in another, it's helpful if your notebook automatically reads in the new modules as soon as the python file changes.</p>
 </blockquote>
-<p>this is example</p>
+<p>First run this in the notebook you want to update:<code>notebook2script()</code></p>
+<p>Then this to the top of your notebook as a code cell:</p>
+
+<pre><code>%load_ext autoreload
+%autoreload 2</code></pre>
 
 </div>
-
-</div>
-
 </div>
 </div>
-
-</div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>From nbdev's <a href="https://nbdev.fast.ai/export/">export</a> docs:</p>
-<blockquote><ul>
-<li>a cell marked with # <em>export</em>, # <em>exports</em> or # <em>exporti</em> <strong>will be exported</strong> to the default module</li>
-<li>a cell marked with # <em>export</em> will have it's signature added to the documentation</li>
-<li>a cell marked with # <em>exports</em> will additionally have it's <strong>source code added to the documentation</strong></li>
-<li>a cell marked with # <em>exporti</em> will <strong>not show up</strong> in the documentation, and will also not <strong>be added to</strong> <strong>all</strong>.</li>
-</ul>
+<h3 id="Other-Magic-Markups-and-Flags">Other Magic Markups and Flags<a class="anchor-link" href="#Other-Magic-Markups-and-Flags"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Content in this section is pulled from the Fastpages <a href="https://fastpages.fast.ai/fastpages/jupyter/2020/02/21/introducing-fastpages.html#Other-Feautures">blog</a> and the Nbdev docs.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>0. <a href="https://gist.github.com/rxaviers/7360908">Emoji's</a></strong> wont show in Colab's markdown, but  can be rendered in the documentation and github/ pypi readme pages. :us: :us: :us: :md: :us-md:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>1. Anchor Links</strong></p>
+<blockquote><p>An anchor link is a web link that allows users to leapfrog to a specific point on a website page. It saves them the need to scroll and skim read – and makes navigation easier. - <a href="https://www.telegraph.co.uk/branded-content/marketing-guides/what-is-anchor-link/">Telegraph</a>
+Example:
+<a name="hyperlinkingValue"></a> Both landmark and <a href="#hyperlinkingValue">hyperlink </a> have been placed on this line. Click the link for this line to zip up to the top of your screen.</p>
+</blockquote>
+<p>Code:</p>
+
+<pre><code># This is the hyperlink
+[hyperlinktext](#hyperlinkingValue) 
+
+# It will take you to wherever you place this landmark
+&lt;a name="hyperlinkingValue"&gt;&lt;/a&gt;</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>2. Footnotes</strong> can be attached in markdown using the following notation</p>
+
+<pre><code>This line demonstrates example content with a footnote marker {% fn 1 %}
+
+{{ 'And this is the actual footnote.' | fndetail: 1 }}</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The above content copy and pasted into a textcell:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This line demonstrates example content with a footnote marker {% fn 1 %}</p>
+<p>{{ 'And this is the actual footnote.' | fndetail: 1 }}</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>3. An 'images' folder</strong> can be used to conjure up pictures like so:</p>
+<p><code>![](images/company_logo.png)</code></p>
+<p>These images will be added to added and displayed in the docs</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>4. Image captions</strong> can be placed like so:</p>
+<p><code>![](https://www.LINKTOIMAGE "caption text placed here")</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>5. Twitter and Youtube</strong> content can also be displayed in a similar fasion to Jekyll Notes:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>twitter:<a href="https://twitter.com/jakevdp/status/1204765621767901185?s=20">https://twitter.com/jakevdp/status/1204765621767901185?s=20</a></p>
 </blockquote>
 
 </div>
@@ -301,27 +551,15 @@ sidebar: home_sidebar
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Misc">Misc<a class="anchor-link" href="#Misc"> </a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>0</strong>. <strong>Automated Documentation</strong> : Classes are automatically documented. Use <code>show_doc</code> to document methods :</p>
+<blockquote><p>youtube:<a href="https://youtu.be/XfoYk_Z5AkI">https://youtu.be/XfoYk_Z5AkI</a></p>
+</blockquote>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>1</strong>: <strong>Automated Document Hyperlinking</strong> : For any notebook. If a text cell contains a function name that is wrapped in backquotes like this <code>examplefunctionName</code>, the nbdev renderer will hyperlink to the functions documentation (only if its an exported function).</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>2. Jekyll <a href="http://nbdev.fast.ai/export2html/#add_jekyll_notes">Notes</a></strong></p>
+<p><strong>6. Jekyll <a href="http://nbdev.fast.ai/export2html/#add_jekyll_notes">Notes</a></strong></p>
 <p>The following section was written using the following markups</p>
 <p><code>&gt; Note:</code>, <code>&gt; Warning:</code>, <code>&gt; Tip:</code> and <code>&gt; Important: text goes here</code>
 {% include note.html content='This is a note.' %}{% include warning.html content='This is a warning' %}{% include tip.html content='This is a tip' %}{% include important.html content='This is an Important doc link to <code>add_jekyll_notes</code> which should also work fine' %}</p>
@@ -331,18 +569,25 @@ sidebar: home_sidebar
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>3</strong>: <strong><em>Side Note:</em></strong> <a href="http://nbdev.fast.ai/search/">Search</a> functionality is not covered here, but may be added to your websites this way.</p>
+<p>{% include warning.html content='# 3' %}</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>4</strong>: <strong>Autoreloading</strong> : (I have note tried)</p>
-<blockquote><p>Since you'll be often updating your modules from one notebook, and using them in another, it's helpful if your notebook automatically reads in the new modules as soon as the python file changes.</p>
+<h3 id="Misc-Nbdev-Percs">Misc Nbdev Percs<a class="anchor-link" href="#Misc-Nbdev-Percs"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>0. <a href="http://nbdev.fast.ai/search/">Search</a></strong> functionality is not covered here, but may be added.</p>
+<p><strong>1. Custom Sidebar</strong>'s for your HTML documentation can be configured using meta-markup, <a href="https://www.json.org/json-en.html">JSON</a>.</p>
+<blockquote><p>The default sidebar lists all html pages with their respective title, except the index that is named "Overview". To build a custom sidebar, set the flag custom_sidebar in your settings.ini to True then change the sidebar.json file in the doc_folder to your liking. Otherwise, the sidebar is updated at each doc build.</p>
 </blockquote>
-<p>Add this to the top of your notebook as a code cell:<code>%load_ext autoreload
-%autoreload 2</code></p>
+<p><strong>2. <a href="https://yaml.org/">YAML</a></strong>, a data-serialization standard, is used as <a href="https://assemble.io/docs/YAML-front-matter.html">Front Matter</a> that can be <a href="https://jekyllrb.com/docs/datafiles/">used with Jekyll</a> to render templates.&gt; In the markdown cell with the title, you can add the summary as a block quote (just put an empty block quote for an empty summary) and a list with any additional metadata you would like to add <strong><code>get_metadata</code></strong>
+<strong>3. Console Scripts</strong> are made by marking up functions using the <a href="https://fastscript.fast.ai/">fastscript</a> tool and editing the settings.ini file (<a href="https://github.com/fastai/nbdev/blob/554e63b1b05390a3ad2bc086d8485f98b1e63ca4/settings.ini">example</a> )</p>
 
 </div>
 </div>
@@ -412,11 +657,7 @@ sidebar: home_sidebar
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Go to this URL in a browser: https://accounts.google.com/o/oauth2/auth?client_id=947318989803-6bn6qk8qdgf4n4g3pfee6491hc0brc4i.apps.googleusercontent.com&amp;redirect_uri=urn%3aietf%3awg%3aoauth%3a2.0%3aoob&amp;response_type=code&amp;scope=email%20https%3a%2f%2fwww.googleapis.com%2fauth%2fdocs.test%20https%3a%2f%2fwww.googleapis.com%2fauth%2fdrive%20https%3a%2f%2fwww.googleapis.com%2fauth%2fdrive.photos.readonly%20https%3a%2f%2fwww.googleapis.com%2fauth%2fpeopleapi.readonly
-
-Enter your authorization code:
-··········
-Mounted at /content/drive
+<pre>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&#34;/content/drive&#34;, force_remount=True).
 </pre>
 </div>
 </div>
@@ -472,109 +713,18 @@ cd drive/&#39;My Drive&#39;/
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/    setup.py
-<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  settings.ini
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Enter the project if it exists. Otherwise go to the folder you want it to exist at.</p>
-
-</div>
-</div>
-</div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># cd dataplay</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>/content/drive/My Drive/dataplay
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># cd ./datalabs/</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>/content/drive/My Drive/datalabs
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/    setup.py
-<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  settings.ini
+<pre>&#39;5) Computation Clustering Morality. ipynb&#39;   <span class="ansi-blue-intense-fg ansi-bold">Misc_old_code_for_old_projects</span>/
+ Batteries.ipynb                              Notes2.ipynb
+ <span class="ansi-blue-intense-fg ansi-bold">Bnia</span>/                                        <span class="ansi-blue-intense-fg ansi-bold">Personal</span>/
+<span class="ansi-blue-intense-fg ansi-bold">&#39;Colab Notebooks&#39;</span>/                            <span class="ansi-blue-intense-fg ansi-bold">pyjs</span>/
+ CovidBaltimore.ipynb                         PythonBCountyVitalSigns.ipynb
+<span class="ansi-blue-intense-fg ansi-bold">&#39;CReading Slides Visuals&#39;</span>/                    Radios.ipynb
+ <span class="ansi-blue-intense-fg ansi-bold">DATA</span>/                                        <span class="ansi-blue-intense-fg ansi-bold">realtime</span>/
+ <span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/                                    ScooterHelp.ipynb
+ <span class="ansi-blue-intense-fg ansi-bold">dataplay</span>/                                    <span class="ansi-blue-intense-fg ansi-bold">stonks</span>/
+ <span class="ansi-blue-intense-fg ansi-bold">feelsgoodgoods</span>/                              <span class="ansi-blue-intense-fg ansi-bold">System</span>/
+ <span class="ansi-blue-intense-fg ansi-bold">labs</span>/                                        <span class="ansi-blue-intense-fg ansi-bold">tobepublished</span>/
+ menu.ipynb                                   <span class="ansi-blue-intense-fg ansi-bold">vitalSigns</span>/
 </pre>
 </div>
 </div>
@@ -1014,8 +1164,7 @@ CONTRIBUTING.md  index.ipynb  MANIFEST.in  settings.ini
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Example form fields</span>
-<span class="c1">#@markdown Forms support many types of fields.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@markdown Forms support many types of fields.</span>
 
 <span class="c1"># Name of the project</span>
 <span class="n">folder_name</span> <span class="o">=</span> <span class="s2">&quot;test123&quot;</span>  <span class="c1">#@param {type:&quot;string&quot;}</span>
@@ -1356,7 +1505,7 @@ CONTRIBUTING.md  index.ipynb  MANIFEST.in  settings.ini
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ! nbdev_nb2m index.ipynb</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -1513,9 +1662,7 @@ CONTRIBUTING.md  index.ipynb  MANIFEST.in  settings.ini
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Make the replacements where needed and run this! be sure to remove our password once ran.</span>
-
-<span class="c1"># ! git remote add ORIGIN https://&lt;USER NAME&gt;:&lt;passwrd&gt;@github.com/&lt;USER NAME&gt;/&lt;REPO NAME&gt;.git</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ! git remote add ORIGIN https://&lt;USER NAME&gt;:&lt;passwrd&gt;@github.com/&lt;USER NAME&gt;/&lt;REPO NAME&gt;.git</span>
 </pre></div>
 
     </div>
@@ -1632,7 +1779,7 @@ CONTRIBUTING.md  index.ipynb  MANIFEST.in  settings.ini
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As long as you are somewhere in the folder where you are developing your library. Either of these will work:</p>
+<p>Enter the project if it exists. Otherwise go to the folder you want it to exist at.</p>
 
 </div>
 </div>
@@ -1644,8 +1791,7 @@ CONTRIBUTING.md  index.ipynb  MANIFEST.in  settings.ini
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbdev_build_lib, builds the library from the notebooks</span>
-<span class="o">!</span>nbdev_build_lib
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">../</span>
 </pre></div>
 
     </div>
@@ -1658,11 +1804,7 @@ CONTRIBUTING.md  index.ipynb  MANIFEST.in  settings.ini
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Converted 00_github.ipynb.
-Converted 01_colabs.ipynb.
-Converted 02_scooterExploration.ipynb.
-Converted 03_nbdev.ipynb.
-Converted index.ipynb.
+<pre>/content/drive/My Drive/datalabs
 </pre>
 </div>
 </div>
@@ -1680,7 +1822,66 @@ Converted index.ipynb.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">../</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&#39;5) Computation Clustering Morality. ipynb&#39;   <span class="ansi-blue-intense-fg ansi-bold">Misc_old_code_for_old_projects</span>/
+ Batteries.ipynb                              Notes2.ipynb
+ <span class="ansi-blue-intense-fg ansi-bold">Bnia</span>/                                        <span class="ansi-blue-intense-fg ansi-bold">Personal</span>/
+<span class="ansi-blue-intense-fg ansi-bold">&#39;Colab Notebooks&#39;</span>/                            <span class="ansi-blue-intense-fg ansi-bold">pyjs</span>/
+ CovidBaltimore.ipynb                         PythonBCountyVitalSigns.ipynb
+<span class="ansi-blue-intense-fg ansi-bold">&#39;CReading Slides Visuals&#39;</span>/                    Radios.ipynb
+ <span class="ansi-blue-intense-fg ansi-bold">DATA</span>/                                        <span class="ansi-blue-intense-fg ansi-bold">realtime</span>/
+ <span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/                                    ScooterHelp.ipynb
+ <span class="ansi-blue-intense-fg ansi-bold">dataplay</span>/                                    <span class="ansi-blue-intense-fg ansi-bold">stonks</span>/
+ <span class="ansi-blue-intense-fg ansi-bold">feelsgoodgoods</span>/                              <span class="ansi-blue-intense-fg ansi-bold">System</span>/
+ <span class="ansi-blue-intense-fg ansi-bold">labs</span>/                                        <span class="ansi-blue-intense-fg ansi-bold">tobepublished</span>/
+ menu.ipynb                                   <span class="ansi-blue-intense-fg ansi-bold">vitalSigns</span>/
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="n">datalabs</span>
 </pre></div>
 
     </div>
@@ -1736,6 +1937,13 @@ Converted index.ipynb.
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As long as you are somewhere in the folder where you are developing your library. Both of these commands will work:</p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1743,8 +1951,7 @@ Converted index.ipynb.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbdev_build_docs builds the documentation from the notebooks</span>
-<span class="o">!</span>nbdev_build_docs
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>nbdev_build_lib
 </pre></div>
 
     </div>
@@ -1757,9 +1964,58 @@ Converted index.ipynb.
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>converting: /content/drive/My Drive/datalabs/notebooks/03_nbdev.ipynb
-converting: /content/drive/My Drive/datalabs/notebooks/index.ipynb
-converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
+<pre>Converted 00_github.ipynb.
+Converted 01_colabs.ipynb.
+Converted 02_scooterExploration.ipynb.
+Converted 03_nbdev.ipynb.
+Converted index.ipynb.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>nbdev_build_docs
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;IPython.core.display.HTML object&gt;
+&lt;IPython.core.display.HTML object&gt;
+converting: /content/drive/My Drive/datalabs/notebooks/03_nbdev.ipynb
+Path(&#39;/content/drive/My Drive/datalabs/notebooks/../docs/images/company_logo.png&#39;) and Path(&#39;/content/drive/My Drive/datalabs/docs/../docs/images/company_logo.png&#39;) are the same file
+&lt;IPython.core.display.HTML object&gt;
+&lt;IPython.core.display.HTML object&gt;
+Traceback (most recent call last):
+  File &#34;/usr/local/bin/nbdev_build_docs&#34;, line 8, in &lt;module&gt;
+    sys.exit(nbdev_build_docs())
+  File &#34;/usr/local/lib/python3.6/dist-packages/fastscript/core.py&#34;, line 76, in _f
+    func(**args.__dict__)
+  File &#34;/usr/local/lib/python3.6/dist-packages/nbdev/cli.py&#34;, line 220, in nbdev_build_docs
+    notebook2html(fname=fname, force_all=force_all, n_workers=n_workers)
+  File &#34;/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py&#34;, line 580, in notebook2html
+    raise Exception(msg + &#39;\n&#39;.join([f.name for p,f in zip(passed,files) if not p]))
+Exception: Conversion failed on the following:
+03_nbdev.ipynb
 </pre>
 </div>
 </div>
@@ -1822,7 +2078,7 @@ converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># cd datalab</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -1839,7 +2095,7 @@ converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ! git pull origin master</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -1886,8 +2142,9 @@ converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/  settings.ini
-<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  README.md   setup.py
+<pre><span class="ansi-blue-intense-fg ansi-bold">build</span>/           <span class="ansi-blue-intense-fg ansi-bold">dataplay.egg-info</span>/  LICENSE      <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/    setup.py
+CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">dist</span>/               Makefile     README.md
+<span class="ansi-blue-intense-fg ansi-bold">dataplay</span>/        <span class="ansi-blue-intense-fg ansi-bold">docs</span>/               MANIFEST.in  settings.ini
 </pre>
 </div>
 </div>
@@ -1939,7 +2196,7 @@ converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;Updated Readme&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;Added Chapter 3 to the index demo&quot;</span>
 </pre></div>
 
     </div>
@@ -1952,14 +2209,14 @@ converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>On branch master
-Your branch is up to date with &#39;ORIGIN/master&#39;.
-
-Untracked files:
-	<span class="ansi-red-fg">.gitconfig</span>
-	<span class="ansi-red-fg">.pypirc</span>
-
-nothing added to commit but untracked files present
+<pre>[master 7e9c12e] Added Chapter 3 to the index demo
+ 26 files changed, 879 insertions(+), 137 deletions(-)
+ delete mode 100644 dist/dataplay-0.0.11-py3-none-any.whl
+ delete mode 100644 dist/dataplay-0.0.11.tar.gz
+ create mode 100644 dist/dataplay-0.0.12-py3-none-any.whl
+ create mode 100644 dist/dataplay-0.0.12.tar.gz
+ create mode 100644 docs/images/output_17_1.png
+ create mode 100644 docs/images/output_19_2.png
 </pre>
 </div>
 </div>
@@ -1990,14 +2247,14 @@ nothing added to commit but untracked files present
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Counting objects: 26, done.
+<pre>Counting objects: 29, done.
 Delta compression using up to 2 threads.
-Compressing objects: 100% (23/23), done.
-Writing objects: 100% (26/26), 3.62 MiB | 6.09 MiB/s, done.
-Total 26 (delta 10), reused 0 (delta 0)
-remote: Resolving deltas: 100% (10/10), completed with 10 local objects.
+Compressing objects: 100% (26/26), done.
+Writing objects: 100% (29/29), 3.93 MiB | 7.31 MiB/s, done.
+Total 29 (delta 11), reused 0 (delta 0)
+remote: Resolving deltas: 100% (11/11), completed with 9 local objects.
 To https://github.com/karpatic/dataplay.git
-   6347707..308fe40  master -&gt; master
+   95523b7..7e9c12e  master -&gt; master
 Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;ORIGIN&#39;.
 </pre>
 </div>
@@ -2046,39 +2303,9 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/  settings.ini
-<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  README.md   setup.py
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> mv ./02_scooterExploration.ipynb ./docs/
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>mv: cannot stat &#39;./02_scooterExploration.ipynb&#39;: No such file or directory
+<pre><span class="ansi-blue-intense-fg ansi-bold">build</span>/           <span class="ansi-blue-intense-fg ansi-bold">dataplay.egg-info</span>/  LICENSE      <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/    setup.py
+CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">dist</span>/               Makefile     README.md
+<span class="ansi-blue-intense-fg ansi-bold">dataplay</span>/        <span class="ansi-blue-intense-fg ansi-bold">docs</span>/               MANIFEST.in  settings.ini
 </pre>
 </div>
 </div>
@@ -2123,8 +2350,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ! echo &quot;[pypi]&quot; &gt; .pypirc</span>
-<span class="c1"># ! echo &quot;username = &#39;username&#39;&quot; &gt;&gt; .pypirc</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ! echo &quot;username = &#39;username&#39;&quot; &gt;&gt; .pypirc</span>
 <span class="c1"># ! echo &quot;password = &#39;password&#39;&quot; &gt;&gt; .pypirc</span>
 </pre></div>
 
@@ -2187,8 +2413,8 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Old version: 0.0.5
-New version: 0.0.6
+<pre>Old version: 0.0.12
+New version: 0.0.13
 </pre>
 </div>
 </div>
@@ -2227,224 +2453,32 @@ New version: 0.0.6
 </div>
 </div>
 
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 <div class="output_wrapper">
 <div class="output">
 
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>rm -rf dist
-python setup.py sdist bdist_wheel
-running sdist
-running egg_info
-writing dataplay.egg-info/PKG-INFO
-writing dependency_links to dataplay.egg-info/dependency_links.txt
-writing entry points to dataplay.egg-info/entry_points.txt
-writing top-level names to dataplay.egg-info/top_level.txt
-reading manifest template &#39;MANIFEST.in&#39;
-warning: no previously-included files matching &#39;__pycache__&#39; found under directory &#39;*&#39;
-writing manifest file &#39;dataplay.egg-info/SOURCES.txt&#39;
-running check
-creating dataplay-0.0.6
-creating dataplay-0.0.6/dataplay
-creating dataplay-0.0.6/dataplay.egg-info
-creating dataplay-0.0.6/dataplay/__pycache__
-creating dataplay-0.0.6/docs
-creating dataplay-0.0.6/docs/_data
-creating dataplay-0.0.6/docs/_data/sidebars
-creating dataplay-0.0.6/docs/_includes
-creating dataplay-0.0.6/docs/_layouts
-creating dataplay-0.0.6/docs/css
-creating dataplay-0.0.6/docs/css/fonts
-creating dataplay-0.0.6/docs/fonts
-creating dataplay-0.0.6/docs/images
-creating dataplay-0.0.6/docs/js
-creating dataplay-0.0.6/docs/licenses
-creating dataplay-0.0.6/notebooks
-copying files to dataplay-0.0.6...
-copying CONTRIBUTING.md -&gt; dataplay-0.0.6
-copying LICENSE -&gt; dataplay-0.0.6
-copying MANIFEST.in -&gt; dataplay-0.0.6
-copying Makefile -&gt; dataplay-0.0.6
-copying README.md -&gt; dataplay-0.0.6
-copying settings.ini -&gt; dataplay-0.0.6
-copying setup.py -&gt; dataplay-0.0.6
-copying dataplay/__init__.py -&gt; dataplay-0.0.6/dataplay
-copying dataplay/_nbdev.py -&gt; dataplay-0.0.6/dataplay
-copying dataplay/acsDownload.py -&gt; dataplay-0.0.6/dataplay
-copying dataplay/geoms.py -&gt; dataplay-0.0.6/dataplay
-copying dataplay/merge.py -&gt; dataplay-0.0.6/dataplay
-copying dataplay.egg-info/PKG-INFO -&gt; dataplay-0.0.6/dataplay.egg-info
-copying dataplay.egg-info/SOURCES.txt -&gt; dataplay-0.0.6/dataplay.egg-info
-copying dataplay.egg-info/dependency_links.txt -&gt; dataplay-0.0.6/dataplay.egg-info
-copying dataplay.egg-info/entry_points.txt -&gt; dataplay-0.0.6/dataplay.egg-info
-copying dataplay.egg-info/not-zip-safe -&gt; dataplay-0.0.6/dataplay.egg-info
-copying dataplay.egg-info/top_level.txt -&gt; dataplay-0.0.6/dataplay.egg-info
-copying dataplay/__pycache__/__init__.cpython-36.pyc -&gt; dataplay-0.0.6/dataplay/__pycache__
-copying dataplay/__pycache__/_nbdev.cpython-36.pyc -&gt; dataplay-0.0.6/dataplay/__pycache__
-copying dataplay/__pycache__/acsDownload.cpython-36.pyc -&gt; dataplay-0.0.6/dataplay/__pycache__
-copying dataplay/__pycache__/geoms.cpython-36.pyc -&gt; dataplay-0.0.6/dataplay/__pycache__
-copying dataplay/__pycache__/merge.cpython-36.pyc -&gt; dataplay-0.0.6/dataplay/__pycache__
-copying docs/.gitignore -&gt; dataplay-0.0.6/docs
-copying docs/ACS_Explore_and_Download.html -&gt; dataplay-0.0.6/docs
-copying docs/ACS_From_Download_To_Gif.html -&gt; dataplay-0.0.6/docs
-copying docs/Animated_Map_Change_in_Value_over_Time.html -&gt; dataplay-0.0.6/docs
-copying docs/Gemfile -&gt; dataplay-0.0.6/docs
-copying docs/Map_Basics_Intake_and_Operations.html -&gt; dataplay-0.0.6/docs
-copying docs/Merge_Data.html -&gt; dataplay-0.0.6/docs
-copying docs/_config.yml -&gt; dataplay-0.0.6/docs
-copying docs/feed.xml -&gt; dataplay-0.0.6/docs
-copying docs/index.html -&gt; dataplay-0.0.6/docs
-copying docs/sidebar.json -&gt; dataplay-0.0.6/docs
-copying docs/sitemap.xml -&gt; dataplay-0.0.6/docs
-copying docs/tooltips.json -&gt; dataplay-0.0.6/docs
-copying docs/_data/alerts.yml -&gt; dataplay-0.0.6/docs/_data
-copying docs/_data/definitions.yml -&gt; dataplay-0.0.6/docs/_data
-copying docs/_data/glossary.yml -&gt; dataplay-0.0.6/docs/_data
-copying docs/_data/tags.yml -&gt; dataplay-0.0.6/docs/_data
-copying docs/_data/terms.yml -&gt; dataplay-0.0.6/docs/_data
-copying docs/_data/topnav.yml -&gt; dataplay-0.0.6/docs/_data
-copying docs/_data/sidebars/home_sidebar.yml -&gt; dataplay-0.0.6/docs/_data/sidebars
-copying docs/_includes/archive.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/callout.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/footer.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/google_analytics.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/head.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/head_print.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/image.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/important.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/initialize_shuffle.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/inline_image.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/links.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/note.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/search_google_custom.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/search_simple_jekyll.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/sidebar.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/tip.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/toc.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/topnav.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_includes/warning.html -&gt; dataplay-0.0.6/docs/_includes
-copying docs/_layouts/default.html -&gt; dataplay-0.0.6/docs/_layouts
-copying docs/_layouts/default_print.html -&gt; dataplay-0.0.6/docs/_layouts
-copying docs/_layouts/none.html -&gt; dataplay-0.0.6/docs/_layouts
-copying docs/_layouts/page.html -&gt; dataplay-0.0.6/docs/_layouts
-copying docs/_layouts/page_print.html -&gt; dataplay-0.0.6/docs/_layouts
-copying docs/css/bootstrap.min.css -&gt; dataplay-0.0.6/docs/css
-copying docs/css/boxshadowproperties.css -&gt; dataplay-0.0.6/docs/css
-copying docs/css/customstyles.css -&gt; dataplay-0.0.6/docs/css
-copying docs/css/font-awesome.min.css -&gt; dataplay-0.0.6/docs/css
-copying docs/css/modern-business.css -&gt; dataplay-0.0.6/docs/css
-copying docs/css/printstyles.css -&gt; dataplay-0.0.6/docs/css
-copying docs/css/syntax.css -&gt; dataplay-0.0.6/docs/css
-copying docs/css/theme-blue.css -&gt; dataplay-0.0.6/docs/css
-copying docs/css/theme-green.css -&gt; dataplay-0.0.6/docs/css
-copying docs/css/fonts/FontAwesome.otf -&gt; dataplay-0.0.6/docs/css/fonts
-copying docs/css/fonts/fontawesome-webfont.eot -&gt; dataplay-0.0.6/docs/css/fonts
-copying docs/css/fonts/fontawesome-webfont.svg -&gt; dataplay-0.0.6/docs/css/fonts
-copying docs/css/fonts/fontawesome-webfont.ttf -&gt; dataplay-0.0.6/docs/css/fonts
-copying docs/css/fonts/fontawesome-webfont.woff -&gt; dataplay-0.0.6/docs/css/fonts
-copying docs/css/fonts/fontawesome-webfont.woff2 -&gt; dataplay-0.0.6/docs/css/fonts
-copying docs/fonts/FontAwesome.otf -&gt; dataplay-0.0.6/docs/fonts
-copying docs/fonts/fontawesome-webfont.eot -&gt; dataplay-0.0.6/docs/fonts
-copying docs/fonts/fontawesome-webfont.svg -&gt; dataplay-0.0.6/docs/fonts
-copying docs/fonts/fontawesome-webfont.ttf -&gt; dataplay-0.0.6/docs/fonts
-copying docs/fonts/fontawesome-webfont.woff -&gt; dataplay-0.0.6/docs/fonts
-copying docs/fonts/glyphicons-halflings-regular.eot -&gt; dataplay-0.0.6/docs/fonts
-copying docs/fonts/glyphicons-halflings-regular.svg -&gt; dataplay-0.0.6/docs/fonts
-copying docs/fonts/glyphicons-halflings-regular.ttf -&gt; dataplay-0.0.6/docs/fonts
-copying docs/fonts/glyphicons-halflings-regular.woff -&gt; dataplay-0.0.6/docs/fonts
-copying docs/fonts/glyphicons-halflings-regular.woff2 -&gt; dataplay-0.0.6/docs/fonts
-copying docs/images/company_logo.png -&gt; dataplay-0.0.6/docs/images
-copying docs/images/company_logo_big.png -&gt; dataplay-0.0.6/docs/images
-copying docs/images/doc_example.png -&gt; dataplay-0.0.6/docs/images
-copying docs/images/export_example.png -&gt; dataplay-0.0.6/docs/images
-copying docs/images/favicon.ico -&gt; dataplay-0.0.6/docs/images
-copying docs/images/workflowarrow.png -&gt; dataplay-0.0.6/docs/images
-copying docs/js/customscripts.js -&gt; dataplay-0.0.6/docs/js
-copying docs/js/jekyll-search.js -&gt; dataplay-0.0.6/docs/js
-copying docs/js/jquery.ba-throttle-debounce.min.js -&gt; dataplay-0.0.6/docs/js
-copying docs/js/jquery.navgoco.min.js -&gt; dataplay-0.0.6/docs/js
-copying docs/js/jquery.shuffle.min.js -&gt; dataplay-0.0.6/docs/js
-copying docs/js/toc.js -&gt; dataplay-0.0.6/docs/js
-copying docs/licenses/LICENSE -&gt; dataplay-0.0.6/docs/licenses
-copying docs/licenses/LICENSE-BSD-NAVGOCO.txt -&gt; dataplay-0.0.6/docs/licenses
-copying notebooks/.gitattributes -&gt; dataplay-0.0.6/notebooks
-copying notebooks/.last_checked -&gt; dataplay-0.0.6/notebooks
-copying notebooks/01_ACS_Explore_and_Download.ipynb -&gt; dataplay-0.0.6/notebooks
-copying notebooks/02_Merge_Data.ipynb -&gt; dataplay-0.0.6/notebooks
-copying notebooks/03_Map_Basics_Intake_and_Operations.ipynb -&gt; dataplay-0.0.6/notebooks
-copying notebooks/04_Animated_Map_Change_in_Value_over_Time.ipynb -&gt; dataplay-0.0.6/notebooks
-copying notebooks/05_ACS_From_Download_To_Gif.ipynb -&gt; dataplay-0.0.6/notebooks
-copying notebooks/index.ipynb -&gt; dataplay-0.0.6/notebooks
-Writing dataplay-0.0.6/setup.cfg
-creating dist
-Creating tar archive
-removing &#39;dataplay-0.0.6&#39; (and everything under it)
-running bdist_wheel
-running build
-running build_py
-copying dataplay/geoms.py -&gt; build/lib/dataplay
-copying dataplay/__init__.py -&gt; build/lib/dataplay
-copying dataplay/merge.py -&gt; build/lib/dataplay
-copying dataplay/acsDownload.py -&gt; build/lib/dataplay
-copying dataplay/_nbdev.py -&gt; build/lib/dataplay
-copying dataplay/__pycache__/__init__.cpython-36.pyc -&gt; build/lib/dataplay/__pycache__
-copying dataplay/__pycache__/_nbdev.cpython-36.pyc -&gt; build/lib/dataplay/__pycache__
-copying dataplay/__pycache__/acsDownload.cpython-36.pyc -&gt; build/lib/dataplay/__pycache__
-copying dataplay/__pycache__/geoms.cpython-36.pyc -&gt; build/lib/dataplay/__pycache__
-copying dataplay/__pycache__/merge.cpython-36.pyc -&gt; build/lib/dataplay/__pycache__
-installing to build/bdist.linux-x86_64/wheel
-running install
-running install_lib
-creating build/bdist.linux-x86_64/wheel
-creating build/bdist.linux-x86_64/wheel/dataplay
-copying build/lib/dataplay/__init__.py -&gt; build/bdist.linux-x86_64/wheel/dataplay
-copying build/lib/dataplay/merge.py -&gt; build/bdist.linux-x86_64/wheel/dataplay
-copying build/lib/dataplay/geoms.py -&gt; build/bdist.linux-x86_64/wheel/dataplay
-copying build/lib/dataplay/acsDownload.py -&gt; build/bdist.linux-x86_64/wheel/dataplay
-copying build/lib/dataplay/_nbdev.py -&gt; build/bdist.linux-x86_64/wheel/dataplay
-creating build/bdist.linux-x86_64/wheel/dataplay/__pycache__
-copying build/lib/dataplay/__pycache__/_nbdev.cpython-36.pyc -&gt; build/bdist.linux-x86_64/wheel/dataplay/__pycache__
-copying build/lib/dataplay/__pycache__/acsDownload.cpython-36.pyc -&gt; build/bdist.linux-x86_64/wheel/dataplay/__pycache__
-copying build/lib/dataplay/__pycache__/merge.cpython-36.pyc -&gt; build/bdist.linux-x86_64/wheel/dataplay/__pycache__
-copying build/lib/dataplay/__pycache__/__init__.cpython-36.pyc -&gt; build/bdist.linux-x86_64/wheel/dataplay/__pycache__
-copying build/lib/dataplay/__pycache__/geoms.cpython-36.pyc -&gt; build/bdist.linux-x86_64/wheel/dataplay/__pycache__
-running install_egg_info
-Copying dataplay.egg-info to build/bdist.linux-x86_64/wheel/dataplay-0.0.6-py3.6.egg-info
-running install_scripts
-adding license file &#34;LICENSE&#34; (matched pattern &#34;LICEN[CS]E*&#34;)
-creating build/bdist.linux-x86_64/wheel/dataplay-0.0.6.dist-info/WHEEL
-creating &#39;dist/dataplay-0.0.6-py3-none-any.whl&#39; and adding &#39;build/bdist.linux-x86_64/wheel&#39; to it
-adding &#39;dataplay/__init__.py&#39;
-adding &#39;dataplay/_nbdev.py&#39;
-adding &#39;dataplay/acsDownload.py&#39;
-adding &#39;dataplay/geoms.py&#39;
-adding &#39;dataplay/merge.py&#39;
-adding &#39;dataplay/__pycache__/__init__.cpython-36.pyc&#39;
-adding &#39;dataplay/__pycache__/_nbdev.cpython-36.pyc&#39;
-adding &#39;dataplay/__pycache__/acsDownload.cpython-36.pyc&#39;
-adding &#39;dataplay/__pycache__/geoms.cpython-36.pyc&#39;
-adding &#39;dataplay/__pycache__/merge.cpython-36.pyc&#39;
-adding &#39;dataplay-0.0.6.dist-info/LICENSE&#39;
-adding &#39;dataplay-0.0.6.dist-info/METADATA&#39;
-adding &#39;dataplay-0.0.6.dist-info/WHEEL&#39;
-adding &#39;dataplay-0.0.6.dist-info/entry_points.txt&#39;
-adding &#39;dataplay-0.0.6.dist-info/top_level.txt&#39;
-adding &#39;dataplay-0.0.6.dist-info/RECORD&#39;
-removing build/bdist.linux-x86_64/wheel
-twine upload --repository pypi dist/*
-Uploading distributions to https://upload.pypi.org/legacy/
-Enter your username: karpatic
-/usr/local/lib/python3.6/dist-packages/twine/auth.py:72: UserWarning: No recommended backend was available. Install a recommended 3rd party backend package; or, install the keyrings.alt package if you want to use the non-recommended backends. See https://pypi.org/project/keyring for details.
-  warnings.warn(str(exc))
-Enter your password: 
-Uploading dataplay-0.0.6-py3-none-any.whl
-100% 35.3k/35.3k [00:01&lt;00:00, 34.0kB/s]
-Uploading dataplay-0.0.6.tar.gz
-100% 2.98M/2.98M [00:01&lt;00:00, 1.93MB/s]
-
-View at:
-https://pypi.org/project/dataplay/0.0.6/
+<pre><span class="ansi-blue-intense-fg ansi-bold">build</span>/           <span class="ansi-blue-intense-fg ansi-bold">dataplay.egg-info</span>/  LICENSE      <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/    setup.py
+CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">dist</span>/               Makefile     README.md
+<span class="ansi-blue-intense-fg ansi-bold">dataplay</span>/        <span class="ansi-blue-intense-fg ansi-bold">docs</span>/               MANIFEST.in  settings.ini
 </pre>
 </div>
 </div>

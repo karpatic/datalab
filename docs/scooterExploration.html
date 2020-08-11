@@ -34,7 +34,7 @@ sidebar: home_sidebar
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># do you see this? - Carlos</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -51,7 +51,7 @@ sidebar: home_sidebar
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Hello world! - Michael</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -68,7 +68,7 @@ sidebar: home_sidebar
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Checking - Brian</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -98,8 +98,7 @@ sidebar: home_sidebar
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># (Optional) Run this cell to gain access to Google Drive (Colabs only) </span>
-<span class="kn">from</span> <span class="nn">google.colab</span> <span class="k">import</span> <span class="n">drive</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="k">import</span> <span class="n">drive</span>
 
 <span class="c1"># Colabs operates in a virtualized enviornment</span>
 <span class="c1"># Colabs default directory is at ~/content.</span>
@@ -118,11 +117,7 @@ sidebar: home_sidebar
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Go to this URL in a browser: https://accounts.google.com/o/oauth2/auth?client_id=947318989803-6bn6qk8qdgf4n4g3pfee6491hc0brc4i.apps.googleusercontent.com&amp;redirect_uri=urn%3aietf%3awg%3aoauth%3a2.0%3aoob&amp;response_type=code&amp;scope=email%20https%3a%2f%2fwww.googleapis.com%2fauth%2fdocs.test%20https%3a%2f%2fwww.googleapis.com%2fauth%2fdrive%20https%3a%2f%2fwww.googleapis.com%2fauth%2fdrive.photos.readonly%20https%3a%2f%2fwww.googleapis.com%2fauth%2fpeopleapi.readonly
-
-Enter your authorization code:
-··········
-Mounted at /content/drive
+<pre>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&#34;/content/drive&#34;, force_remount=True).
 </pre>
 </div>
 </div>
@@ -140,25 +135,27 @@ Mounted at /content/drive
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Your file path will be different</span>
-<span class="o">!</span> <span class="nb">cd</span> ./drive/<span class="s1">&#39;My Drive&#39;</span>/colabs/DATA/scooter
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> <span class="nb">cd</span> ./drive/<span class="s1">&#39;My Drive&#39;</span>/BNIA/responsive_records/Routes
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>/bin/bash: line 0: cd: ./drive/My Drive/colabs/DATA/scooter: No such file or directory
-</pre>
 </div>
-</div>
+    {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># cd ./drive/&#39;My Drive&#39;/BNIA/&#39;Scooter Use Data&#39;/BNIA</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -172,8 +169,24 @@ Mounted at /content/drive
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Brian: Path to Scooter Data</span>
-<span class="o">!</span> <span class="nb">cd</span> drive/<span class="s1">&#39;My Drive&#39;</span>/BNIA/responsive_records
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">./</span><span class="n">Routes</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span><span class="nb">cd</span> ../ <span class="o">&amp;&amp;</span> ls
 </pre></div>
 
     </div>
@@ -197,9 +210,29 @@ Mounted at /content/drive
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre><span class="ansi-blue-intense-fg ansi-bold">drive</span>/  <span class="ansi-blue-intense-fg ansi-bold">sample_data</span>/
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Installs"><strong>Installs</strong><a class="anchor-link" href="#Installs"> </a></h1>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -275,16 +308,607 @@ Mounted at /content/drive
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">gpdvega</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">dataplay</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Imports"><strong>Imports</strong><a class="anchor-link" href="#Imports"> </a></h1>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
 <span class="kn">import</span> <span class="nn">dexplot</span> <span class="k">as</span> <span class="nn">dxp</span>
 <span class="kn">import</span> <span class="nn">folium</span> <span class="k">as</span> <span class="nn">fol</span>
 <span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">ipyleaflet</span> <span class="k">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">GeoData</span><span class="p">,</span> <span class="n">basemaps</span><span class="p">,</span> <span class="n">LayersControl</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="kn">import</span> <span class="nn">gpdvega</span>
+<span class="kn">import</span> <span class="nn">dataplay</span>
+<span class="c1"># These imports will handle everything</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">clear_output</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">from</span> <span class="nn">geopandas</span> <span class="k">import</span> <span class="n">GeoDataFrame</span>
+<span class="kn">import</span> <span class="nn">psycopg2</span>
+<span class="kn">import</span> <span class="nn">pyproj</span>
+<span class="kn">from</span> <span class="nn">pyproj</span> <span class="k">import</span> <span class="n">Proj</span><span class="p">,</span> <span class="n">transform</span>
+<span class="c1"># conda install -c conda-forge proj4</span>
+<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="k">import</span> <span class="n">Point</span>
+<span class="kn">from</span> <span class="nn">shapely</span> <span class="k">import</span> <span class="n">wkb</span>
+<span class="kn">from</span> <span class="nn">shapely.wkt</span> <span class="k">import</span> <span class="n">loads</span>
+<span class="c1"># https://pypi.org/project/geopy/</span>
+<span class="kn">from</span> <span class="nn">geopy.geocoders</span> <span class="k">import</span> <span class="n">Nominatim</span>
+<span class="kn">import</span> <span class="nn">folium</span>
+<span class="kn">from</span> <span class="nn">folium</span> <span class="k">import</span> <span class="n">plugins</span>
+
+<span class="kn">from</span> <span class="nn">dataplay.merge</span> <span class="k">import</span> <span class="n">mergeDatasets</span> 
+
+<span class="kn">import</span> <span class="nn">dexplot</span> <span class="k">as</span> <span class="nn">dxp</span>
+
+<span class="c1"># In case file is KML, enable support</span>
+<span class="kn">import</span> <span class="nn">fiona</span>
+<span class="n">fiona</span><span class="o">.</span><span class="n">drvsupport</span><span class="o">.</span><span class="n">supported_drivers</span><span class="p">[</span><span class="s1">&#39;kml&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;rw&#39;</span>
+<span class="n">fiona</span><span class="o">.</span><span class="n">drvsupport</span><span class="o">.</span><span class="n">supported_drivers</span><span class="p">[</span><span class="s1">&#39;KML&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;rw&#39;</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-3-190a3405b270&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-green-fg">import</span> json
+<span class="ansi-green-intense-fg ansi-bold">      7</span> <span class="ansi-green-fg">import</span> altair <span class="ansi-green-fg">as</span> alt
+<span class="ansi-green-fg">----&gt; 8</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> gpdvega
+<span class="ansi-green-intense-fg ansi-bold">      9</span> <span class="ansi-green-fg">import</span> dataplay
+<span class="ansi-green-intense-fg ansi-bold">     10</span> <span class="ansi-red-fg"># These imports will handle everything</span>
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;gpdvega&#39;
+
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span><span class="ansi-green-fg">
+NOTE: If your import is failing due to a missing package, you can
+manually install dependencies using either !pip or !apt.
+
+To view examples of installing some common dependencies, click the
+&#34;Open Examples&#34; button below.
+</span><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Assigning Start and End coordianates</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdf_left</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">gdf_left</span> <span class="o">=</span> <span class="n">gdf_left</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">,</span><span class="s1">&#39;rightx&#39;</span><span class="p">,</span> <span class="s1">&#39;righty&#39;</span><span class="p">])</span>
+
+<span class="n">gdf_right</span><span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">gdf_right</span> <span class="o">=</span> <span class="n">gdf_right</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">,</span><span class="s1">&#39;leftx&#39;</span><span class="p">,</span> <span class="s1">&#39;lefty&#39;</span><span class="p">])</span>
+
+<span class="n">gdf_right</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-65-888462948aac&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>gdf_left <span class="ansi-blue-fg">=</span> gdf<span class="ansi-blue-fg">.</span>copy<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> gdf_left <span class="ansi-blue-fg">=</span> gdf_left<span class="ansi-blue-fg">.</span>drop<span class="ansi-blue-fg">(</span>columns <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;geometry&#39;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;rightx&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;righty&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> 
+<span class="ansi-green-intense-fg ansi-bold">      4</span> gdf_right<span class="ansi-blue-fg">=</span> gdf<span class="ansi-blue-fg">.</span>copy<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> gdf_right <span class="ansi-blue-fg">=</span> gdf_right<span class="ansi-blue-fg">.</span>drop<span class="ansi-blue-fg">(</span>columns <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;geometry&#39;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;leftx&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;lefty&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;gdf&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="k">import</span> <span class="n">LineString</span>
+
+<span class="c1"># only works with linstrings right now</span>
+<span class="k">def</span> <span class="nf">split</span><span class="p">(</span><span class="n">geom</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span> <span class="nb">str</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">geom</span><span class="p">))</span> <span class="p">)</span>
+  <span class="c1">#Linestring might not be the actual type, so this may need to be fied. </span>
+  <span class="c1">#IF its not a linestring then dont run it and stuff &#39;false&#39; and the datatype</span>
+  <span class="k">if</span> <span class="nb">str</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">geom</span><span class="p">))</span> <span class="o">==</span> <span class="s2">&quot;&lt;class &#39;shapely.geometry.linestring.LineString&#39;&gt;&quot;</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">str</span><span class="p">(</span><span class="n">geom</span><span class="o">.</span><span class="n">boundary</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;MULTIPOINT EMPTY&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">geom</span><span class="o">.</span><span class="n">boundary</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">boundary</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;left x: &#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">left</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="n">left</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;left y: &#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">left</span><span class="o">.</span><span class="n">y</span><span class="p">),</span> <span class="n">left</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;right x: &#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">right</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="n">right</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;right y: &#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">right</span><span class="o">.</span><span class="n">y</span><span class="p">),</span> <span class="n">right</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">left</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">left</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">right</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">right</span><span class="o">.</span><span class="n">y</span>
+  <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">geom</span><span class="p">),</span> <span class="kc">False</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">geom</span><span class="p">)</span>
+
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="o">~</span><span class="n">gdf</span><span class="o">.</span><span class="n">isna</span><span class="p">()]</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="o">~</span><span class="n">gdf</span><span class="o">.</span><span class="n">is_empty</span><span class="p">]</span>
+ 
+<span class="c1"># This has been updated too</span>
+<span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;leftx&#39;</span><span class="p">],</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;lefty&#39;</span><span class="p">],</span><span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;rightx&#39;</span><span class="p">],</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;righty&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">gdf</span><span class="p">[</span><span class="s2">&quot;geometry&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">split</span><span class="p">))</span>
+<span class="n">gdf</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+
+<span class="ansi-red-fg">NameError</span>Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-4-80a370a5a750&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     17</span>   <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span> <span class="ansi-green-fg">return</span> <span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span> type<span class="ansi-blue-fg">(</span>geom<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span> type<span class="ansi-blue-fg">(</span>geom<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span> 
+<span class="ansi-green-fg">---&gt; 19</span><span class="ansi-red-fg"> </span>gdf <span class="ansi-blue-fg">=</span> gdf<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">~</span>gdf<span class="ansi-blue-fg">.</span>isna<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span> gdf <span class="ansi-blue-fg">=</span> gdf<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">~</span>gdf<span class="ansi-blue-fg">.</span>is_empty<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">     21</span> 
+
+<span class="ansi-red-fg">NameError</span>: name &#39;gdf&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">register_matplotlib_converters</span><span class="p">()</span>
+
+<span class="n">temp_gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span>
+    <span class="n">gdf_right</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">gdf_right</span><span class="o">.</span><span class="n">rightx</span><span class="p">,</span> <span class="n">gdf_right</span><span class="o">.</span><span class="n">righty</span><span class="p">))</span>
+<span class="n">temp_gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-67-8fd78edc1158&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-intense-fg ansi-bold">      3</span> temp_gdf = gpd.GeoDataFrame(
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg">     gdf_right, geometry=gpd.points_from_xy(gdf_right.rightx, gdf_right.righty))
+</span><span class="ansi-green-intense-fg ansi-bold">      5</span> temp_gdf<span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;gdf_right&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdf_right</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-68-eacbec86be72&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>gdf_right<span class="ansi-blue-fg">.</span>dtypes
+
+<span class="ansi-red-fg">NameError</span>: name &#39;gdf_right&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdf_right</span><span class="p">[</span><span class="s1">&#39;rightx&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">gdf_right</span><span class="p">[</span><span class="s1">&#39;rightx&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-69-70d9e3b5f07d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>gdf_right<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;rightx&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">=</span>pd<span class="ansi-blue-fg">.</span>to_numeric<span class="ansi-blue-fg">(</span>gdf_right<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;rightx&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> errors<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;coerce&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;gdf_right&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdf_right</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;rightRouts.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-70-61bcf60e70de&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>gdf_right<span class="ansi-blue-fg">.</span>to_csv<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;rightRouts.csv&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;gdf_right&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdf_right</span><span class="p">[</span><span class="s1">&#39;righty&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf_right</span><span class="p">[</span><span class="s1">&#39;righty&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">gdf_right</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-71-048ab6ddbcaa&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>gdf_right<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;righty&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> gdf_right<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;righty&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>astype<span class="ansi-blue-fg">(</span>str<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> gdf_right<span class="ansi-blue-fg">.</span>dtypes
+
+<span class="ansi-red-fg">NameError</span>: name &#39;gdf_right&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dataplay.geoms</span> <span class="k">import</span> <span class="n">readInGeometryData</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/usr/local/lib/python3.6/dist-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use &#34;pip install psycopg2-binary&#34; instead. For details see: &lt;http://initd.org/psycopg/docs/install.html#binary-install-from-pypi&gt;.
+  &#34;&#34;&#34;)
+/usr/local/lib/python3.6/dist-packages/dataplay/acsDownload.py:27: FutureWarning: Passing a negative integer is deprecated in version 1.0 and will not be supported in future version. Instead, use None to not limit the column width.
+  pd.set_option(&#39;display.max_colwidth&#39;, -1)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">shapely</span> <span class="k">import</span> <span class="n">wkt</span>
+<span class="c1">#gdf_right[&#39;geometry&#39;] = gdf_right[&#39;right&#39;].apply(wkt.loads)</span>
+<span class="n">gdf_right</span><span class="p">[</span><span class="s1">&#39;strCol&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">gdf_right</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">gdf_right</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf_right</span><span class="p">[</span><span class="s1">&#39;strCol&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">wkt</span><span class="o">.</span><span class="n">loads</span><span class="p">)</span>
+<span class="n">gdf_right</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+
+<span class="ansi-red-fg">NameError</span>Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-6-6025a63d3d2b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">from</span> shapely <span class="ansi-green-fg">import</span> wkt
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg">#gdf_right[&#39;geometry&#39;] = gdf_right[&#39;right&#39;].apply(wkt.loads)</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>gdf_right<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;strCol&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">=</span>gdf_right<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;right&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>astype<span class="ansi-blue-fg">(</span>str<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> gdf_right<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;geometry&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> gdf_right<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;strCol&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>apply<span class="ansi-blue-fg">(</span>wkt<span class="ansi-blue-fg">.</span>loads<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> gdf_right<span class="ansi-blue-fg">.</span>head<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;gdf_right&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="k">import</span> <span class="n">LineString</span>
+ 
+<span class="k">def</span> <span class="nf">split</span><span class="p">(</span><span class="n">geom</span><span class="p">):</span> 
+    <span class="nb">print</span><span class="p">(</span> <span class="nb">str</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">geom</span><span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="n">geom</span><span class="o">.</span><span class="n">is_empty</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">str</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">geom</span><span class="p">)</span> <span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;&lt;class &#39;shapely.geometry.linestring.LineString&#39;&gt;&quot;</span> <span class="ow">or</span> <span class="nb">str</span><span class="p">(</span><span class="n">geom</span><span class="o">.</span><span class="n">boundary</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;MULTIPOINT EMPTY&#39;</span><span class="p">:</span>
+    
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;First print&#39;</span><span class="p">)</span>
+      <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">boundary</span>
+      
+      <span class="c1"># This is new</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;left x: &#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">left</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="n">left</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;left y: &#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">left</span><span class="o">.</span><span class="n">y</span><span class="p">),</span> <span class="n">left</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;right x: &#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">right</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="n">right</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;right y: &#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">right</span><span class="o">.</span><span class="n">y</span><span class="p">),</span> <span class="n">right</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+      
+      <span class="k">return</span> <span class="n">left</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">left</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">right</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">right</span><span class="o">.</span><span class="n">y</span>
+    <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">geom</span><span class="p">)</span>
+ 
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="o">~</span><span class="n">gdf</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span> <span class="p">]</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="o">~</span><span class="n">gdf</span><span class="o">.</span><span class="n">is_empty</span><span class="p">]</span>
+ 
+<span class="c1"># This has been updated too</span>
+<span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;leftx&#39;</span><span class="p">],</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;lefty&#39;</span><span class="p">],</span><span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;rightx&#39;</span><span class="p">],</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;righty&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">gdf</span><span class="p">[</span><span class="s2">&quot;geometry&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">split</span><span class="p">))</span>
+<span class="n">gdf</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+
+<span class="ansi-red-fg">NameError</span>Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-7-5cc69d65d43a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     19</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span> <span class="ansi-green-fg">return</span> <span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span> type<span class="ansi-blue-fg">(</span>geom<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span> 
+<span class="ansi-green-fg">---&gt; 21</span><span class="ansi-red-fg"> </span>gdf <span class="ansi-blue-fg">=</span> gdf<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">~</span>gdf<span class="ansi-blue-fg">.</span>isna<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">     22</span> gdf <span class="ansi-blue-fg">=</span> gdf<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">~</span>gdf<span class="ansi-blue-fg">.</span>is_empty<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">     23</span> 
+
+<span class="ansi-red-fg">NameError</span>: name &#39;gdf&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dataplay.geoms</span> <span class="k">import</span> <span class="n">readInGeometryData</span>
+
+<span class="c1">#gdf_right[&#39;geometry&#39;] = gdf_right[&#39;strCol&#39;].apply(lambda x: loads( str(x) ))</span>
+<span class="n">csaMap</span> <span class="o">=</span> <span class="n">readInGeometryData</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">gdf_right</span><span class="p">,</span> <span class="n">porg</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="n">geom</span><span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">lat</span><span class="o">=</span> <span class="s1">&#39;rightx&#39;</span><span class="p">,</span> <span class="n">lng</span><span class="o">=</span> <span class="s1">&#39;righty&#39;</span><span class="p">,</span> <span class="n">revgeocode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">save</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">in_crs</span><span class="o">=</span><span class="mi">4268</span><span class="p">,</span> <span class="n">out_crs</span><span class="o">=</span><span class="mi">4268</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+
+<span class="ansi-red-fg">NameError</span>Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-8-c651bc8e9ed8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-red-fg">#gdf_right[&#39;geometry&#39;] = gdf_right[&#39;strCol&#39;].apply(lambda x: loads( str(x) ))</span>
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>csaMap <span class="ansi-blue-fg">=</span> readInGeometryData<span class="ansi-blue-fg">(</span>url<span class="ansi-blue-fg">=</span>gdf_right<span class="ansi-blue-fg">,</span> porg<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;p&#39;</span><span class="ansi-blue-fg">,</span> geom<span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span> lat<span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;rightx&#39;</span><span class="ansi-blue-fg">,</span> lng<span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;righty&#39;</span><span class="ansi-blue-fg">,</span> revgeocode<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span> save<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span> in_crs<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">4268</span><span class="ansi-blue-fg">,</span> out_crs<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">4268</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;gdf_right&#39; is not defined</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -304,8 +928,7 @@ Mounted at /content/drive
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Find Relative Path to Files</span>
-<span class="k">def</span> <span class="nf">findFile</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">file</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">findFile</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">file</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">d</span><span class="p">,</span> <span class="n">subD</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">root</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
             <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{1}</span><span class="s2">/</span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
@@ -369,20 +992,6 @@ Mounted at /content/drive
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre><span class="ansi-blue-intense-fg ansi-bold">drive</span>/  <span class="ansi-blue-intense-fg ansi-bold">sample_data</span>/
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -399,24 +1008,10 @@ Mounted at /content/drive
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span> <span class="n">Deployment</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span> <span class="s1">&#39;Trip origins-destinations by month&#39;</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>ls: cannot access &#39;Deployment&#39;: No such file or directory
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -430,12 +1025,13 @@ Mounted at /content/drive
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Example form fields</span>
-<span class="c1">#@markdown Forms support many types of fields.</span>
-<span class="n">fileName</span> <span class="o">=</span> <span class="s2">&quot;Daily Deployment average by block September 2019.csv&quot;</span>  <span class="c1">#@param [&#39;Daily Deployment average by block August 2019.csv&#39;, &#39;Daily Deployment average by block December 2019.csv&#39;, &#39;Daily Deployment average by block November 2019.csv&#39;, &#39;Daily Deployment average by block October 2019.csv&#39;, &#39;Daily Deployment average by block September 2019.csv&#39;]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@markdown Forms support many types of fields.</span>
+<span class="n">fileName</span> <span class="o">=</span> <span class="s2">&quot;Trip Destinations by block August 2019.geojson&quot;</span>  <span class="c1">#@param [&#39;Daily Deployment average by block August 2019.csv&#39;, &#39;Daily Deployment average by block December 2019.csv&#39;, &#39;Daily Deployment average by block November 2019.csv&#39;, &#39;Daily Deployment average by block October 2019.csv&#39;, &#39;Daily Deployment average by block September 2019.csv&#39;, &#39;Trip Destinations by block August 2019.geojson&#39;,&#39;Trip Destinations by block December 2019.geojson&#39;,&#39;Trip Destinations by block November 2019.geojson&#39;, &#39;Trip Destinations by block October 2019.geojson&#39;, &#39;Trip Destinations by block September 2019.geojson&#39;, &#39;Trip Origins by block August 2019.geojson&#39;,&#39;Trip Origins by block December 2019.geojson&#39;,&#39;Trip Origins by block November 2019.geojson&#39;,&#39;Trip Origins by block October 2019.geojson&#39;,&#39;Trip Origins by block September 2019.geojson&#39;]</span>
 <span class="c1">#@markdown ---</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span> <span class="n">findFile</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="n">fileName</span><span class="p">)</span> <span class="p">)</span>
+
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span> <span class="n">findFile</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="n">fileName</span><span class="p">)</span> <span class="p">)</span>
 
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -444,74 +1040,416 @@ Mounted at /content/drive
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+</div>
+    {% endraw %}
 
-<div class="output_area">
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span> <span class="o">=</span> <span class="s1">&#39;value&#39;</span><span class="p">)</span>
+</pre></div>
 
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>value</th>
-      <th>name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>NaN</td>
-      <td>Block 245102502063018</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>NaN</td>
-      <td>Block 245102006001022</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>NaN</td>
-      <td>Block 245102804033017</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>NaN</td>
-      <td>Block 245102716006003</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>NaN</td>
-      <td>Block 245102709023013</td>
-    </tr>
-  </tbody>
-</table>
+    </div>
 </div>
 </div>
 
 </div>
+    {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">point_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">point_df</span><span class="p">[</span><span class="s1">&#39;centroids&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">centroid</span>
+<span class="n">point_df</span> <span class="o">=</span> <span class="n">point_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;geometry&#39;</span><span class="p">)</span>
+<span class="n">point_df</span> <span class="o">=</span> <span class="n">point_df</span><span class="o">.</span><span class="n">set_geometry</span><span class="p">(</span><span class="s1">&#39;centroids&#39;</span><span class="p">)</span>
+<span class="n">point_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">point_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">point_df</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">point_df</span><span class="p">[</span><span class="n">point_df</span><span class="o">.</span><span class="n">value</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">baltimore</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;https://opendata.arcgis.com/datasets/b738a8587b6d479a8824d937892701d8_0.geojson&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">baltimore</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dataplay.geoms</span> <span class="k">import</span> <span class="n">workWithGeometryData</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">baltimore</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pointsInPolys</span> <span class="o">=</span> <span class="n">workWithGeometryData</span><span class="p">(</span><span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;ponp&#39;</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="n">point_df</span><span class="p">,</span> <span class="n">polys</span> <span class="o">=</span> <span class="n">baltimore</span><span class="p">,</span> <span class="n">ptsCoordCol</span> <span class="o">=</span><span class="s1">&#39;centroids&#39;</span><span class="p">,</span> 
+                                     <span class="n">polygonsCoordCol</span> <span class="o">=</span> <span class="s1">&#39;geometry&#39;</span><span class="p">,</span> <span class="n">polygonsLabel</span> <span class="o">=</span> <span class="s1">&#39;CSA2010&#39;</span><span class="p">)</span>
+<span class="n">pointsInPolys</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ponp_copy</span> <span class="o">=</span> <span class="n">pointsInPolys</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ponp_copy</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">ponp_copy</span><span class="p">[</span><span class="s1">&#39;CSA2010&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;NumberMissingCount&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ponp_copy</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">notnull</span><span class="p">()</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">ponp_copy</span><span class="p">[</span><span class="s1">&#39;CSA2010&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;NumberNotMissingCount&#39;</span><span class="p">)</span> <span class="o">/</span>
+<span class="n">ponp_copy</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">ponp_copy</span><span class="p">[</span><span class="s1">&#39;CSA2010&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;NumberMissingCount&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ponp_copy</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">notnull</span><span class="p">()</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">ponp_copy</span><span class="p">[</span><span class="s1">&#39;CSA2010&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">/</span> <span class="n">ponp_copy</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">ponp_copy</span><span class="p">[</span><span class="s1">&#39;CSA2010&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ponp_copy</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">ponp_copy</span><span class="p">[</span><span class="s1">&#39;CSA2010&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">/</span> <span class="n">ponp_copy</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">ponp_copy</span><span class="p">[</span><span class="s1">&#39;CSA2010&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ponp_copy</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;CSA2010&#39;</span><span class="p">)[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ponp_copy</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">ponp_copy</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">ponp_copy</span> <span class="o">=</span> <span class="n">ponp_copy</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">regex</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">ponp_copy_grouped</span> <span class="o">=</span> <span class="n">ponp_copy</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;CSA2010&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="c1"># ponp_copy_grouped.head()</span>
+<span class="n">ponp_copy_grouped</span> <span class="o">=</span> <span class="n">ponp_copy_grouped</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="c1"># ponp_copy_grouped.filter(lambda x: x[&#39;value&#39;].astype(int) &gt; 3)</span>
+<span class="n">ponp_copy_grouped</span> <span class="o">=</span> <span class="n">ponp_copy_grouped</span><span class="p">[</span><span class="n">ponp_copy_grouped</span><span class="o">.</span><span class="n">value</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">ponp_copy_grouped</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+
+<span class="c1"># ponp_copy.groupby(ponp_copy.groupby(&#39;CSA2010&#39;)[&#39;value&#39;].mean &gt; 50)</span>
+<span class="c1"># ponp_copy.groupby(&#39;CSA2010&#39;)[&#39;value&#39;][ ponp_copy.groupby(&#39;CSA2010&#39;)[&#39;value&#39;].mean()&gt;50 ]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">baltimore</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">baltimore</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ponp_copy_grouped</span> <span class="o">=</span> <span class="n">ponp_copy_grouped</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">baltimore</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;CSA2010&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;CSA2010&#39;</span><span class="p">)</span>
+<span class="n">ponp_copy_groupedV2</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">ponp_copy_grouped</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="s1">&#39;geometry&#39;</span><span class="p">)</span>
+<span class="n">ponp_copy_groupedV2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span> <span class="o">=</span> <span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="n">legend</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">panp</span> <span class="o">=</span> <span class="n">workWithGeometryData</span><span class="p">(</span> <span class="s1">&#39;pandp&#39;</span><span class="p">,</span> <span class="n">foodPantryLocations</span><span class="p">[</span> <span class="n">foodPantryLocations</span><span class="o">.</span><span class="n">City_1</span> <span class="o">==</span> <span class="s1">&#39;Baltimore&#39;</span> <span class="p">],</span> <span class="n">pointsInPolys</span><span class="p">,</span> <span class="n">polyColorCol</span><span class="o">=</span><span class="s1">&#39;number of points&#39;</span><span class="p">)</span>
+<span class="n">panp</span> <span class="o">=</span> <span class="n">workWithGeometryData</span><span class="p">(</span> <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;pandp&#39;</span><span class="p">,</span> <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ponp_copy</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ponp_copy</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;CSA&#39;</span><span class="p">)[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ponp_copy</span><span class="o">.</span><span class="n">CSA</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -610,8 +1548,7 @@ Mounted at /content/drive
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DataFrame.shape	Return a tuple representing the dimensionality of the DataFrame.</span>
-<span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
 
 <span class="c1">#DataFrame.size	Return an int representing the number of elements in this object.</span>
 <span class="n">df</span><span class="o">.</span><span class="n">size</span>
@@ -668,9 +1605,7 @@ Mounted at /content/drive
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This will just beautify the output</span>
-
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.expand_frame_repr&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.expand_frame_repr&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.precision&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">IPython.core.interactiveshell</span> <span class="k">import</span> <span class="n">InteractiveShell</span>
 <span class="n">InteractiveShell</span><span class="o">.</span><span class="n">ast_node_interactivity</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span>
@@ -692,8 +1627,7 @@ Mounted at /content/drive
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The attributes are what we will use.</span>
-<span class="n">in_crs</span> <span class="o">=</span> <span class="mi">2248</span> <span class="c1"># The CRS we recieve our data </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">in_crs</span> <span class="o">=</span> <span class="mi">2248</span> <span class="c1"># The CRS we recieve our data </span>
 <span class="n">out_crs</span> <span class="o">=</span> <span class="mi">4326</span> <span class="c1"># The CRS we would like to have our data represented as</span>
 <span class="n">geom</span> <span class="o">=</span> <span class="s1">&#39;geometry&#39;</span> <span class="c1"># The column where our spatial information lives.</span>
 
@@ -711,45 +1645,6 @@ Mounted at /content/drive
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-24-256ac80526e5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     11</span> 
-<span class="ansi-green-intense-fg ansi-bold">     12</span> <span class="ansi-red-fg"># Convert the geometry column datatype from a string of text into a coordinate datatype</span>
-<span class="ansi-green-fg">---&gt; 13</span><span class="ansi-red-fg"> </span>gdf<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;geometry&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> gdf<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;geometry&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>apply<span class="ansi-blue-fg">(</span><span class="ansi-green-fg">lambda</span> x<span class="ansi-blue-fg">:</span> loads<span class="ansi-blue-fg">(</span> str<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     14</span> 
-<span class="ansi-green-intense-fg ansi-bold">     15</span> <span class="ansi-red-fg"># Process the dataframe as a geodataframe with a known CRS and geom column</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.6/dist-packages/pandas/core/series.py</span> in <span class="ansi-cyan-fg">apply</span><span class="ansi-blue-fg">(self, func, convert_dtype, args, **kwds)</span>
-<span class="ansi-green-intense-fg ansi-bold">   3846</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   3847</span>                 values <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>astype<span class="ansi-blue-fg">(</span>object<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>values
-<span class="ansi-green-fg">-&gt; 3848</span><span class="ansi-red-fg">                 </span>mapped <span class="ansi-blue-fg">=</span> lib<span class="ansi-blue-fg">.</span>map_infer<span class="ansi-blue-fg">(</span>values<span class="ansi-blue-fg">,</span> f<span class="ansi-blue-fg">,</span> convert<span class="ansi-blue-fg">=</span>convert_dtype<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   3849</span> 
-<span class="ansi-green-intense-fg ansi-bold">   3850</span>         <span class="ansi-green-fg">if</span> len<span class="ansi-blue-fg">(</span>mapped<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">and</span> isinstance<span class="ansi-blue-fg">(</span>mapped<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> Series<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">pandas/_libs/lib.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.lib.map_infer</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-green-fg">&lt;ipython-input-24-256ac80526e5&gt;</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(x)</span>
-<span class="ansi-green-intense-fg ansi-bold">     11</span> 
-<span class="ansi-green-intense-fg ansi-bold">     12</span> <span class="ansi-red-fg"># Convert the geometry column datatype from a string of text into a coordinate datatype</span>
-<span class="ansi-green-fg">---&gt; 13</span><span class="ansi-red-fg"> </span>gdf<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;geometry&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> gdf<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;geometry&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>apply<span class="ansi-blue-fg">(</span><span class="ansi-green-fg">lambda</span> x<span class="ansi-blue-fg">:</span> loads<span class="ansi-blue-fg">(</span> str<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     14</span> 
-<span class="ansi-green-intense-fg ansi-bold">     15</span> <span class="ansi-red-fg"># Process the dataframe as a geodataframe with a known CRS and geom column</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;loads&#39; is not defined</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -846,8 +1741,7 @@ Mounted at /content/drive
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># scooterdf.to_csv(&#39;./scooterdf.csv&#39;, index=False)</span>
-<span class="c1"># gdf.drop(columns=&#39;geometry&#39;).to_csv(&#39;./boundsdf.csv&#39;, index=False)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># gdf.drop(columns=&#39;geometry&#39;).to_csv(&#39;./boundsdf.csv&#39;, index=False)</span>
 </pre></div>
 
     </div>
@@ -1047,6 +1941,20 @@ Mounted at /content/drive
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>ls: cannot access &#39;Routes&#39;: No such file or directory
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -1091,38 +1999,9 @@ Mounted at /content/drive
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Example form fields</span>
-<span class="c1">#@markdown Forms support many types of fields.</span>
-<span class="n">fileName</span> <span class="o">=</span> <span class="s2">&quot;Routing September 2019.geojson&quot;</span>  <span class="c1">#@param [&#39;Routing August 2019.geojson&#39;, &#39;Routing October 2019.geojson&#39;, &#39;Routing December 2019.geojson&#39;, &#39;Routing September 2019.geojson&#39;, &#39;Routing November 2019.geojson&#39;]</span>
-<span class="n">columnName</span> <span class="o">=</span> <span class="s2">&quot;color&quot;</span>  <span class="c1">#@param [&#39;id&#39;, &#39;color&#39;, &#39;streetname&#39;, &#39;trip_count_sum&#39;, &#39;trip_count_average&#39;, &#39;trip_count_percent&#39;]</span>
-<span class="c1">#@markdown ---</span>
-
-<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span> <span class="n">findFile</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="n">fileName</span><span class="p">)</span> <span class="p">)</span>
-
-<span class="n">gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span> <span class="n">column</span> <span class="o">=</span> <span class="n">columnName</span><span class="p">)</span>
-<span class="n">gdf</span><span class="o">.</span><span class="n">columns</span>
-<span class="n">gdf</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># @title Example form fields</span>
-<span class="c1">#@markdown Forms support many types of fields.</span>
-<span class="n">fileName</span> <span class="o">=</span> <span class="s1">&#39;Routing October 2019.geojson&#39;</span>  <span class="c1">#@param [&#39;Routing August 2019.geojson&#39;, &#39;Routing October 2019.geojson&#39;, &#39;Routing December 2019.geojson&#39;, &#39;Routing September 2019.geojson&#39;, &#39;Routing November 2019.geojson&#39;]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@markdown Forms support many types of fields.</span>
+<span class="n">fileName</span> <span class="o">=</span> <span class="s1">&#39;Routing December 2019.geojson&#39;</span>  <span class="c1">#@param [&#39;Routing August 2019.geojson&#39;, &#39;Routing October 2019.geojson&#39;, &#39;Routing December 2019.geojson&#39;, &#39;Routing September 2019.geojson&#39;, &#39;Routing November 2019.geojson&#39;]</span>
 <span class="n">columnName</span> <span class="o">=</span> <span class="s2">&quot;streetname&quot;</span>  <span class="c1">#@param [&#39;id&#39;, &#39;color&#39;, &#39;streetname&#39;, &#39;trip_count_sum&#39;, &#39;trip_count_average&#39;, &#39;trip_count_percent&#39;]</span>
-
 
 
 <span class="c1">#@markdown ---</span>
@@ -1148,7 +2027,7 @@ Mounted at /content/drive
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f7b7c6af978&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fc51bc6a470&gt;</pre>
 </div>
 
 </div>
@@ -1202,7 +2081,7 @@ Mounted at /content/drive
       <td>rgb(213, 228, 239)</td>
       <td>Jefferson Street</td>
       <td>94</td>
-      <td>3.03</td>
+      <td>3.032258</td>
       <td>0.0%</td>
     </tr>
     <tr>
@@ -1211,7 +2090,7 @@ Mounted at /content/drive
       <td>rgb(160, 185, 216)</td>
       <td></td>
       <td>790</td>
-      <td>25.48</td>
+      <td>25.483871</td>
       <td>0.4%</td>
     </tr>
     <tr>
@@ -1220,7 +2099,7 @@ Mounted at /content/drive
       <td>rgb(202, 219, 235)</td>
       <td>Harford Avenue</td>
       <td>164</td>
-      <td>5.29</td>
+      <td>5.290323</td>
       <td>0.1%</td>
     </tr>
     <tr>
@@ -1229,7 +2108,7 @@ Mounted at /content/drive
       <td>rgb(224, 236, 244)</td>
       <td></td>
       <td>45</td>
-      <td>1.45</td>
+      <td>1.451613</td>
       <td>0.0%</td>
     </tr>
     <tr>
@@ -1238,7 +2117,7 @@ Mounted at /content/drive
       <td>rgb(165, 190, 219)</td>
       <td></td>
       <td>655</td>
-      <td>21.13</td>
+      <td>21.129032</td>
       <td>0.3%</td>
     </tr>
   </tbody>
@@ -1266,6 +2145,12 @@ Mounted at /content/drive
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Testing-Area">Testing Area<a class="anchor-link" href="#Testing-Area"> </a></h1>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1273,68 +2158,53 @@ Mounted at /content/drive
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Pretty Map</span>
-<span class="c1">#@markdown Switches Between Fields</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="o">!</span>jupyter nbextension <span class="nb">enable</span> --py widgetsnbextension
+<span class="kn">from</span> <span class="nn">IPython.core.interactiveshell</span> <span class="k">import</span> <span class="n">InteractiveShell</span>
+<span class="n">InteractiveShell</span><span class="o">.</span><span class="n">ast_node_interactivity</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="k">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interact_manual</span>
 
-<span class="kn">from</span> <span class="nn">ipyleaflet</span> <span class="k">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">GeoData</span><span class="p">,</span> <span class="n">basemaps</span><span class="p">,</span> <span class="n">LayersControl</span>
+<span class="n">tract</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span> <span class="n">findFile</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="n">fileName</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">tract</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">tract</span><span class="o">.</span><span class="n">crs</span>
 
+<span class="n">alt</span><span class="o">.</span><span class="n">data_transformers</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">max_rows</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 
-<span class="n">routes</span> <span class="o">=</span>  <span class="s1">&#39;Routing December 2019.geojson&#39;</span>  <span class="c1">#@param [&#39;Routing August 2019.geojson&#39;, &#39;Routing October 2019.geojson&#39;, &#39;Routing December 2019.geojson&#39;, &#39;Routing September 2019.geojson&#39;, &#39;Routing November 2019.geojson&#39;]</span>
-<span class="c1">##rivers = geopandas.read_file(&quot;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_rivers_lake_centerlines.zip&quot;)</span>
+<span class="n">fileName</span> <span class="o">=</span> <span class="s1">&#39;Routing December 2019.geojson&#39;</span>  <span class="c1">#@param [&#39;Routing August 2019.geojson&#39;, &#39;Routing October 2019.geojson&#39;, &#39;Routing December 2019.geojson&#39;, &#39;Routing September 2019.geojson&#39;, &#39;Routing November 2019.geojson&#39;]</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span> <span class="n">findFile</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="n">fileName</span><span class="p">)</span> <span class="p">)</span>
 
-<span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mf">39.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">76.6</span><span class="p">),</span> <span class="n">zoom</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">basemap</span><span class="o">=</span> <span class="n">basemaps</span><span class="o">.</span><span class="n">Esri</span><span class="o">.</span><span class="n">WorldTopoMap</span><span class="p">)</span>
+<span class="n">columnName</span> <span class="o">=</span> <span class="s2">&quot;trip_count_sum&quot;</span>  <span class="c1">#@param [&#39;id&#39;, &#39;color&#39;, &#39;streetname&#39;, &#39;trip_count_sum&#39;, &#39;trip_count_average&#39;, &#39;trip_count_percent&#39;]</span>
 
-<span class="n">geo_data</span> <span class="o">=</span> <span class="n">GeoData</span><span class="p">(</span><span class="n">geo_dataframe</span> <span class="o">=</span> <span class="n">countries</span><span class="p">,</span>
-                   <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;#3366cc&#39;</span><span class="p">,</span> <span class="s1">&#39;opacity&#39;</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="mf">1.9</span><span class="p">,</span> <span class="s1">&#39;dashArray&#39;</span><span class="p">:</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span><span class="mf">0.6</span><span class="p">},</span>
-                   <span class="n">hover_style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span> <span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">},</span>
-                   <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Countries&#39;</span><span class="p">)</span>
+<span class="n">background</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">gdf</span><span class="p">)</span><span class="o">.</span><span class="n">mark_geoshape</span><span class="p">(</span>
+    <span class="n">stroke</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
+    <span class="n">strokeWidth</span><span class="o">=</span><span class="mi">2</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;#eee&#39;</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">500</span>
+<span class="p">)</span>
 
-<span class="n">rivers_data</span> <span class="o">=</span> <span class="n">GeoData</span><span class="p">(</span><span class="n">geo_dataframe</span> <span class="o">=</span> <span class="n">rivers</span><span class="p">,</span>
-                   <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="s1">&#39;opacity&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="mf">1.9</span><span class="p">,</span> <span class="s1">&#39;dashArray&#39;</span><span class="p">:</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span><span class="mf">0.6</span><span class="p">},</span>
-                   <span class="n">hover_style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span> <span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">},</span>
-                   <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Rivers&#39;</span><span class="p">)</span>
+<span class="n">baltimore</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;https://opendata.arcgis.com/datasets/b738a8587b6d479a8824d937892701d8_0.geojson&quot;</span><span class="p">)</span>
 
-<span class="n">m</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">rivers_data</span><span class="p">)</span>
-<span class="n">m</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">geo_data</span><span class="p">)</span>
-<span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">LayersControl</span><span class="p">())</span>
+<span class="c1"># GeoDataFrame could be passed as usual pd.DataFrame</span>
+<span class="n">city</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">baltimore</span><span class="p">)</span><span class="o">.</span><span class="n">mark_geoshape</span><span class="p">(</span>
+<span class="p">)</span><span class="o">.</span><span class="n">project</span><span class="p">(</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tpop10&#39;</span><span class="p">,</span> <span class="c1"># shorthand infer types as for regular pd.DataFrame</span>
+    <span class="n">tooltip</span><span class="o">=</span><span class="s1">&#39;CSA2010&#39;</span> <span class="c1"># GeoDataFrame.index is accessible as id</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">300</span>
+<span class="p">)</span>
 
-<span class="n">m</span>
-</pre></div>
+<span class="n">routes</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">gdf</span><span class="p">)</span><span class="o">.</span><span class="n">mark_geoshape</span><span class="p">(</span>
+    <span class="n">filled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">strokeWidth</span><span class="o">=</span><span class="mi">2</span>
+<span class="p">)</span>
 
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">gpd</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s1">&#39;naturalearth_lowres&#39;</span><span class="p">))</span>
-<span class="n">rivers</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_rivers_lake_centerlines.zip&quot;</span><span class="p">)</span>
-
-<span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mf">52.3</span><span class="p">,</span><span class="mf">8.0</span><span class="p">),</span> <span class="n">zoom</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">basemap</span><span class="o">=</span> <span class="n">basemaps</span><span class="o">.</span><span class="n">Esri</span><span class="o">.</span><span class="n">WorldTopoMap</span><span class="p">)</span>
-
-<span class="n">geo_data</span> <span class="o">=</span> <span class="n">GeoData</span><span class="p">(</span><span class="n">geo_dataframe</span> <span class="o">=</span> <span class="n">countries</span><span class="p">,</span>
-                   <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;#3366cc&#39;</span><span class="p">,</span> <span class="s1">&#39;opacity&#39;</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="mf">1.9</span><span class="p">,</span> <span class="s1">&#39;dashArray&#39;</span><span class="p">:</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span><span class="mf">0.6</span><span class="p">},</span>
-                   <span class="n">hover_style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span> <span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">},</span>
-                   <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Countries&#39;</span><span class="p">)</span>
-
-<span class="n">rivers_data</span> <span class="o">=</span> <span class="n">GeoData</span><span class="p">(</span><span class="n">geo_dataframe</span> <span class="o">=</span> <span class="n">rivers</span><span class="p">,</span>
-                   <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="s1">&#39;opacity&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="mf">1.9</span><span class="p">,</span> <span class="s1">&#39;dashArray&#39;</span><span class="p">:</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span><span class="mf">0.6</span><span class="p">},</span>
-                   <span class="n">hover_style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span> <span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">},</span>
-                   <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Rivers&#39;</span><span class="p">)</span>
-
-<span class="n">m</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">rivers_data</span><span class="p">)</span>
-<span class="n">m</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">geo_data</span><span class="p">)</span>
-<span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">LayersControl</span><span class="p">())</span>
-
-<span class="n">m</span>
+<span class="n">city</span> <span class="o">+</span> <span class="n">routes</span>
 </pre></div>
 
     </div>
@@ -1346,152 +2216,27 @@ Mounted at /content/drive
 
 <div class="output_area">
 
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enabling notebook extension jupyter-js-widgets/extension...
+      - Validating: <span class="ansi-green-fg">OK</span>
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TimeoutError</span>                              Traceback (most recent call last)
-<span class="ansi-green-fg">/usr/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">do_open</span><span class="ansi-blue-fg">(self, http_class, req, **http_conn_args)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1324</span>                 h.request(req.get_method(), req.selector, req.data, headers,
-<span class="ansi-green-fg">-&gt; 1325</span><span class="ansi-red-fg">                           encode_chunked=req.has_header(&#39;Transfer-encoding&#39;))
-</span><span class="ansi-green-intense-fg ansi-bold">   1326</span>             <span class="ansi-green-fg">except</span> OSError <span class="ansi-green-fg">as</span> err<span class="ansi-blue-fg">:</span> <span class="ansi-red-fg"># timeout error</span>
 
-<span class="ansi-green-fg">/usr/lib/python3.6/http/client.py</span> in <span class="ansi-cyan-fg">request</span><span class="ansi-blue-fg">(self, method, url, body, headers, encode_chunked)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1263</span>         <span class="ansi-blue-fg">&#34;&#34;&#34;Send a complete request to the server.&#34;&#34;&#34;</span>
-<span class="ansi-green-fg">-&gt; 1264</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_send_request<span class="ansi-blue-fg">(</span>method<span class="ansi-blue-fg">,</span> url<span class="ansi-blue-fg">,</span> body<span class="ansi-blue-fg">,</span> headers<span class="ansi-blue-fg">,</span> encode_chunked<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1265</span> 
+<span class="ansi-red-fg">NameError</span>Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-11-fd2ad663fc37&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-green-fg">from</span> ipywidgets <span class="ansi-green-fg">import</span> interact<span class="ansi-blue-fg">,</span> interact_manual
+<span class="ansi-green-intense-fg ansi-bold">      7</span> 
+<span class="ansi-green-fg">----&gt; 8</span><span class="ansi-red-fg"> </span>tract <span class="ansi-blue-fg">=</span> gpd<span class="ansi-blue-fg">.</span>read_file<span class="ansi-blue-fg">(</span> findFile<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;./&#39;</span><span class="ansi-blue-fg">,</span> fileName<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span> tract<span class="ansi-blue-fg">.</span>head<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     10</span> tract<span class="ansi-blue-fg">.</span>crs
 
-<span class="ansi-green-fg">/usr/lib/python3.6/http/client.py</span> in <span class="ansi-cyan-fg">_send_request</span><span class="ansi-blue-fg">(self, method, url, body, headers, encode_chunked)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1309</span>             body <span class="ansi-blue-fg">=</span> _encode<span class="ansi-blue-fg">(</span>body<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;body&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 1310</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>endheaders<span class="ansi-blue-fg">(</span>body<span class="ansi-blue-fg">,</span> encode_chunked<span class="ansi-blue-fg">=</span>encode_chunked<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1311</span> 
-
-<span class="ansi-green-fg">/usr/lib/python3.6/http/client.py</span> in <span class="ansi-cyan-fg">endheaders</span><span class="ansi-blue-fg">(self, message_body, encode_chunked)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1258</span>             <span class="ansi-green-fg">raise</span> CannotSendHeader<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 1259</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_send_output<span class="ansi-blue-fg">(</span>message_body<span class="ansi-blue-fg">,</span> encode_chunked<span class="ansi-blue-fg">=</span>encode_chunked<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1260</span> 
-
-<span class="ansi-green-fg">/usr/lib/python3.6/http/client.py</span> in <span class="ansi-cyan-fg">_send_output</span><span class="ansi-blue-fg">(self, message_body, encode_chunked)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1037</span>         <span class="ansi-green-fg">del</span> self<span class="ansi-blue-fg">.</span>_buffer<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-fg">-&gt; 1038</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>send<span class="ansi-blue-fg">(</span>msg<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1039</span> 
-
-<span class="ansi-green-fg">/usr/lib/python3.6/http/client.py</span> in <span class="ansi-cyan-fg">send</span><span class="ansi-blue-fg">(self, data)</span>
-<span class="ansi-green-intense-fg ansi-bold">    975</span>             <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>auto_open<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 976</span><span class="ansi-red-fg">                 </span>self<span class="ansi-blue-fg">.</span>connect<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    977</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/lib/python3.6/http/client.py</span> in <span class="ansi-cyan-fg">connect</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    947</span>         self.sock = self._create_connection(
-<span class="ansi-green-fg">--&gt; 948</span><span class="ansi-red-fg">             (self.host,self.port), self.timeout, self.source_address)
-</span><span class="ansi-green-intense-fg ansi-bold">    949</span>         self<span class="ansi-blue-fg">.</span>sock<span class="ansi-blue-fg">.</span>setsockopt<span class="ansi-blue-fg">(</span>socket<span class="ansi-blue-fg">.</span>IPPROTO_TCP<span class="ansi-blue-fg">,</span> socket<span class="ansi-blue-fg">.</span>TCP_NODELAY<span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/lib/python3.6/socket.py</span> in <span class="ansi-cyan-fg">create_connection</span><span class="ansi-blue-fg">(address, timeout, source_address)</span>
-<span class="ansi-green-intense-fg ansi-bold">    723</span>     <span class="ansi-green-fg">if</span> err <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 724</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">raise</span> err
-<span class="ansi-green-intense-fg ansi-bold">    725</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/lib/python3.6/socket.py</span> in <span class="ansi-cyan-fg">create_connection</span><span class="ansi-blue-fg">(address, timeout, source_address)</span>
-<span class="ansi-green-intense-fg ansi-bold">    712</span>                 sock<span class="ansi-blue-fg">.</span>bind<span class="ansi-blue-fg">(</span>source_address<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 713</span><span class="ansi-red-fg">             </span>sock<span class="ansi-blue-fg">.</span>connect<span class="ansi-blue-fg">(</span>sa<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    714</span>             <span class="ansi-red-fg"># Break explicitly a reference cycle</span>
-
-<span class="ansi-red-fg">TimeoutError</span>: [Errno 110] Connection timed out
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-fg">URLError</span>                                  Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-27-4666d8ecddb9&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> 
-<span class="ansi-green-intense-fg ansi-bold">      2</span> countries <span class="ansi-blue-fg">=</span> gpd<span class="ansi-blue-fg">.</span>read_file<span class="ansi-blue-fg">(</span>gpd<span class="ansi-blue-fg">.</span>datasets<span class="ansi-blue-fg">.</span>get_path<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;naturalearth_lowres&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>rivers <span class="ansi-blue-fg">=</span> gpd<span class="ansi-blue-fg">.</span>read_file<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_rivers_lake_centerlines.zip&#34;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> 
-<span class="ansi-green-intense-fg ansi-bold">      5</span> m <span class="ansi-blue-fg">=</span> Map<span class="ansi-blue-fg">(</span>center<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">52.3</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">8.0</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> zoom <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">,</span> basemap<span class="ansi-blue-fg">=</span> basemaps<span class="ansi-blue-fg">.</span>Esri<span class="ansi-blue-fg">.</span>WorldTopoMap<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.6/dist-packages/geopandas/io/file.py</span> in <span class="ansi-cyan-fg">_read_file</span><span class="ansi-blue-fg">(filename, bbox, mask, rows, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">     83</span>     &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">     84</span>     <span class="ansi-green-fg">if</span> _is_url<span class="ansi-blue-fg">(</span>filename<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">---&gt; 85</span><span class="ansi-red-fg">         </span>req <span class="ansi-blue-fg">=</span> _urlopen<span class="ansi-blue-fg">(</span>filename<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     86</span>         path_or_bytes <span class="ansi-blue-fg">=</span> req<span class="ansi-blue-fg">.</span>read<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     87</span>         reader <span class="ansi-blue-fg">=</span> fiona<span class="ansi-blue-fg">.</span>BytesCollection
-
-<span class="ansi-green-fg">/usr/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">urlopen</span><span class="ansi-blue-fg">(url, data, timeout, cafile, capath, cadefault, context)</span>
-<span class="ansi-green-intense-fg ansi-bold">    221</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    222</span>         opener <span class="ansi-blue-fg">=</span> _opener
-<span class="ansi-green-fg">--&gt; 223</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> opener<span class="ansi-blue-fg">.</span>open<span class="ansi-blue-fg">(</span>url<span class="ansi-blue-fg">,</span> data<span class="ansi-blue-fg">,</span> timeout<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    224</span> 
-<span class="ansi-green-intense-fg ansi-bold">    225</span> <span class="ansi-green-fg">def</span> install_opener<span class="ansi-blue-fg">(</span>opener<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-fg">(self, fullurl, data, timeout)</span>
-<span class="ansi-green-intense-fg ansi-bold">    530</span>         <span class="ansi-green-fg">for</span> processor <span class="ansi-green-fg">in</span> self<span class="ansi-blue-fg">.</span>process_response<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span>protocol<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    531</span>             meth <span class="ansi-blue-fg">=</span> getattr<span class="ansi-blue-fg">(</span>processor<span class="ansi-blue-fg">,</span> meth_name<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 532</span><span class="ansi-red-fg">             </span>response <span class="ansi-blue-fg">=</span> meth<span class="ansi-blue-fg">(</span>req<span class="ansi-blue-fg">,</span> response<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    533</span> 
-<span class="ansi-green-intense-fg ansi-bold">    534</span>         <span class="ansi-green-fg">return</span> response
-
-<span class="ansi-green-fg">/usr/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">http_response</span><span class="ansi-blue-fg">(self, request, response)</span>
-<span class="ansi-green-intense-fg ansi-bold">    640</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> <span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">200</span> <span class="ansi-blue-fg">&lt;=</span> code <span class="ansi-blue-fg">&lt;</span> <span class="ansi-cyan-fg">300</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    641</span>             response = self.parent.error(
-<span class="ansi-green-fg">--&gt; 642</span><span class="ansi-red-fg">                 &#39;http&#39;, request, response, code, msg, hdrs)
-</span><span class="ansi-green-intense-fg ansi-bold">    643</span> 
-<span class="ansi-green-intense-fg ansi-bold">    644</span>         <span class="ansi-green-fg">return</span> response
-
-<span class="ansi-green-fg">/usr/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">error</span><span class="ansi-blue-fg">(self, proto, *args)</span>
-<span class="ansi-green-intense-fg ansi-bold">    562</span>             http_err <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0</span>
-<span class="ansi-green-intense-fg ansi-bold">    563</span>         args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>dict<span class="ansi-blue-fg">,</span> proto<span class="ansi-blue-fg">,</span> meth_name<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> args
-<span class="ansi-green-fg">--&gt; 564</span><span class="ansi-red-fg">         </span>result <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_call_chain<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    565</span>         <span class="ansi-green-fg">if</span> result<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    566</span>             <span class="ansi-green-fg">return</span> result
-
-<span class="ansi-green-fg">/usr/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">_call_chain</span><span class="ansi-blue-fg">(self, chain, kind, meth_name, *args)</span>
-<span class="ansi-green-intense-fg ansi-bold">    502</span>         <span class="ansi-green-fg">for</span> handler <span class="ansi-green-fg">in</span> handlers<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    503</span>             func <span class="ansi-blue-fg">=</span> getattr<span class="ansi-blue-fg">(</span>handler<span class="ansi-blue-fg">,</span> meth_name<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 504</span><span class="ansi-red-fg">             </span>result <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    505</span>             <span class="ansi-green-fg">if</span> result <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    506</span>                 <span class="ansi-green-fg">return</span> result
-
-<span class="ansi-green-fg">/usr/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">http_error_302</span><span class="ansi-blue-fg">(self, req, fp, code, msg, headers)</span>
-<span class="ansi-green-intense-fg ansi-bold">    754</span>         fp<span class="ansi-blue-fg">.</span>close<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    755</span> 
-<span class="ansi-green-fg">--&gt; 756</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>parent<span class="ansi-blue-fg">.</span>open<span class="ansi-blue-fg">(</span>new<span class="ansi-blue-fg">,</span> timeout<span class="ansi-blue-fg">=</span>req<span class="ansi-blue-fg">.</span>timeout<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    757</span> 
-<span class="ansi-green-intense-fg ansi-bold">    758</span>     http_error_301 <span class="ansi-blue-fg">=</span> http_error_303 <span class="ansi-blue-fg">=</span> http_error_307 <span class="ansi-blue-fg">=</span> http_error_302
-
-<span class="ansi-green-fg">/usr/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-fg">(self, fullurl, data, timeout)</span>
-<span class="ansi-green-intense-fg ansi-bold">    524</span>             req <span class="ansi-blue-fg">=</span> meth<span class="ansi-blue-fg">(</span>req<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    525</span> 
-<span class="ansi-green-fg">--&gt; 526</span><span class="ansi-red-fg">         </span>response <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_open<span class="ansi-blue-fg">(</span>req<span class="ansi-blue-fg">,</span> data<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    527</span> 
-<span class="ansi-green-intense-fg ansi-bold">    528</span>         <span class="ansi-red-fg"># post-process response</span>
-
-<span class="ansi-green-fg">/usr/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">_open</span><span class="ansi-blue-fg">(self, req, data)</span>
-<span class="ansi-green-intense-fg ansi-bold">    542</span>         protocol <span class="ansi-blue-fg">=</span> req<span class="ansi-blue-fg">.</span>type
-<span class="ansi-green-intense-fg ansi-bold">    543</span>         result = self._call_chain(self.handle_open, protocol, protocol +
-<span class="ansi-green-fg">--&gt; 544</span><span class="ansi-red-fg">                                   &#39;_open&#39;, req)
-</span><span class="ansi-green-intense-fg ansi-bold">    545</span>         <span class="ansi-green-fg">if</span> result<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    546</span>             <span class="ansi-green-fg">return</span> result
-
-<span class="ansi-green-fg">/usr/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">_call_chain</span><span class="ansi-blue-fg">(self, chain, kind, meth_name, *args)</span>
-<span class="ansi-green-intense-fg ansi-bold">    502</span>         <span class="ansi-green-fg">for</span> handler <span class="ansi-green-fg">in</span> handlers<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    503</span>             func <span class="ansi-blue-fg">=</span> getattr<span class="ansi-blue-fg">(</span>handler<span class="ansi-blue-fg">,</span> meth_name<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 504</span><span class="ansi-red-fg">             </span>result <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    505</span>             <span class="ansi-green-fg">if</span> result <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    506</span>                 <span class="ansi-green-fg">return</span> result
-
-<span class="ansi-green-fg">/usr/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">http_open</span><span class="ansi-blue-fg">(self, req)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1351</span> 
-<span class="ansi-green-intense-fg ansi-bold">   1352</span>     <span class="ansi-green-fg">def</span> http_open<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> req<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 1353</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>do_open<span class="ansi-blue-fg">(</span>http<span class="ansi-blue-fg">.</span>client<span class="ansi-blue-fg">.</span>HTTPConnection<span class="ansi-blue-fg">,</span> req<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1354</span> 
-<span class="ansi-green-intense-fg ansi-bold">   1355</span>     http_request <span class="ansi-blue-fg">=</span> AbstractHTTPHandler<span class="ansi-blue-fg">.</span>do_request_
-
-<span class="ansi-green-fg">/usr/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">do_open</span><span class="ansi-blue-fg">(self, http_class, req, **http_conn_args)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1325</span>                           encode_chunked=req.has_header(&#39;Transfer-encoding&#39;))
-<span class="ansi-green-intense-fg ansi-bold">   1326</span>             <span class="ansi-green-fg">except</span> OSError <span class="ansi-green-fg">as</span> err<span class="ansi-blue-fg">:</span> <span class="ansi-red-fg"># timeout error</span>
-<span class="ansi-green-fg">-&gt; 1327</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">raise</span> URLError<span class="ansi-blue-fg">(</span>err<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1328</span>             r <span class="ansi-blue-fg">=</span> h<span class="ansi-blue-fg">.</span>getresponse<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1329</span>         <span class="ansi-green-fg">except</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">URLError</span>: &lt;urlopen error [Errno 110] Connection timed out&gt;</pre>
+<span class="ansi-red-fg">NameError</span>: name &#39;findFile&#39; is not defined</pre>
 </div>
 </div>
 
@@ -1508,10 +2253,238 @@ During handling of the above exception, another exception occurred:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dxp</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;streetname&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;trip_count_sum&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">,</span> <span class="n">aggfunc</span> <span class="o">=</span> <span class="s2">&quot;median&quot;</span><span class="p">,</span> <span class="n">sort_values</span> <span class="o">=</span> <span class="s1">&#39;desc&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">clear_output</span>
+
+<span class="k">def</span> <span class="nf">getPolygonOnPoints</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">polygons</span><span class="p">,</span> <span class="n">ptsCoordCol</span><span class="p">,</span> <span class="n">polygonsCoordCol</span><span class="p">,</span> <span class="n">polygonsLabel</span><span class="p">):</span> 
+  <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> 
+  <span class="c1"># We&#39;re going to keep a list of how many points we find.</span>
+  <span class="n">boundaries</span> <span class="o">=</span> <span class="p">[]</span>
+
+  <span class="c1"># Loop over polygons with index i.</span>
+  <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">pts</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+  <span class="c1"># print(&#39;Searching for point within Geom:&#39;, pt )</span>
+  <span class="c1"># Only one Label is accepted.</span>
+    <span class="n">poly_on_this_point</span> <span class="o">=</span> <span class="s1">&#39;false&#39;</span>
+  <span class="c1"># Now loop over all polygons with index j. </span>
+  <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">poly</span> <span class="ow">in</span> <span class="n">polygons</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">poly</span><span class="p">[</span><span class="n">polygonsCoordCol</span><span class="p">]</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">pt</span><span class="p">[</span><span class="n">ptsCoordCol</span><span class="p">]):</span>
+    <span class="c1"># Then it&#39;s a hit! Add it to the list</span>
+     <span class="n">poly_on_this_point</span> <span class="o">=</span> <span class="n">poly</span><span class="p">[</span><span class="n">polygonsLabel</span><span class="p">]</span> 
+     <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span> 
+      <span class="c1"># pts = pts.drop([j])</span>
+
+  <span class="c1"># We could do all sorts, like grab a property of the</span>
+  <span class="c1"># points, but let&#39;s just append the number of them.</span>
+    <span class="n">boundaries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">poly_on_this_point</span><span class="p">)</span>
+    <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+  <span class="c1"># Add the number of points for each poly to the dataframe.</span>
+  <span class="n">pts</span> <span class="o">=</span> <span class="n">pts</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">CSA2010</span> <span class="o">=</span> <span class="n">boundaries</span><span class="p">)</span> 
+  <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Total Points: &#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">pts</span><span class="o">.</span><span class="n">size</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">pts</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Total Points in Polygons: &#39;</span><span class="p">,</span> <span class="n">count</span> <span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Prcnt Points in Polygons: &#39;</span><span class="p">,</span> <span class="n">count</span> <span class="o">/</span> <span class="p">(</span><span class="n">pts</span><span class="o">.</span><span class="n">size</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">pts</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+  <span class="k">return</span> <span class="n">pts</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Final-Version"><strong>Final Version</strong><a class="anchor-link" href="#Final-Version"> </a></h1>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="o">!</span>jupyter nbextension <span class="nb">enable</span> --py widgetsnbextension
+<span class="kn">from</span> <span class="nn">IPython.core.interactiveshell</span> <span class="k">import</span> <span class="n">InteractiveShell</span>
+<span class="n">InteractiveShell</span><span class="o">.</span><span class="n">ast_node_interactivity</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="k">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interact_manual</span>
+
+<span class="n">tract</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span> <span class="n">findFile</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="n">fileName</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">tract</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">tract</span><span class="o">.</span><span class="n">crs</span>
+
+<span class="n">alt</span><span class="o">.</span><span class="n">data_transformers</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">max_rows</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">fileName</span> <span class="o">=</span> <span class="s1">&#39;Routing October 2019.geojson&#39;</span>  <span class="c1">#@param [&#39;Routing August 2019.geojson&#39;, &#39;Routing October 2019.geojson&#39;, &#39;Routing December 2019.geojson&#39;, &#39;Routing September 2019.geojson&#39;, &#39;Routing November 2019.geojson&#39;]</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span> <span class="n">findFile</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="n">fileName</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="n">background</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">gdf</span><span class="p">)</span><span class="o">.</span><span class="n">mark_geoshape</span><span class="p">(</span>
+    <span class="n">stroke</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
+    <span class="n">strokeWidth</span><span class="o">=</span><span class="mi">2</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;#eee&#39;</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">500</span>
+<span class="p">)</span>
+
+<span class="n">baltimore</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;https://opendata.arcgis.com/datasets/b738a8587b6d479a8824d937892701d8_0.geojson&quot;</span><span class="p">)</span>
+
+<span class="c1"># GeoDataFrame could be passed as usual pd.DataFrame</span>
+<span class="n">city</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">baltimore</span><span class="p">)</span><span class="o">.</span><span class="n">mark_geoshape</span><span class="p">(</span>
+<span class="p">)</span><span class="o">.</span><span class="n">project</span><span class="p">(</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tpop10&#39;</span><span class="p">,</span> <span class="c1"># shorthand infer types as for regular pd.DataFrame</span>
+    <span class="n">tooltip</span><span class="o">=</span><span class="s1">&#39;CSA2010&#39;</span> <span class="c1"># GeoDataFrame.index is accessible as id</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">300</span>
+<span class="p">)</span>
+
+<span class="n">routes</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">gdf</span><span class="p">)</span><span class="o">.</span><span class="n">mark_geoshape</span><span class="p">(</span>
+    <span class="n">filled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">strokeWidth</span><span class="o">=</span><span class="mi">2</span>
+<span class="p">)</span>
+
+<span class="n">city</span> <span class="o">+</span> <span class="n">routes</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enabling notebook extension jupyter-js-widgets/extension...
+      - Validating: <span class="ansi-green-fg">OK</span>
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+
+<span class="ansi-red-fg">NameError</span>Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-13-266796694f4a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-green-fg">from</span> ipywidgets <span class="ansi-green-fg">import</span> interact<span class="ansi-blue-fg">,</span> interact_manual
+<span class="ansi-green-intense-fg ansi-bold">      7</span> 
+<span class="ansi-green-fg">----&gt; 8</span><span class="ansi-red-fg"> </span>tract <span class="ansi-blue-fg">=</span> gpd<span class="ansi-blue-fg">.</span>read_file<span class="ansi-blue-fg">(</span> findFile<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;./&#39;</span><span class="ansi-blue-fg">,</span> fileName<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span> tract<span class="ansi-blue-fg">.</span>head<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     10</span> tract<span class="ansi-blue-fg">.</span>crs
+
+<span class="ansi-red-fg">NameError</span>: name &#39;findFile&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Tracts</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">world</span><span class="o">.</span><span class="n">crs</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">world</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="o">!</span>jupyter nbextension <span class="nb">enable</span> --py widgetsnbextension
+<span class="kn">from</span> <span class="nn">IPython.core.interactiveshell</span> <span class="k">import</span> <span class="n">InteractiveShell</span>
+<span class="n">InteractiveShell</span><span class="o">.</span><span class="n">ast_node_interactivity</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="k">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interact_manual</span>
+
+<span class="n">tract</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span> <span class="n">findFile</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="n">fileName</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">tract</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">tract</span><span class="o">.</span><span class="n">crs</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enabling notebook extension jupyter-js-widgets/extension...
+      - Validating: <span class="ansi-green-fg">OK</span>
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+
+<span class="ansi-red-fg">NameError</span>Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-14-b560e243ceef&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span> <span class="ansi-green-fg">from</span> ipywidgets <span class="ansi-green-fg">import</span> interact<span class="ansi-blue-fg">,</span> interact_manual
+<span class="ansi-green-intense-fg ansi-bold">      8</span> 
+<span class="ansi-green-fg">----&gt; 9</span><span class="ansi-red-fg"> </span>tract <span class="ansi-blue-fg">=</span> gpd<span class="ansi-blue-fg">.</span>read_file<span class="ansi-blue-fg">(</span> findFile<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;./&#39;</span><span class="ansi-blue-fg">,</span> fileName<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     10</span> tract<span class="ansi-blue-fg">.</span>head<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     11</span> tract<span class="ansi-blue-fg">.</span>crs
+
+<span class="ansi-red-fg">NameError</span>: name &#39;findFile&#39; is not defined</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1584,8 +2557,7 @@ During handling of the above exception, another exception occurred:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># scooterdf.to_csv(&#39;./scooterdf.csv&#39;, index=False)</span>
-<span class="c1"># gdf.drop(columns=&#39;geometry&#39;).to_csv(&#39;./boundsdf.csv&#39;, index=False)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># gdf.drop(columns=&#39;geometry&#39;).to_csv(&#39;./boundsdf.csv&#39;, index=False)</span>
 </pre></div>
 
     </div>
@@ -1778,8 +2750,7 @@ During handling of the above exception, another exception occurred:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># @title Example form fields</span>
-<span class="c1">#@markdown Forms support many types of fields.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@markdown Forms support many types of fields.</span>
 <span class="n">fileName</span> <span class="o">=</span> <span class="s1">&#39;Trip Destinations by block August 2019.geojson&#39;</span>  <span class="c1">#@param [&#39;Trip Destinations by block August 2019.geojson&#39;, &#39;Trip Destinations by block December 2019.geojson&#39;, &#39;Trip Destinations by block November 2019.geojson&#39;, &#39;Trip Destinations by block October 2019.geojson&#39;, &#39;Trip Destinations by block September 2019.geojson&#39;, &#39;Trip Origins by block August 2019.geojson&#39;, &#39;Trip Origins by block December 2019.geojson&#39;, &#39;Trip Origins by block November 2019.geojson&#39;, &#39;Trip Origins by block October 2019.geojson&#39;, &#39;Trip Origins by block September 2019.geojson&#39;]</span>
 <span class="n">columnName</span> <span class="o">=</span> <span class="s2">&quot;name&quot;</span>  <span class="c1">#@param [&#39;name&#39;, &#39;value&#39;, &#39;color&#39;, &#39;radius&#39;]</span>
 
@@ -1833,6 +2804,89 @@ During handling of the above exception, another exception occurred:
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Old-Routes-Code:"><strong>Old Routes Code:</strong><a class="anchor-link" href="#Old-Routes-Code:"> </a></h1>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">getPointsInPolygons</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">polygons</span><span class="p">,</span> <span class="n">ptsCoordCol</span><span class="p">,</span> <span class="n">polygonsCoordCol</span><span class="p">):</span> 
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> 
+    <span class="n">total</span> <span class="o">=</span> <span class="n">pts</span><span class="o">.</span><span class="n">size</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">pts</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+    <span class="c1"># We&#39;re going to keep a list of how many points we find.</span>
+    <span class="n">pts_in_polys</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># Loop over polygons with index i.</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">poly</span> <span class="ow">in</span> <span class="n">polygons</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="c1"># print(&#39;Searching for point within Geom:&#39;, poly )</span>
+        <span class="c1"># Keep a list of points in this poly</span>
+        <span class="n">pts_in_this_poly</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># Now loop over all points with index j.</span>
+    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">pts</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">poly</span><span class="p">[</span><span class="n">polygonsCoordCol</span><span class="p">]</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pt</span><span class="p">[</span><span class="n">ptsCoordCol</span><span class="p">]):</span>
+        <span class="c1"># Then it&#39;s a hit! Add it to the list,</span>
+        <span class="c1"># and drop it so we have less hunting.</span>
+        <span class="n">pts_in_this_poly</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pt</span><span class="p">[</span><span class="n">ptsCoordCol</span><span class="p">])</span>
+        <span class="n">pts</span> <span class="o">=</span> <span class="n">pts</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="n">j</span><span class="p">])</span>
+
+      <span class="c1"># We could do all sorts, like grab a property of the</span>
+      <span class="c1"># points, but let&#39;s just append the number of them.</span>
+      <span class="n">pts_in_polys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pts_in_this_poly</span><span class="p">))</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Found this many points within the Geom:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pts_in_this_poly</span><span class="p">)</span> <span class="p">)</span> 
+      <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">pts_in_this_poly</span><span class="p">)</span> 
+      <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Add the number of points for each poly to the dataframe.</span>
+    <span class="n">polygons</span><span class="p">[</span><span class="s1">&#39;pointsinpolygon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">(</span><span class="n">pts_in_polys</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Total Points: &#39;</span><span class="p">,</span> <span class="n">total</span> <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Total Points in Polygons: &#39;</span><span class="p">,</span> <span class="n">count</span> <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Prcnt Points in Polygons: &#39;</span><span class="p">,</span> <span class="n">count</span> <span class="o">/</span> <span class="n">total</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="n">polygons</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-23-71e13534e014&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">19</span>
+<span class="ansi-red-fg">    pts_in_this_poly.append(pt[ptsCoordCol])</span>
+                   ^
+<span class="ansi-red-fg">IndentationError</span><span class="ansi-red-fg">:</span> expected an indented block
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Charles-code:"><strong>Charles code:</strong><a class="anchor-link" href="#Charles-code:"> </a></h1>
+</div>
+</div>
+</div>
 </div>
  
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"0a524b8c810347d7bd44dfdf531c188f": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "initial"}}, "1192f0a4f8034777a823bf8cbe9828a4": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "ec08d46ca524420a89b887d969477dcd": {"model_name": "DropdownModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DropdownModel", "_options_labels": ["Qualitative", "Sequential", "Diverging", "Cyclic", "Misc", "All Colormaps"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "DropdownView", "description": "Colormap Category: ", "description_tooltip": null, "disabled": false, "index": null, "layout": "IPY_MODEL_1192f0a4f8034777a823bf8cbe9828a4", "style": "IPY_MODEL_0a524b8c810347d7bd44dfdf531c188f"}}}, "version_major": 2, "version_minor": 0}
+</script>
 
