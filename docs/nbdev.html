@@ -495,7 +495,7 @@ Example:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>2. Footnotes</strong> can be attached in markdown using the following notation</p>
 
-<pre><code>This line demonstrates example content with a footnote marker {% fn 1 %}
+<pre><code>This line demonstrates example content with a footnote marker {percentSign fn 1 percentSign}
 
 {{ 'And this is the actual footnote.' | fndetail: 1 }}</code></pre>
 
@@ -1579,6 +1579,21 @@ cd drive/&#39;My Drive&#39;/
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/  settings.ini
+<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  README.md   setup.py
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -1680,24 +1695,6 @@ cd drive/&#39;My Drive&#39;/
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Converted 00_github.ipynb.
-Converted 01_colabs.ipynb.
-Converted 02_scooterExploration.ipynb.
-Converted 03_nbdev.ipynb.
-Converted index.ipynb.
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1973,7 +1970,7 @@ Succesfully merged conflicts!
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;nbdev_clean_nbs and nbdev_fix_merge&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;Jekyll fix. Footnotes caused an unknown liquid tag error. Docs should Update now.&quot;</span>
 </pre></div>
 
     </div>
@@ -1986,13 +1983,8 @@ Succesfully merged conflicts!
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master 5ff0d72] nbdev_clean_nbs and nbdev_fix_merge
- 7 files changed, 4921 insertions(+), 10 deletions(-)
- rewrite notebooks/00_github.ipynb (100%)
- rewrite notebooks/01_colabs.ipynb (99%)
- rewrite notebooks/02_scooterExploration.ipynb (99%)
- rewrite notebooks/03_nbdev.ipynb (99%)
- rewrite notebooks/index.ipynb (100%)
+<pre>[master d4e1396] Jekyll fix. Footnotes caused an unknown liquid tag error. Docs should Update now.
+ 4 files changed, 95 insertions(+), 319 deletions(-)
 </pre>
 </div>
 </div>
@@ -2040,18 +2032,18 @@ Succesfully merged conflicts!
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Counting objects: 11, done.
+<pre>Counting objects: 8, done.
 Delta compression using up to 2 threads.
-Compressing objects: 100% (11/11), done.
-Writing objects: 100% (11/11), 16.68 KiB | 1.04 MiB/s, done.
-Total 11 (delta 8), reused 0 (delta 0)
-remote: Resolving deltas: 100% (8/8), completed with 8 local objects.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 2.11 KiB | 539.00 KiB/s, done.
+Total 8 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
 remote: 
 remote: GitHub found 1 vulnerability on karpatic/datalabs&#39;s default branch (1 high). To find out more, visit:
 remote:      https://github.com/karpatic/datalabs/network/alert/docs/Gemfile.lock/kramdown/open
 remote: 
 To https://github.com/karpatic/datalabs.git
-   83a9543..5ff0d72  master -&gt; master
+   2564170..d4e1396  master -&gt; master
 Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;ORIGIN&#39;.
 </pre>
 </div>
