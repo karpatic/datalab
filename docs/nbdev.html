@@ -1,12 +1,12 @@
 ---
 toc: true
 title: Nbdev
-image: images/fastai_logo.png
+image: images/company_logo.png
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "In this chapter we learn about publishing python notebooks with nbdev. "
-description: "In this chapter we learn about publishing python notebooks with nbdev. "
+summary: "<a href='https://mybinder.org/v2/gh/karpatic/datalab/master?filepath=%2Fnotebooks%2F03_nbdev.ipynb'>![Binder](https://mybinder.org/badge_logo.svg)</a>"
+description: "<a href='https://mybinder.org/v2/gh/karpatic/datalab/master?filepath=%2Fnotebooks%2F03_nbdev.ipynb'>![Binder](https://mybinder.org/badge_logo.svg)</a>"
 ---
 <!--
 
@@ -294,6 +294,7 @@ description: "In this chapter we learn about publishing python notebooks with nb
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>%nbdev_collapse_input open</p>
 <h3 id="-Nbdev-Flags-(Mark-Up/-Cell-Magic)"><a name="nbflags" /> Nbdev Flags (Mark Up/ Cell Magic)<a class="anchor-link" href="#-Nbdev-Flags-(Mark-Up/-Cell-Magic)"> </a></h3>
 </div>
 </div>
@@ -309,7 +310,13 @@ description: "In this chapter we learn about publishing python notebooks with nb
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Nbdev scripts rely on special <a href="https://nbdev.fast.ai/tutorial/#nbdev-flags">comments <strong>or</strong> magics</a> (your choice) for cell-level handling of notebooks.</p>
-<p>The list shown below was obtained from <a href="https://pete88b.github.io/fastpages/nbdev/fastai/jupyter/2020/06/02/nbdev-magic.html">here</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>{% include important.html content='The list shown below was obtained from <a href="https://pete88b.github.io/fastpages/nbdev/fastai/jupyter/2020/06/02/nbdev-magic.html">here</a>. As always, please refer to the official source for up to date information.' %}</p>
 
 </div>
 </div>
@@ -392,6 +399,13 @@ description: "In this chapter we learn about publishing python notebooks with nb
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>{% include warning.html content='<a href="https://nbdev.fast.ai/cli/#nbdev_upgrade">nbdev_upgrade</a> need to be ran/set up before <strong>everything</strong> will work properly. Enabling the #collapsable flag to work on html markup sections. This <a href="https://pete88b.github.io/fastpages/nbdev/fastai/jupyter/2020/06/02/nbdev-magic.html">article</a> covers exactly how to do that. ' %}</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>The cell <code>#default_exp core</code> cell found at the top of the <code>00_core.ipynb</code> template, defines the name of the generated module (lib_name/core.py).</p>
 
 </div>
@@ -461,14 +475,14 @@ description: "In this chapter we learn about publishing python notebooks with nb
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Content in this section is pulled from the Fastpages <a href="https://fastpages.fast.ai/fastpages/jupyter/2020/02/21/introducing-fastpages.html#Other-Feautures">blog</a> and the Nbdev docs.</p>
+<p>{% include warning.html content='Content in this section is pulled from the Fastpages <a href="https://fastpages.fast.ai/fastpages/jupyter/2020/02/21/introducing-fastpages.html#Other-Feautures">blog</a> <a href="https://pete88b.github.io/fastpages/nbdev/fastai/jupyter/2020/07/24/nbdev-deep-dive.html">posts</a> and the Nbdev docs. If you have any issues, you will have to scoure these sources to resolve them!' %}</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>0. <a href="https://gist.github.com/rxaviers/7360908">Emoji's</a></strong> wont show in Colab's markdown, but  can be rendered in the documentation and github/ pypi readme pages. :us: :us: :us: :md: :us-md:</p>
+<p><strong>0. <a href="https://gist.github.com/rxaviers/7360908">Emoji's</a></strong> wont show in Colab's markdown, but  can be rendered in the documentation and github/ pypi readme pages. :heart_eyes:</p>
 
 </div>
 </div>
@@ -493,18 +507,7 @@ Example:
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>2. Footnotes</strong> can be attached in markdown using the following notation</p>
-
-<pre><code>This line demonstrates example content with a footnote marker {percentSign fn 1 percentSign}
-
-{{ 'And this is the actual footnote.' | fndetail: 1 }}</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>3. An 'images' folder</strong> can be used to conjure up pictures like so:</p>
+<p><strong>2. An 'images' folder</strong> can be used to conjure up pictures like so:</p>
 <p><code>![](images/company_logo.png)</code></p>
 <p>These images will be added to added and displayed in the docs</p>
 
@@ -513,48 +516,10 @@ Example:
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>4. Image captions</strong> can be placed like so:</p>
-<p><code>![](https://www.LINKTOIMAGE "caption text placed here")</code></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>5. Twitter and Youtube</strong> content can also be displayed in a similar fasion to Jekyll Notes:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>twitter:<a href="https://twitter.com/jakevdp/status/1204765621767901185?s=20">https://twitter.com/jakevdp/status/1204765621767901185?s=20</a></p>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>youtube:<a href="https://youtu.be/XfoYk_Z5AkI">https://youtu.be/XfoYk_Z5AkI</a></p>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>6. Jekyll <a href="http://nbdev.fast.ai/export2html/#add_jekyll_notes">Notes</a></strong></p>
+<p><strong>3. Jekyll <a href="http://nbdev.fast.ai/export2html/#add_jekyll_notes">Notes</a></strong></p>
 <p>The following section was written using the following markups</p>
 <p><code>&gt; Note:</code>, <code>&gt; Warning:</code>, <code>&gt; Tip:</code> and <code>&gt; Important: text goes here</code>
 {% include note.html content='This is a note.' %}{% include warning.html content='This is a warning' %}{% include tip.html content='This is a tip' %}{% include important.html content='This is an Important doc link to <code>add_jekyll_notes</code> which should also work fine' %}</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>{% include warning.html content='Nbdev updates need to be had before #3 and 4 in this list can work properly. ' %}</p>
 
 </div>
 </div>
@@ -1040,7 +1005,9 @@ cd drive/&#39;My Drive&#39;/
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<details class="description" open>
+      <summary data-open="Hide Code" data-close="Show Code"></summary>
+        <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
@@ -1152,6 +1119,7 @@ cd drive/&#39;My Drive&#39;/
 </div>
 </div>
 
+    </details>
 </div>
     {% endraw %}
 
@@ -1698,6 +1666,24 @@ cd drive/&#39;My Drive&#39;/
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Converted 00_github.ipynb.
+Converted 01_colabs.ipynb.
+Converted 02_scooterExploration.ipynb.
+Converted 03_nbdev.ipynb.
+Converted index.ipynb.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -1779,27 +1765,10 @@ converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Git">Git<a class="anchor-link" href="#Git"> </a></h1>
+<h2 id="Git">Git<a class="anchor-link" href="#Git"> </a></h2>
 </div>
 </div>
 </div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="n">notebooks</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1970,7 +1939,7 @@ Succesfully merged conflicts!
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;Jekyll fix. Footnotes caused an unknown liquid tag error. Docs should Update now.&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;Same Jekyll issue. Evidently backticks to not escape out of the issue. I should try Updating Nbdev to get the magics flags. That could solve this? Gonna try the commit rn anywys.&quot;</span>
 </pre></div>
 
     </div>
@@ -1983,8 +1952,8 @@ Succesfully merged conflicts!
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master d4e1396] Jekyll fix. Footnotes caused an unknown liquid tag error. Docs should Update now.
- 4 files changed, 95 insertions(+), 319 deletions(-)
+<pre>[master d12dcac] Same Jekyll issue. Evidently backticks to not escape out of the issue. I should try Updating Nbdev to get the magics flags. That could solve this? Gonna try the commit rn anywys.
+ 3 files changed, 28 insertions(+), 45 deletions(-)
 </pre>
 </div>
 </div>
@@ -2032,18 +2001,18 @@ Succesfully merged conflicts!
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Counting objects: 8, done.
+<pre>Counting objects: 7, done.
 Delta compression using up to 2 threads.
-Compressing objects: 100% (8/8), done.
-Writing objects: 100% (8/8), 2.11 KiB | 539.00 KiB/s, done.
-Total 8 (delta 7), reused 0 (delta 0)
-remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.19 KiB | 611.00 KiB/s, done.
+Total 7 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
 remote: 
 remote: GitHub found 1 vulnerability on karpatic/datalabs&#39;s default branch (1 high). To find out more, visit:
 remote:      https://github.com/karpatic/datalabs/network/alert/docs/Gemfile.lock/kramdown/open
 remote: 
 To https://github.com/karpatic/datalabs.git
-   2564170..d4e1396  master -&gt; master
+   d4e1396..d12dcac  master -&gt; master
 Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;ORIGIN&#39;.
 </pre>
 </div>
@@ -2091,7 +2060,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="PyPI">PyPI<a class="anchor-link" href="#PyPI"> </a></h1>
+<h2 id="PyPI">PyPI<a class="anchor-link" href="#PyPI"> </a></h2>
 </div>
 </div>
 </div>
