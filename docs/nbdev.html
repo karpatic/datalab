@@ -5,8 +5,8 @@ image: images/company_logo.png
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "<a href='https://mybinder.org/v2/gh/karpatic/datalab/master?filepath=%2Fnotebooks%2F03_nbdev.ipynb'>![Binder](https://mybinder.org/badge_logo.svg)</a>"
-description: "<a href='https://mybinder.org/v2/gh/karpatic/datalab/master?filepath=%2Fnotebooks%2F03_nbdev.ipynb'>![Binder](https://mybinder.org/badge_logo.svg)</a>"
+summary: "In this chapter we learn about publishing python notebooks with nbdev. "
+description: "In this chapter we learn about publishing python notebooks with nbdev. "
 ---
 <!--
 
@@ -30,6 +30,15 @@ description: "<a href='https://mybinder.org/v2/gh/karpatic/datalab/master?filepa
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="(Non-Technical)-Introduction">(Non-Technical) Introduction<a class="anchor-link" href="#(Non-Technical)-Introduction"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://mybinder.org/v2/gh/karpatic/datalab/master?filepath=%2Fnotebooks%2F03_nbdev.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a>
+<a href="https://colab.research.google.com/github/karpatic/datalab/blob/master/notebooks/03_nbdev.ipynb"><img src="https://pete88b.github.io/fastpages/assets/badges/colab.svg" alt="Binder"></a>
+<a href="https://github.com/karpatic/datalab/tree/master/notebooks/03_nbdev.ipynb"><img src="https://pete88b.github.io/fastpages/assets/badges/github.svg" alt="Binder"></a></p>
+
 </div>
 </div>
 </div>
@@ -138,10 +147,9 @@ description: "<a href='https://mybinder.org/v2/gh/karpatic/datalab/master?filepa
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>If this is more than you need, consider</p>
 <ul>
-<li><p>Sharing the Colab links directly.</p>
-</li>
-<li><p>Using <a href="https://mybinder.org/">mybinder</a></p>
-<blockquote><p>Have a repository full of Jupyter notebooks? With Binder, open those notebooks in an executable environment, making your code immediately reproducible by anyone, anywhere.</p>
+<li>Sharing the Colab links directly. </li>
+<li><a href="https://nbconvert.readthedocs.io/en/latest/">Nbconvert</a> notes into HTML, LaTeX, PDF, Markdown, ..</li>
+<li>Using <a href="https://mybinder.org/">mybinder</a><blockquote><p>Have a repository full of Jupyter notebooks? With Binder, open those notebooks in an executable environment, making your code immediately reproducible by anyone, anywhere.</p>
 </blockquote>
 </li>
 </ul>
@@ -294,7 +302,7 @@ description: "<a href='https://mybinder.org/v2/gh/karpatic/datalab/master?filepa
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>%nbdev_collapse_input open</p>
+<p>%nbdev_collapse_input close</p>
 <h3 id="-Nbdev-Flags-(Mark-Up/-Cell-Magic)"><a name="nbflags" /> Nbdev Flags (Mark Up/ Cell Magic)<a class="anchor-link" href="#-Nbdev-Flags-(Mark-Up/-Cell-Magic)"> </a></h3>
 </div>
 </div>
@@ -482,13 +490,6 @@ description: "<a href='https://mybinder.org/v2/gh/karpatic/datalab/master?filepa
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>0. <a href="https://gist.github.com/rxaviers/7360908">Emoji's</a></strong> wont show in Colab's markdown, but  can be rendered in the documentation and github/ pypi readme pages. :heart_eyes:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>1. Anchor Links</strong></p>
 <blockquote><p>An anchor link is a web link that allows users to leapfrog to a specific point on a website page. It saves them the need to scroll and skim read – and makes navigation easier. - <a href="https://www.telegraph.co.uk/branded-content/marketing-guides/what-is-anchor-link/">Telegraph</a>
 Example:
@@ -601,26 +602,12 @@ Example:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&#34;/content/drive&#34;, force_remount=True).
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Navigate to the drive directory where you store your projects folder</p>
+<p>Then navigate to the drive directory where you store your projects folder.</p>
 
 </div>
 </div>
@@ -637,38 +624,6 @@ cd drive/&#39;My Drive&#39;/
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/  settings.ini
-<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  README.md   setup.py
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -732,57 +687,6 @@ cd drive/&#39;My Drive&#39;/
 </div>
     {% endraw %}
 
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mv</span> <span class="n">thisisatemplate</span> <span class="o">../</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">thisisatemplate</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Method-2)-Grabbing-a-template-using-the-Nbdev-library-and-the-terminal">Method 2) Grabbing a template using the Nbdev library and the terminal<a class="anchor-link" href="#Method-2)-Grabbing-a-template-using-the-Nbdev-library-and-the-terminal"> </a></h4>
@@ -804,27 +708,37 @@ cd drive/&#39;My Drive&#39;/
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">../</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> nbdev_new -h
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>usage: nbdev_new [-h] [--template_git_repo TEMPLATE_GIT_REPO] [--xtra XTRA]
+                 name
+
+Create a new nbdev project with a given name.
+
+positional arguments:
+  name                  A directory to create the project in
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --template_git_repo TEMPLATE_GIT_REPO
+                        url to template repo (default:
+                        https://github.com/fastai/nbdev_template.git)
+  --xtra XTRA           Parse for additional args
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -870,8 +784,7 @@ cd drive/&#39;My Drive&#39;/
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">capture</span> 
-! nbdev_new &#39;test123&#39;
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> nbdev_new <span class="s1">&#39;test123&#39;</span>
 </pre></div>
 
     </div>
@@ -883,28 +796,11 @@ cd drive/&#39;My Drive&#39;/
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Lets enter into it</p>
+<p>If you enter into it, you'll see it comes all set up.</p>
 
 </div>
 </div>
 </div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">test123</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As you can see it comes all set up.</p>
@@ -912,23 +808,6 @@ cd drive/&#39;My Drive&#39;/
 </div>
 </div>
 </div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Configuring-the-template">Configuring the template<a class="anchor-link" href="#Configuring-the-template"> </a></h3>
@@ -1005,9 +884,7 @@ cd drive/&#39;My Drive&#39;/
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-<details class="description" open>
-      <summary data-open="Hide Code" data-close="Show Code"></summary>
-        <div class="input">
+<div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
@@ -1119,7 +996,20 @@ cd drive/&#39;My Drive&#39;/
 </div>
 </div>
 
-    </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>UsageError: Invalid option &#34;close&#34;. Usage `%nbdev_collapse_input [open]`
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -1181,23 +1071,6 @@ cd drive/&#39;My Drive&#39;/
 </div>
     {% endraw %}
 
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Create-the-library-and-documentation">Create the library and documentation<a class="anchor-link" href="#Create-the-library-and-documentation"> </a></h4>
@@ -1229,41 +1102,7 @@ cd drive/&#39;My Drive&#39;/
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> nbdev_build_lib
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
 </pre></div>
 
     </div>
@@ -1305,40 +1144,6 @@ cd drive/&#39;My Drive&#39;/
 </div>
 </div>
 </div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">datalabs</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Configuring-Git-Github">Configuring Git-Github<a class="anchor-link" href="#Configuring-Git-Github"> </a></h4>
@@ -1509,7 +1314,7 @@ cd drive/&#39;My Drive&#39;/
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">../</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls
 </pre></div>
 
     </div>
@@ -1522,119 +1327,9 @@ cd drive/&#39;My Drive&#39;/
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>/content/drive/My Drive/datalabs
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/  settings.ini
-<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  README.md   setup.py
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="n">datalabs</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>/content/drive/My Drive/datalabs/datalabs
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/  settings.ini
-<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  README.md   setup.py
+<pre>build		 datalabs.egg-info  LICENSE	 notebooks     setup.py
+CONTRIBUTING.md  dist		    Makefile	 README.md
+datalabs	 docs		    MANIFEST.in  settings.ini
 </pre>
 </div>
 </div>
@@ -1709,8 +1404,8 @@ Converted index.ipynb.
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;IPython.core.display.HTML object&gt;
 &lt;IPython.core.display.HTML object&gt;
-converting: /content/drive/My Drive/datalabs/notebooks/02_scooterExploration.ipynb
 converting: /content/drive/My Drive/datalabs/notebooks/01_colabs.ipynb
+converting: /content/drive/My Drive/datalabs/notebooks/02_scooterExploration.ipynb
 converting: /content/drive/My Drive/datalabs/notebooks/00_github.ipynb
 converting: /content/drive/My Drive/datalabs/notebooks/index.ipynb
 converting: /content/drive/My Drive/datalabs/notebooks/03_nbdev.ipynb
@@ -1731,41 +1426,16 @@ converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
 </div>
     {% endraw %}
 
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/  settings.ini
-<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  README.md   setup.py
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Git">Git<a class="anchor-link" href="#Git"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Before you push</strong>: Running <code>nbdev_clean_nbs</code> will ensure the push will work. <code>nbdev_fix_merge</code> ensures it.</p>
+
 </div>
 </div>
 </div>
@@ -1782,22 +1452,6 @@ converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
 <span class="o">!</span> nbdev_fix_merge notebooks/02_scooterExploration.ipynb
 <span class="o">!</span> nbdev_fix_merge notebooks/03_nbdev.ipynb
 <span class="o">!</span> nbdev_fix_merge notebooks/index.ipynb
-
-<span class="c1"># https://github.com/fastai/nbdev/blob/master/nbdev/merge.py#L91</span>
-<span class="c1"># http://nbdev.fast.ai/merge/</span>
-<span class="c1"># https://forums.fast.ai/t/fastai-nbstripout-stripping-notebook-outputs-and-metadata-for-git-storage/20355</span>
-<span class="c1"># https://nbdev.fast.ai/export2html/</span>
-<span class="c1"># https://pypi.org/project/nbd-colab/</span>
-<span class="c1"># https://forums.fast.ai/t/fastai-nbstripout-stripping-notebook-outputs-and-metadata-for-git-storage/20355/20</span>
-<span class="c1"># https://nbconvert.readthedocs.io/en/latest/</span>
-<span class="c1"># https://github.com/kynan/nbstripout</span>
-<span class="c1"># https://hallmx.github.io/nbds_colab//</span>
-
-<span class="c1"># fix_conflicts(&#39;notebooks/index.ipynb&#39;) # This is ran as a method within nbdev_fix_merge</span>
-<span class="c1"># from nbdev.export import *</span>
-<span class="c1"># from nbdev.merge import *</span>
-<span class="c1"># tst_nb = read_nb(&#39;notebooks/index.ipynb&#39;)</span>
-<span class="c1"># print(tst_nb)</span>
 </pre></div>
 
     </div>
@@ -1863,6 +1517,24 @@ Succesfully merged conflicts!
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The following paths are ignored by one of your .gitignore files:
+build
+datalabs.egg-info
+dist
+Use -f if you really want to add them.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -1886,8 +1558,9 @@ Succesfully merged conflicts!
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    Makefile     <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/  settings.ini
-<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        LICENSE  MANIFEST.in  README.md   setup.py
+<pre><span class="ansi-blue-intense-fg ansi-bold">build</span>/           <span class="ansi-blue-intense-fg ansi-bold">datalabs.egg-info</span>/  LICENSE      <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/    setup.py
+CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">dist</span>/               Makefile     README.md
+<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        <span class="ansi-blue-intense-fg ansi-bold">docs</span>/               MANIFEST.in  settings.ini
 </pre>
 </div>
 </div>
@@ -1939,7 +1612,7 @@ Succesfully merged conflicts!
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;Same Jekyll issue. Evidently backticks to not escape out of the issue. I should try Updating Nbdev to get the magics flags. That could solve this? Gonna try the commit rn anywys.&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;Testing Collapse Feature. Did some sprucing up.&quot;</span>
 </pre></div>
 
     </div>
@@ -1952,8 +1625,8 @@ Succesfully merged conflicts!
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master d12dcac] Same Jekyll issue. Evidently backticks to not escape out of the issue. I should try Updating Nbdev to get the magics flags. That could solve this? Gonna try the commit rn anywys.
- 3 files changed, 28 insertions(+), 45 deletions(-)
+<pre>[master a1f72a7] Testing Collapse Feature. Did some sprucing up.
+ 4 files changed, 128 insertions(+), 157 deletions(-)
 </pre>
 </div>
 </div>
@@ -2001,18 +1674,18 @@ Succesfully merged conflicts!
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Counting objects: 7, done.
+<pre>Counting objects: 9, done.
 Delta compression using up to 2 threads.
-Compressing objects: 100% (7/7), done.
-Writing objects: 100% (7/7), 1.19 KiB | 611.00 KiB/s, done.
-Total 7 (delta 6), reused 0 (delta 0)
-remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 2.98 KiB | 436.00 KiB/s, done.
+Total 9 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas: 100% (8/8), completed with 8 local objects.
 remote: 
 remote: GitHub found 1 vulnerability on karpatic/datalabs&#39;s default branch (1 high). To find out more, visit:
 remote:      https://github.com/karpatic/datalabs/network/alert/docs/Gemfile.lock/kramdown/open
 remote: 
 To https://github.com/karpatic/datalabs.git
-   d4e1396..d12dcac  master -&gt; master
+   d12dcac..a1f72a7  master -&gt; master
 Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;ORIGIN&#39;.
 </pre>
 </div>
@@ -2041,23 +1714,6 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 </div>
 </div>
 </div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="PyPI">PyPI<a class="anchor-link" href="#PyPI"> </a></h2>
