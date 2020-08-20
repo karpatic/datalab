@@ -7,6 +7,7 @@ sidebar: home_sidebar
 
 summary: "In this chapter we learn about publishing python notebooks with nbdev. "
 description: "In this chapter we learn about publishing python notebooks with nbdev. "
+nb_path: "notebooks/03_nbdev.ipynb"
 ---
 <!--
 
@@ -27,6 +28,46 @@ description: "In this chapter we learn about publishing python notebooks with nb
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> nbdev_upgrade
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Traceback (most recent call last):
+  File &#34;/usr/local/bin/nbdev_upgrade&#34;, line 8, in &lt;module&gt;
+    sys.exit(nbdev_upgrade())
+  File &#34;/usr/local/lib/python3.6/dist-packages/fastscript/core.py&#34;, line 76, in _f
+    func(**args.__dict__)
+  File &#34;/usr/local/lib/python3.6/dist-packages/nbdev/cli.py&#34;, line 131, in nbdev_upgrade
+    for fname in Config().nbs_path.glob(&#39;*.ipynb&#39;):
+  File &#34;/usr/local/lib/python3.6/dist-packages/nbdev/imports.py&#34;, line 43, in __init__
+    assert self.config_file.exists(), &#34;Use `create_config` to create settings.ini for the first time&#34;
+AssertionError: Use `create_config` to create settings.ini for the first time
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="(Non-Technical)-Introduction">(Non-Technical) Introduction<a class="anchor-link" href="#(Non-Technical)-Introduction"> </a></h2>
@@ -37,7 +78,19 @@ description: "In this chapter we learn about publishing python notebooks with nb
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://mybinder.org/v2/gh/karpatic/datalab/master?filepath=%2Fnotebooks%2F03_nbdev.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a>
 <a href="https://colab.research.google.com/github/karpatic/datalab/blob/master/notebooks/03_nbdev.ipynb"><img src="https://pete88b.github.io/fastpages/assets/badges/colab.svg" alt="Binder"></a>
-<a href="https://github.com/karpatic/datalab/tree/master/notebooks/03_nbdev.ipynb"><img src="https://pete88b.github.io/fastpages/assets/badges/github.svg" alt="Binder"></a></p>
+<a href="https://github.com/karpatic/datalab/tree/master/notebooks/03_nbdev.ipynb"><img src="https://pete88b.github.io/fastpages/assets/badges/github.svg" alt="Binder"></a>
+<a href="https://github.com/ellerbrock/open-source-badges/"><img src="https://badges.frapsoft.com/os/v3/open-source.svg?v=103" alt="Open Source Love svg3"></a></p>
+<p><a href="https://github.com/karpatic/datalabs/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/all-contributors.svg?style=flat" alt="NPM License"></a>
+<a href="https://karpatic.github.io"><img src="http://img.shields.io/badge/Status-Active-green.svg" alt="Active"></a> 
+<a href="https://pypi.python.org/pypi/dataplay/"><img src="https://img.shields.io/pypi/pyversions/dataplay.svg" alt="Python Versions"></a>
+<a href=""><img src="https://img.shields.io/github/last-commit/karpatic/datalabs.svg?style=flat" alt="GitHub last commit"></a> 
+<a href="http://unmaintained.tech/"><img src="http://unmaintained.tech/badge.svg" alt="No Maintenance Intended"></a></p>
+<p><a href="https://github.com/karpatic/datalabs"><img src="https://img.shields.io/github/stars/karpatic/datalabs.svg?style=social&amp;label=Star" alt="GitHub stars"></a> 
+<a href="https://github.com/karpatic/datalabs"><img src="https://img.shields.io/github/watchers/karpatic/datalabs.svg?style=social&amp;label=Watch" alt="GitHub watchers"></a> 
+<a href="https://github.com/karpatic/datalabs"><img src="https://img.shields.io/github/forks/karpatic/datalabs.svg?style=social&amp;label=Fork" alt="GitHub forks"></a> 
+<a href="https://github.com/karpatic/datalabs"><img src="https://img.shields.io/github/followers/karpatic.svg?style=social&amp;label=Follow" alt="GitHub followers"></a></p>
+<p><a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20%E2%9C%A8%20colab%20by%20@bniajfi%20https://github.com/karpatic/datalabs%20%F0%9F%A4%97"><img src="https://img.shields.io/twitter/url/https/github.com/karpatic/datalabs.svg?style=social" alt="Tweet"></a> 
+<a href="https://twitter.com/bniajfi"><img src="https://img.shields.io/twitter/follow/bniajfi.svg?style=social" alt="Twitter Follow"></a></p>
 
 </div>
 </div>
@@ -1321,6 +1374,20 @@ optional arguments:
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/drive/My Drive/datalabs
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -1351,18 +1418,11 @@ optional arguments:
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Traceback (most recent call last):
-  File &#34;/usr/local/bin/nbdev_build_lib&#34;, line 8, in &lt;module&gt;
-    sys.exit(nbdev_build_lib())
-  File &#34;/usr/local/lib/python3.6/dist-packages/fastscript/core.py&#34;, line 76, in _f
-    func(**args.__dict__)
-  File &#34;/usr/local/lib/python3.6/dist-packages/nbdev/cli.py&#34;, line 140, in nbdev_build_lib
-    write_tmpls()
-  File &#34;/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py&#34;, line 494, in write_tmpls
-    cfg = Config()
-  File &#34;/usr/local/lib/python3.6/dist-packages/nbdev/imports.py&#34;, line 43, in __init__
-    assert self.config_file.exists(), &#34;Use `create_config` to create settings.ini for the first time&#34;
-AssertionError: Use `create_config` to create settings.ini for the first time
+<pre>Converted 00_github.ipynb.
+Converted 01_colabs.ipynb.
+Converted 02_scooterExploration.ipynb.
+Converted 03_nbdev.ipynb.
+Converted index.ipynb.
 </pre>
 </div>
 </div>
@@ -1384,31 +1444,6 @@ AssertionError: Use `create_config` to create settings.ini for the first time
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Traceback (most recent call last):
-  File &#34;/usr/local/bin/nbdev_build_docs&#34;, line 8, in &lt;module&gt;
-    sys.exit(nbdev_build_docs())
-  File &#34;/usr/local/lib/python3.6/dist-packages/fastscript/core.py&#34;, line 76, in _f
-    func(**args.__dict__)
-  File &#34;/usr/local/lib/python3.6/dist-packages/nbdev/cli.py&#34;, line 220, in nbdev_build_docs
-    notebook2html(fname=fname, force_all=force_all, n_workers=n_workers)
-  File &#34;/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py&#34;, line 559, in notebook2html
-    files = [f for f in Config().nbs_path.glob(&#39;**/*.ipynb&#39;)
-  File &#34;/usr/local/lib/python3.6/dist-packages/nbdev/imports.py&#34;, line 43, in __init__
-    assert self.config_file.exists(), &#34;Use `create_config` to create settings.ini for the first time&#34;
-AssertionError: Use `create_config` to create settings.ini for the first time
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1444,24 +1479,6 @@ AssertionError: Use `create_config` to create settings.ini for the first time
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Succesfully merged conflicts!
-Succesfully merged conflicts!
-Succesfully merged conflicts!
-Succesfully merged conflicts!
-Succesfully merged conflicts!
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1506,24 +1523,6 @@ Succesfully merged conflicts!
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The following paths are ignored by one of your .gitignore files:
-build
-datalabs.egg-info
-dist
-Use -f if you really want to add them.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -1538,22 +1537,6 @@ Use -f if you really want to add them.
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre><span class="ansi-blue-intense-fg ansi-bold">build</span>/           <span class="ansi-blue-intense-fg ansi-bold">datalabs.egg-info</span>/  LICENSE      <span class="ansi-blue-intense-fg ansi-bold">notebooks</span>/    setup.py
-CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">dist</span>/               Makefile     README.md     <span class="ansi-blue-intense-fg ansi-bold">test123</span>/
-<span class="ansi-blue-intense-fg ansi-bold">datalabs</span>/        <span class="ansi-blue-intense-fg ansi-bold">docs</span>/               MANIFEST.in  settings.ini
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1608,26 +1591,6 @@ CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">dist</span>/      
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[master 9f531cd] Updated Images
- 12 files changed, 226 insertions(+), 499 deletions(-)
- rewrite docs/images/company_logo.png (99%)
- rewrite docs/images/company_logo_big.png (99%)
- rewrite docs/images/favicon.ico (100%)
- create mode 100644 test123/__init__.py
- create mode 100644 test123/_nbdev.py
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -1659,32 +1622,6 @@ CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">dist</span>/      
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Counting objects: 19, done.
-Delta compression using up to 2 threads.
-Compressing objects: 100% (17/17), done.
-Writing objects: 100% (19/19), 13.68 KiB | 1.37 MiB/s, done.
-Total 19 (delta 11), reused 1 (delta 0)
-remote: Resolving deltas: 100% (11/11), completed with 11 local objects.
-remote: 
-remote: GitHub found 1 vulnerability on karpatic/datalabs&#39;s default branch (1 high). To find out more, visit:
-remote:      https://github.com/karpatic/datalabs/network/alert/docs/Gemfile.lock/kramdown/open
-remote: 
-To https://github.com/karpatic/datalabs.git
-   a1f72a7..9f531cd  master -&gt; master
-Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;ORIGIN&#39;.
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 

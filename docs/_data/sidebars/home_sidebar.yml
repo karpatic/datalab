@@ -11,16 +11,16 @@ entries:
       url: /
     - output: web,pdf
       title: Github
-      url: /github
+      url: github.html
     - output: web,pdf
       title: Python and Colabs
-      url: /colabs
+      url: colabs.html
     - output: web,pdf
       title: Scooter Exploration
-      url: /scooterExploration
+      url: scooterExploration.html
     - output: web,pdf
       title: Nbdev
-      url: /nbdev
+      url: nbdev.html
     output: web
     title: datalabs
   output: web
