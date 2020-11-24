@@ -6,16 +6,7 @@
 ! nbdev_upgrade
 ```
 
-    Traceback (most recent call last):
-      File "/usr/local/bin/nbdev_upgrade", line 8, in <module>
-        sys.exit(nbdev_upgrade())
-      File "/usr/local/lib/python3.6/dist-packages/fastscript/core.py", line 76, in _f
-        func(**args.__dict__)
-      File "/usr/local/lib/python3.6/dist-packages/nbdev/cli.py", line 131, in nbdev_upgrade
-        for fname in Config().nbs_path.glob('*.ipynb'):
-      File "/usr/local/lib/python3.6/dist-packages/nbdev/imports.py", line 43, in __init__
-        assert self.config_file.exists(), "Use `create_config` to create settings.ini for the first time"
-    AssertionError: Use `create_config` to create settings.ini for the first time
+    /bin/bash: nbdev_upgrade: command not found
 
 
 ## (Non-Technical) Introduction
@@ -54,7 +45,7 @@ Some (not all) of the tools **fastai provides**:
 - [FastiAi](https://github.com/fastai/fastai) - Data convenience tools and AI models
 - [FastAi Course](https://course.fast.ai/) - V3. A practical deep-learning course
 
-Use one of these products? Tweet [@jeremyphoward](https://www.fast.ai/about/#founders) the product of your work!
+Use one of these products? Tweet @jeremyphoward and [staff](https://www.fast.ai/about/#founders) or @HamelHusain for all their work!
 
 ### With Nbdev you can:
 
@@ -286,6 +277,10 @@ Then navigate to the drive directory where you store your projects folder.
 ```
 %%capture
 cd drive/'My Drive'/
+```
+
+```
+cd 
 ```
 
 ## Creating a New Project
@@ -652,40 +647,99 @@ As long as you are somewhere in the folder where you are developing your library
 ! nbdev_fix_merge notebooks/index.ipynb
 ```
 
-    Succesfully merged conflicts!
-    Succesfully merged conflicts!
-    Succesfully merged conflicts!
-    Succesfully merged conflicts!
-    Succesfully merged conflicts!
+    Traceback (most recent call last):
+      File "/usr/local/bin/nbdev_clean_nbs", line 8, in <module>
+        sys.exit(nbdev_clean_nbs())
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 103, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/clean.py", line 87, in nbdev_clean_nbs
+        clean_nb(nb, clear_all=clear_all)
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/clean.py", line 51, in clean_nb
+        for c in nb['cells']: clean_cell(c, clear_all=clear_all)
+    KeyError: 'cells'
+    Traceback (most recent call last):
+      File "/usr/local/bin/nbdev_fix_merge", line 8, in <module>
+        sys.exit(nbdev_fix_merge())
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 103, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/merge.py", line 98, in nbdev_fix_merge
+        shutil.copy(fname, fname.with_suffix('.ipynb.bak'))
+      File "/usr/lib/python3.6/shutil.py", line 245, in copy
+        copyfile(src, dst, follow_symlinks=follow_symlinks)
+      File "/usr/lib/python3.6/shutil.py", line 120, in copyfile
+        with open(src, 'rb') as fsrc:
+    FileNotFoundError: [Errno 2] No such file or directory: 'notebooks/00_github.ipynb'
+    Traceback (most recent call last):
+      File "/usr/local/bin/nbdev_fix_merge", line 8, in <module>
+        sys.exit(nbdev_fix_merge())
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 103, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/merge.py", line 98, in nbdev_fix_merge
+        shutil.copy(fname, fname.with_suffix('.ipynb.bak'))
+      File "/usr/lib/python3.6/shutil.py", line 245, in copy
+        copyfile(src, dst, follow_symlinks=follow_symlinks)
+      File "/usr/lib/python3.6/shutil.py", line 120, in copyfile
+        with open(src, 'rb') as fsrc:
+    FileNotFoundError: [Errno 2] No such file or directory: 'notebooks/01_colabs.ipynb'
+    Traceback (most recent call last):
+      File "/usr/local/bin/nbdev_fix_merge", line 8, in <module>
+        sys.exit(nbdev_fix_merge())
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 103, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/merge.py", line 98, in nbdev_fix_merge
+        shutil.copy(fname, fname.with_suffix('.ipynb.bak'))
+      File "/usr/lib/python3.6/shutil.py", line 245, in copy
+        copyfile(src, dst, follow_symlinks=follow_symlinks)
+      File "/usr/lib/python3.6/shutil.py", line 120, in copyfile
+        with open(src, 'rb') as fsrc:
+    FileNotFoundError: [Errno 2] No such file or directory: 'notebooks/02_scooterExploration.ipynb'
+    Traceback (most recent call last):
+      File "/usr/local/bin/nbdev_fix_merge", line 8, in <module>
+        sys.exit(nbdev_fix_merge())
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 103, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/merge.py", line 98, in nbdev_fix_merge
+        shutil.copy(fname, fname.with_suffix('.ipynb.bak'))
+      File "/usr/lib/python3.6/shutil.py", line 245, in copy
+        copyfile(src, dst, follow_symlinks=follow_symlinks)
+      File "/usr/lib/python3.6/shutil.py", line 120, in copyfile
+        with open(src, 'rb') as fsrc:
+    FileNotFoundError: [Errno 2] No such file or directory: 'notebooks/03_nbdev.ipynb'
+    Traceback (most recent call last):
+      File "/usr/local/bin/nbdev_fix_merge", line 8, in <module>
+        sys.exit(nbdev_fix_merge())
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 103, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/merge.py", line 98, in nbdev_fix_merge
+        shutil.copy(fname, fname.with_suffix('.ipynb.bak'))
+      File "/usr/lib/python3.6/shutil.py", line 245, in copy
+        copyfile(src, dst, follow_symlinks=follow_symlinks)
+      File "/usr/lib/python3.6/shutil.py", line 120, in copyfile
+        with open(src, 'rb') as fsrc:
+    FileNotFoundError: [Errno 2] No such file or directory: 'notebooks/index.ipynb'
 
 
 ```
 ! nbdev_clean_nbs
 ```
 
+    /bin/bash: nbdev_clean_nbs: command not found
+
+
 ```
 !nbdev_nb2md -h
 ```
 
-```
-! nbdev_nb2md notebooks/00_github.ipynb --dest "markdown" --img_path "markdown"
-! nbdev_nb2md notebooks/01_colabs.ipynb --dest "markdown" --img_path "markdown"
-! nbdev_nb2md notebooks/02_scooterExploration.ipynb --dest "markdown" --img_path "markdown"
-! nbdev_nb2md notebooks/03_nbdev.ipynb --dest "markdown" --img_path "markdown"
-! nbdev_nb2md notebooks/index.ipynb --dest "markdown" --img_path "markdown"
-```
+    /bin/bash: nbdev_nb2md: command not found
 
-    Traceback (most recent call last):
-      File "/usr/local/bin/nbdev_nb2md", line 8, in <module>
-        sys.exit(nbdev_nb2md())
-      File "/usr/local/lib/python3.6/dist-packages/fastscript/core.py", line 76, in _f
-        func(**args.__dict__)
-      File "/usr/local/lib/python3.6/dist-packages/nbdev/cli.py", line 233, in nbdev_nb2md
-        convert_md(fname, dest, jekyll=jekyll, img_path=img_path)
-      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 609, in convert_md
-        with open(Path(dest_path)/img_path/n, 'wb') as f: f.write(o)
-    FileNotFoundError: [Errno 2] No such file or directory: 'markdown/markdown/output_30_1.png'
 
+```
+! nbdev_nb2md notebooks/00_github.ipynb --dest "markdown" --img_path "."
+! nbdev_nb2md notebooks/01_colabs.ipynb --dest "markdown" --img_path "."
+! nbdev_nb2md notebooks/02_scooterExploration.ipynb --dest "markdown" --img_path "."
+! nbdev_nb2md notebooks/03_nbdev.ipynb --dest "markdown" --img_path "."
+! nbdev_nb2md notebooks/index.ipynb --dest "markdown" --img_path "."
+```
 
 ( Run Once Modules, Docs and the README are created using NBDEV and have ben created but not published )
 
@@ -697,9 +751,35 @@ As long as you are somewhere in the folder where you are developing your library
 ! git add *
 ```
 
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    The following paths are ignored by one of your .gitignore files:
+    build
+    dist
+    Use -f if you really want to add them.
+
+
 ```
 ls
 ```
+
+    [0m[01;34mbuild[0m/           [01;34mdist[0m/    Makefile     [01;34mnotebooks[0m/    setup.py
+    CONTRIBUTING.md  [01;34mdocs[0m/    MANIFEST.in  README.md
+    [01;34mdatalabs[0m/        LICENSE  [01;34mmarkdown[0m/    settings.ini
+
 
 ```
 !git config --global user.name "karpatic"
@@ -710,8 +790,24 @@ ls
 ```
 
 ```
-! git commit -m "Updated Images"
+! git commit -m "Updated Formating, Added Markdown Section"
 ```
+
+    [master d0a5ecb] Updated Formating, Added Markdown Section
+     23 files changed, 7975 insertions(+), 4009 deletions(-)
+     rewrite docs/scooterExploration.html (61%)
+     create mode 100644 markdown/00_github.md
+     create mode 100644 markdown/01_colabs.md
+     create mode 100644 markdown/02_scooterExploration.md
+     create mode 100644 markdown/03_nbdev.md
+     create mode 100644 markdown/index.md
+     create mode 100644 markdown/output_102_1.png
+     create mode 100644 markdown/output_103_1.png
+     create mode 100644 markdown/output_109_1.png
+     create mode 100644 markdown/output_30_1.png
+     create mode 100644 markdown/output_37_2.png
+     rewrite notebooks/03_nbdev.ipynb (68%)
+
 
 ```
 # git push -f origin master
@@ -720,6 +816,21 @@ ls
 ```
 ! git push -u ORIGIN master
 ```
+
+    Counting objects: 27, done.
+    Delta compression using up to 2 threads.
+    Compressing objects: 100% (26/26), done.
+    Writing objects: 100% (27/27), 2.38 MiB | 2.68 MiB/s, done.
+    Total 27 (delta 17), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (17/17), completed with 13 local objects.[K
+    remote: 
+    remote: GitHub found 1 vulnerability on karpatic/datalabs's default branch (1 high). To find out more, visit:[K
+    remote:      https://github.com/karpatic/datalabs/network/alert/docs/Gemfile.lock/kramdown/open[K
+    remote: 
+    To https://github.com/karpatic/datalabs.git
+       56b1bad..d0a5ecb  master -> master
+    Branch 'master' set up to track remote branch 'master' from 'ORIGIN'.
+
 
 If you get the error "fatal: could not read Username for 'https://github.com': No such device or address"...
 
@@ -766,6 +877,188 @@ Nbdev has everything else all set up! Simply run make pypi and enter your creden
 %nbdev_hide_output
 ! make pypi
 ```
+
+    rm -rf dist
+    python setup.py sdist bdist_wheel
+    running sdist
+    running egg_info
+    creating datalabs.egg-info
+    writing datalabs.egg-info/PKG-INFO
+    writing dependency_links to datalabs.egg-info/dependency_links.txt
+    writing entry points to datalabs.egg-info/entry_points.txt
+    writing top-level names to datalabs.egg-info/top_level.txt
+    writing manifest file 'datalabs.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    warning: no previously-included files matching '__pycache__' found under directory '*'
+    writing manifest file 'datalabs.egg-info/SOURCES.txt'
+    running check
+    creating datalabs-0.0.2
+    creating datalabs-0.0.2/.github
+    creating datalabs-0.0.2/.github/workflows
+    creating datalabs-0.0.2/datalabs
+    creating datalabs-0.0.2/datalabs.egg-info
+    creating datalabs-0.0.2/docs
+    creating datalabs-0.0.2/docs/_data
+    creating datalabs-0.0.2/docs/_data/sidebars
+    creating datalabs-0.0.2/docs/_includes
+    creating datalabs-0.0.2/docs/_layouts
+    creating datalabs-0.0.2/docs/css
+    creating datalabs-0.0.2/docs/css/fonts
+    creating datalabs-0.0.2/docs/fonts
+    creating datalabs-0.0.2/docs/images
+    creating datalabs-0.0.2/docs/js
+    creating datalabs-0.0.2/docs/licenses
+    creating datalabs-0.0.2/notebooks
+    copying files to datalabs-0.0.2...
+    copying .gitignore -> datalabs-0.0.2
+    copying CONTRIBUTING.md -> datalabs-0.0.2
+    copying LICENSE -> datalabs-0.0.2
+    copying MANIFEST.in -> datalabs-0.0.2
+    copying Makefile -> datalabs-0.0.2
+    copying README.md -> datalabs-0.0.2
+    copying settings.ini -> datalabs-0.0.2
+    copying setup.py -> datalabs-0.0.2
+    copying .github/workflows/main.yml -> datalabs-0.0.2/.github/workflows
+    copying datalabs/__init__.py -> datalabs-0.0.2/datalabs
+    copying datalabs/_nbdev.py -> datalabs-0.0.2/datalabs
+    copying datalabs/core.py -> datalabs-0.0.2/datalabs
+    copying datalabs.egg-info/PKG-INFO -> datalabs-0.0.2/datalabs.egg-info
+    copying datalabs.egg-info/SOURCES.txt -> datalabs-0.0.2/datalabs.egg-info
+    copying datalabs.egg-info/dependency_links.txt -> datalabs-0.0.2/datalabs.egg-info
+    copying datalabs.egg-info/entry_points.txt -> datalabs-0.0.2/datalabs.egg-info
+    copying datalabs.egg-info/not-zip-safe -> datalabs-0.0.2/datalabs.egg-info
+    copying datalabs.egg-info/top_level.txt -> datalabs-0.0.2/datalabs.egg-info
+    copying docs/.gitignore -> datalabs-0.0.2/docs
+    copying docs/Gemfile -> datalabs-0.0.2/docs
+    copying docs/Gemfile.lock -> datalabs-0.0.2/docs
+    copying docs/_config.yml -> datalabs-0.0.2/docs
+    copying docs/colabs.html -> datalabs-0.0.2/docs
+    copying docs/feed.xml -> datalabs-0.0.2/docs
+    copying docs/github.html -> datalabs-0.0.2/docs
+    copying docs/index.html -> datalabs-0.0.2/docs
+    copying docs/nbdev.html -> datalabs-0.0.2/docs
+    copying docs/scooterExploration.html -> datalabs-0.0.2/docs
+    copying docs/sidebar.json -> datalabs-0.0.2/docs
+    copying docs/sitemap.xml -> datalabs-0.0.2/docs
+    copying docs/tooltips.json -> datalabs-0.0.2/docs
+    copying docs/_data/alerts.yml -> datalabs-0.0.2/docs/_data
+    copying docs/_data/definitions.yml -> datalabs-0.0.2/docs/_data
+    copying docs/_data/glossary.yml -> datalabs-0.0.2/docs/_data
+    copying docs/_data/tags.yml -> datalabs-0.0.2/docs/_data
+    copying docs/_data/terms.yml -> datalabs-0.0.2/docs/_data
+    copying docs/_data/topnav.yml -> datalabs-0.0.2/docs/_data
+    copying docs/_data/sidebars/home_sidebar.yml -> datalabs-0.0.2/docs/_data/sidebars
+    copying docs/_includes/archive.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/callout.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/footer.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/google_analytics.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/head.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/head_print.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/image.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/important.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/initialize_shuffle.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/inline_image.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/links.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/note.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/search_google_custom.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/search_simple_jekyll.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/sidebar.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/tip.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/toc.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/topnav.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_includes/warning.html -> datalabs-0.0.2/docs/_includes
+    copying docs/_layouts/default.html -> datalabs-0.0.2/docs/_layouts
+    copying docs/_layouts/default_print.html -> datalabs-0.0.2/docs/_layouts
+    copying docs/_layouts/none.html -> datalabs-0.0.2/docs/_layouts
+    copying docs/_layouts/page.html -> datalabs-0.0.2/docs/_layouts
+    copying docs/_layouts/page_print.html -> datalabs-0.0.2/docs/_layouts
+    copying docs/css/bootstrap.min.css -> datalabs-0.0.2/docs/css
+    copying docs/css/boxshadowproperties.css -> datalabs-0.0.2/docs/css
+    copying docs/css/customstyles.css -> datalabs-0.0.2/docs/css
+    copying docs/css/font-awesome.min.css -> datalabs-0.0.2/docs/css
+    copying docs/css/modern-business.css -> datalabs-0.0.2/docs/css
+    copying docs/css/printstyles.css -> datalabs-0.0.2/docs/css
+    copying docs/css/syntax.css -> datalabs-0.0.2/docs/css
+    copying docs/css/theme-blue.css -> datalabs-0.0.2/docs/css
+    copying docs/css/theme-green.css -> datalabs-0.0.2/docs/css
+    copying docs/css/fonts/FontAwesome.otf -> datalabs-0.0.2/docs/css/fonts
+    copying docs/css/fonts/fontawesome-webfont.eot -> datalabs-0.0.2/docs/css/fonts
+    copying docs/css/fonts/fontawesome-webfont.svg -> datalabs-0.0.2/docs/css/fonts
+    copying docs/css/fonts/fontawesome-webfont.ttf -> datalabs-0.0.2/docs/css/fonts
+    copying docs/css/fonts/fontawesome-webfont.woff -> datalabs-0.0.2/docs/css/fonts
+    copying docs/css/fonts/fontawesome-webfont.woff2 -> datalabs-0.0.2/docs/css/fonts
+    copying docs/fonts/FontAwesome.otf -> datalabs-0.0.2/docs/fonts
+    copying docs/fonts/fontawesome-webfont.eot -> datalabs-0.0.2/docs/fonts
+    copying docs/fonts/fontawesome-webfont.svg -> datalabs-0.0.2/docs/fonts
+    copying docs/fonts/fontawesome-webfont.ttf -> datalabs-0.0.2/docs/fonts
+    copying docs/fonts/fontawesome-webfont.woff -> datalabs-0.0.2/docs/fonts
+    copying docs/fonts/glyphicons-halflings-regular.eot -> datalabs-0.0.2/docs/fonts
+    copying docs/fonts/glyphicons-halflings-regular.svg -> datalabs-0.0.2/docs/fonts
+    copying docs/fonts/glyphicons-halflings-regular.ttf -> datalabs-0.0.2/docs/fonts
+    copying docs/fonts/glyphicons-halflings-regular.woff -> datalabs-0.0.2/docs/fonts
+    copying docs/fonts/glyphicons-halflings-regular.woff2 -> datalabs-0.0.2/docs/fonts
+    copying docs/images/company_logo.png -> datalabs-0.0.2/docs/images
+    copying docs/images/company_logo_big.png -> datalabs-0.0.2/docs/images
+    copying docs/images/doc_example.png -> datalabs-0.0.2/docs/images
+    copying docs/images/export_example.png -> datalabs-0.0.2/docs/images
+    copying docs/images/favicon.ico -> datalabs-0.0.2/docs/images
+    copying docs/images/workflowarrow.png -> datalabs-0.0.2/docs/images
+    copying docs/js/customscripts.js -> datalabs-0.0.2/docs/js
+    copying docs/js/jekyll-search.js -> datalabs-0.0.2/docs/js
+    copying docs/js/jquery.ba-throttle-debounce.min.js -> datalabs-0.0.2/docs/js
+    copying docs/js/jquery.navgoco.min.js -> datalabs-0.0.2/docs/js
+    copying docs/js/jquery.shuffle.min.js -> datalabs-0.0.2/docs/js
+    copying docs/js/toc.js -> datalabs-0.0.2/docs/js
+    copying docs/licenses/LICENSE -> datalabs-0.0.2/docs/licenses
+    copying docs/licenses/LICENSE-BSD-NAVGOCO.txt -> datalabs-0.0.2/docs/licenses
+    copying notebooks/00_github.ipynb -> datalabs-0.0.2/notebooks
+    copying notebooks/01_colabs.ipynb -> datalabs-0.0.2/notebooks
+    copying notebooks/02_scooterExploration.ipynb -> datalabs-0.0.2/notebooks
+    copying notebooks/03_nbdev.ipynb -> datalabs-0.0.2/notebooks
+    copying notebooks/index.ipynb -> datalabs-0.0.2/notebooks
+    Writing datalabs-0.0.2/setup.cfg
+    creating dist
+    Creating tar archive
+    removing 'datalabs-0.0.2' (and everything under it)
+    running bdist_wheel
+    running build
+    running build_py
+    creating build
+    creating build/lib
+    creating build/lib/datalabs
+    copying datalabs/core.py -> build/lib/datalabs
+    copying datalabs/__init__.py -> build/lib/datalabs
+    copying datalabs/_nbdev.py -> build/lib/datalabs
+    installing to build/bdist.linux-x86_64/wheel
+    running install
+    running install_lib
+    creating build/bdist.linux-x86_64
+    creating build/bdist.linux-x86_64/wheel
+    creating build/bdist.linux-x86_64/wheel/datalabs
+    copying build/lib/datalabs/core.py -> build/bdist.linux-x86_64/wheel/datalabs
+    copying build/lib/datalabs/__init__.py -> build/bdist.linux-x86_64/wheel/datalabs
+    copying build/lib/datalabs/_nbdev.py -> build/bdist.linux-x86_64/wheel/datalabs
+    running install_egg_info
+    Copying datalabs.egg-info to build/bdist.linux-x86_64/wheel/datalabs-0.0.2-py3.6.egg-info
+    running install_scripts
+    adding license file "LICENSE" (matched pattern "LICEN[CS]E*")
+    creating build/bdist.linux-x86_64/wheel/datalabs-0.0.2.dist-info/WHEEL
+    creating 'dist/datalabs-0.0.2-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+    adding 'datalabs/__init__.py'
+    adding 'datalabs/_nbdev.py'
+    adding 'datalabs/core.py'
+    adding 'datalabs-0.0.2.dist-info/LICENSE'
+    adding 'datalabs-0.0.2.dist-info/METADATA'
+    adding 'datalabs-0.0.2.dist-info/WHEEL'
+    adding 'datalabs-0.0.2.dist-info/entry_points.txt'
+    adding 'datalabs-0.0.2.dist-info/top_level.txt'
+    adding 'datalabs-0.0.2.dist-info/RECORD'
+    removing build/bdist.linux-x86_64/wheel
+    twine upload --repository pypi dist/*
+    /bin/sh: 1: twine: not found
+    Makefile:23: recipe for target 'pypi' failed
+    make: *** [pypi] Error 127
+
 
 ```
 ls
