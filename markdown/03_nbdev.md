@@ -612,6 +612,9 @@ As long as you are somewhere in the folder where you are developing your library
 cd notebooks
 ```
 
+    /content/drive/My Drive/Sites/datalabs/notebooks
+
+
 ```
 #hide_output
 ! nbdev_clean_nbs
@@ -635,9 +638,29 @@ cd notebooks
 ! find . -type d -name "*files" -exec rm -rf {} \;
 ```
 
+    Traceback (most recent call last):
+      File "/usr/local/bin/nbdev_nb2md", line 8, in <module>
+        sys.exit(nbdev_nb2md())
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 104, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 671, in nbdev_nb2md
+        convert_md(fname, dest, jekyll=jekyll, img_path=img_path)
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 580, in convert_md
+        with open(Path(dest_path)/img_path/n, 'wb') as f: f.write(o)
+    FileNotFoundError: [Errno 2] No such file or directory: '../markdown/02_scooterExploration_files/output_30_1.png'
+    find: ‘./00_github_files’: No such file or directory
+    find: ‘./01_colabs_files’: No such file or directory
+    find: ‘./02_scooterExploration_files’: No such file or directory
+    find: ‘./03_nbdev_files’: No such file or directory
+    find: ‘./index_files’: No such file or directory
+
+
 ```
 cd ../
 ```
+
+    /content/drive/My Drive/Sites/datalabs
+
 
 ## Git
 
@@ -654,9 +677,41 @@ cd ../
 ! git add *
 ```
 
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    The following paths are ignored by one of your .gitignore files:
+    build
+    dist
+    Use -f if you really want to add them.
+
+
 ```
 ls
 ```
+
+    [0m[01;34mbuild[0m/           [01;34mdist[0m/    Makefile     [01;34mnotebooks[0m/    setup.py
+    CONTRIBUTING.md  [01;34mdocs[0m/    MANIFEST.in  README.md
+    [01;34mdatalabs[0m/        LICENSE  [01;34mmarkdown[0m/    settings.ini
+
 
 ```
 !git config --global user.name "karpatic"
@@ -667,11 +722,11 @@ ls
 ```
 
 ```
-! git commit -m "NBDEV Collapse Tes"
+! git commit -m "NBDEV Collapse Tests"
 ```
 
-    [master 25212ec] NBDEV Hide and Collapse Columns
-     3 files changed, 73 insertions(+), 50 deletions(-)
+    [master 661a8fa] NBDEV Collapse Tests
+     3 files changed, 780 insertions(+), 188 deletions(-)
 
 
 ```
@@ -747,6 +802,18 @@ Nbdev has everything else all set up! Simply run make pypi and enter your creden
 ```
 ls
 ```
+
+```
+var = "hide"
+var
+```
+
+
+
+
+    'hide'
+
+
 
 ```
 #hide
