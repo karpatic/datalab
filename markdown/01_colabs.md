@@ -1,5 +1,5 @@
 # Python and Colabs
-> ![](./images/ai_of_me.jpg) In this chapter we will quickly learn about Github and explore some of its many features. 
+> In this chapter we will quickly learn about Github and explore some of its many features. 
 
 
 ![](../../images/ai_of_me.jpg)

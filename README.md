@@ -62,3 +62,64 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+
+<details>
+  <summary> summary and details together </summary>
+  details 1
+</details>
+
+<details>
+  <summary> summary and details split </summary>
+
+  summary and details split
+</details>
+
+<details>
+
+####  <summary> Entirely Split </summary>
+
+  Entirely Split
+
+</details>
+
+<details>
+  <summary> # md within html </summary>
+  **md within html**
+</details>
+
+```
+#collapse_output
+print('The input of this cell is visible as usual.\nHowever, the OUTPUT of this cell is collapsed by default but you can expand it!')
+```
+
+```
+%%html
+<details>
+  <summary> code html </summary>
+  code html
+</details>
+```
+
+
+<details>
+  <summary> summary 1 </summary>
+  details 1
+</details>
+
+
+```
+#collapse_output
+%%html
+<details>
+  <summary> code html collapse output </summary>
+  code html collapse output
+</details>
+```
+
+```
+%%html
+<details>
+  <summary> code html </summary>
+  code html no collapse
+</details>
+```
