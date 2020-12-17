@@ -241,8 +241,6 @@ These images will be added to added and displayed in the docs
 
 [](./images/ai_of_me.jpg)
 
-![](../../notebooks/images/ai_of_me.jpg)
-
 **8. Jekyll [Notes](http://nbdev.fast.ai/export2html/#add_jekyll_notes)**
 
 The following section was written using the following markups 
@@ -729,10 +727,8 @@ ls
 ! git commit -m "Trying Notebook Img Folder"
 ```
 
-    [master b3862a7] Trying Notebook Img Folder
-     6 files changed, 2234 insertions(+), 30 deletions(-)
-     rewrite notebooks/03_nbdev.ipynb (98%)
-     create mode 100644 notebooks/images/ai_of_me.jpg
+    [master e079cd4] Trying Notebook Img Folder
+     2 files changed, 50 insertions(+), 17 deletions(-)
 
 
 ```
@@ -744,18 +740,18 @@ ls
 ! git push -u ORIGIN master
 ```
 
-    Counting objects: 4, done.
+    Counting objects: 18, done.
     Delta compression using up to 2 threads.
-    Compressing objects: 100% (4/4), done.
-    Writing objects: 100% (4/4), 17.11 KiB | 3.42 MiB/s, done.
-    Total 4 (delta 2), reused 0 (delta 0)
-    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+    Compressing objects: 100% (17/17), done.
+    Writing objects: 100% (18/18), 28.80 KiB | 3.60 MiB/s, done.
+    Total 18 (delta 14), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (14/14), completed with 9 local objects.[K
     remote: 
     remote: GitHub found 1 vulnerability on karpatic/datalabs's default branch (1 high). To find out more, visit:[K
     remote:      https://github.com/karpatic/datalabs/security/dependabot/docs/Gemfile.lock/kramdown/open[K
     remote: 
     To https://github.com/karpatic/datalabs.git
-       a95cc46..3cc317b  master -> master
+       3cc317b..e079cd4  master -> master
     Branch 'master' set up to track remote branch 'master' from 'ORIGIN'.
 
 
@@ -802,9 +798,7 @@ Nbdev has everything else all set up! Simply run make pypi and enter your creden
 
 ## Misc Tests
 
-[](./images/ai_of_me.jpg)
-
-![](../../notebooks/images/ai_of_me.jpg)
+![](../../images/ai_of_me.jpg)
 
 ```
 #hide_output
