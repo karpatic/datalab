@@ -239,7 +239,7 @@ The 'images' folder can be used to conjure up pictures like so:
 
 These images will be added to added and displayed in the docs
 
-[](./images/ai_of_me.jpg)
+![](../../images/ai_of_me.jpg)
 
 **8. Jekyll [Notes](http://nbdev.fast.ai/export2html/#add_jekyll_notes)**
 
@@ -724,11 +724,30 @@ ls
 ```
 
 ```
-! git commit -m "Trying Notebook Img Folder"
+! git commit -m "Cover Photo"
 ```
 
-    [master e079cd4] Trying Notebook Img Folder
-     2 files changed, 50 insertions(+), 17 deletions(-)
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    [master b06e71c] Trying Notebook Img Folder attempt 2
+     4 files changed, 81 insertions(+), 58 deletions(-)
+     create mode 100644 docs/images/ai_of_me.jpg
 
 
 ```
@@ -740,18 +759,18 @@ ls
 ! git push -u ORIGIN master
 ```
 
-    Counting objects: 18, done.
+    Counting objects: 9, done.
     Delta compression using up to 2 threads.
-    Compressing objects: 100% (17/17), done.
-    Writing objects: 100% (18/18), 28.80 KiB | 3.60 MiB/s, done.
-    Total 18 (delta 14), reused 0 (delta 0)
-    remote: Resolving deltas: 100% (14/14), completed with 9 local objects.[K
+    Compressing objects: 100% (9/9), done.
+    Writing objects: 100% (9/9), 1.74 KiB | 446.00 KiB/s, done.
+    Total 9 (delta 8), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (8/8), completed with 8 local objects.[K
     remote: 
     remote: GitHub found 1 vulnerability on karpatic/datalabs's default branch (1 high). To find out more, visit:[K
     remote:      https://github.com/karpatic/datalabs/security/dependabot/docs/Gemfile.lock/kramdown/open[K
     remote: 
     To https://github.com/karpatic/datalabs.git
-       3cc317b..e079cd4  master -> master
+       e079cd4..b06e71c  master -> master
     Branch 'master' set up to track remote branch 'master' from 'ORIGIN'.
 
 

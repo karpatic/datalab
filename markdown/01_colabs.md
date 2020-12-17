@@ -1,10 +1,8 @@
 # Python and Colabs
+> ![](./images/ai_of_me.jpg) In this chapter we will quickly learn about Github and explore some of its many features. 
 
 
-
-> In this chapter we will quickly learn about Github and explore some of its many features. 
-
-- keywords:thisworks
+![](../../images/ai_of_me.jpg)
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/karpatic/datalab/master?filepath=%2Fnotebooks%2F01_colabs.ipynb)
 [![Binder](https://pete88b.github.io/fastpages/assets/badges/colab.svg)](https://colab.research.google.com/github/karpatic/datalab/blob/master/notebooks/01_colabs.ipynb)
