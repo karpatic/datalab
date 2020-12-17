@@ -2,11 +2,9 @@
 > In this chapter we learn about publishing python notebooks with <a href='http://nbdev.fast.ai/tutorial/'>nbdev</a>.
 
 
-## (Non-Technical) Introduction
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/karpatic/datalab/master?filepath=%2Fnotebooks%2F03_nbdev.ipynb)
-[![Binder](https://pete88b.github.io/fastpages/assets/badges/colab.svg)](https://colab.research.google.com/github/karpatic/datalab/blob/master/notebooks/03_nbdev.ipynb)
-[![Binder](https://pete88b.github.io/fastpages/assets/badges/github.svg)](https://github.com/karpatic/datalab/tree/master/notebooks/03_nbdev.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/karpatic/datalab/master?filepath=%2Fnotebooks%2Findex.ipynb)
+[![Binder](https://pete88b.github.io/fastpages/assets/badges/colab.svg)](https://colab.research.google.com/github/karpatic/datalab/blob/master/notebooks/index.ipynb)
+[![Binder](https://pete88b.github.io/fastpages/assets/badges/github.svg)](https://github.com/karpatic/datalab/tree/master/notebooks/index.ipynb)
 [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 [![NPM License](https://img.shields.io/npm/l/all-contributors.svg?style=flat)](https://github.com/karpatic/datalabs/blob/master/LICENSE)
@@ -23,6 +21,7 @@
 [![Tweet](https://img.shields.io/twitter/url/https/github.com/karpatic/datalabs.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20%E2%9C%A8%20colab%20by%20@bniajfi%20https://github.com/karpatic/datalabs%20%F0%9F%A4%97) 
 [![Twitter Follow](https://img.shields.io/twitter/follow/bniajfi.svg?style=social)](https://twitter.com/bniajfi)
 
+## (Non-Technical) Introduction
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
@@ -294,7 +293,7 @@ You can grab a free project template (containing all the needed files and proper
 Now create a new [repository](https://github.com/fastai/nbdev_template/generate)
 
 ```
-%nbdev_hide_output
+#hide_output
 ! git clone https://github.com/karpatic/thisisatemplate.git
 ```
 
@@ -305,6 +304,7 @@ An Nbdev terminal command can be used to **create a template** project directory
 Use -h to view positional args.
 
 ```
+#collapse_output
 ! nbdev_new -h
 ```
 
@@ -327,6 +327,7 @@ Use -h to view positional args.
 We will need to **register your github credentials** appropraitely configured for it to work.
 
 ```
+#collapse_input open
 ! git config --global user.email "charles.karpati@gmail.com"
 ! git config --global user.name "karpatic"
 ```
@@ -334,7 +335,7 @@ We will need to **register your github credentials** appropraitely configured fo
 And now you can just **run the command to create a new project**/ (and directory) by a name of your choosing.
 
 ```
-%nbdev_hide_output
+#hide_output
 ! nbdev_new 'test123'
 ```
 
@@ -374,8 +375,8 @@ Really, only the '**folder_name**' and '**github_username**' fields need to be e
 The form values entered here will be inserted into the settings.ini doc. 
 
 ```
+#collapse_input
 #@title Example form fields
-%nbdev_collapse_input close
 #@markdown Forms support many types of fields.
 
 # Name of the project
@@ -480,9 +481,6 @@ file1.write(innertext)
 file1.close() 
 ```
 
-    UsageError: Invalid option "close". Usage `%nbdev_collapse_input [open]`
-
-
 #### Edit The Notebooks
 
 To start, notice how there are two `.ipynb`'s. 
@@ -494,14 +492,12 @@ These are two notebooks used for the template.
 2. `00_core.ipynb` - This is the 'core' component of the python library. You don't have to keep the 'core' part. The left two digits in the filename help the website navigation so you can increment your notebooks by the order you want them displayed. The index.ipynb is the only notebook that does not have this logic apply to it. Inside the notebook you will see a template near ready for deployment. If the lib_name was to be replaced and a function was declared with an `# export flag` at the top of its cell; this would be ready for deployment and publishing to Pypi!
 
 ```
-%nbdev_hide_output
 ! mkdir ./notebooks
 ! mv ./00_core.ipynb ./notebooks/
 ! mv index.ipynb ./notebooks/
 ```
 
 ```
-%nbdev_hide_output
 ! mkdir ./notebooks
 ! rm ./00_core.ipynb
 ! mv index.ipynb ./notebooks/
@@ -518,12 +514,8 @@ Once ready, run `! nbdev_build_lib`
 - You'll now find that you have a new directory, with the name of whatever you set lib_name to.
 
 ```
-%nbdev_hide_output
+#hide_output
 ! nbdev_build_lib
-```
-
-```
-# ! nbdev_nb2m index.ipynb
 ```
 
 **Congratulations**! You have now successfully created a python library. 
@@ -535,7 +527,7 @@ Be sure to explore the Flags and Commands!
 #### Configuring Git-Github
 
 ```
-%nbdev_hide_output
+#hide_output
 ! git init
 ```
 
@@ -611,25 +603,10 @@ As long as you are somewhere in the folder where you are developing your library
 
 
 ```
+#hide_output
 # nbdev_build_docs builds the documentation from the notebooks
 !nbdev_build_docs --force_all True --mk_readme True 
 ```
-
-    <IPython.core.display.HTML object>
-    <IPython.core.display.HTML object>
-    converting: /content/drive/My Drive/Sites/datalabs/notebooks/01_colabs.ipynb
-    converting: /content/drive/My Drive/Sites/datalabs/notebooks/03_nbdev.ipynb
-    <IPython.core.display.HTML object>
-    <IPython.core.display.HTML object>
-    converting: /content/drive/My Drive/Sites/datalabs/notebooks/index.ipynb
-    converting: /content/drive/My Drive/Sites/datalabs/notebooks/00_github.ipynb
-    <IPython.core.display.HTML object>
-    <IPython.core.display.HTML object>
-    converting: /content/drive/My Drive/Sites/datalabs/notebooks/02_scooterExploration.ipynb
-    <IPython.core.display.HTML object>
-    <IPython.core.display.HTML object>
-    converting /content/drive/My Drive/Sites/datalabs/notebooks/index.ipynb to README.md
-
 
 ```
 cd notebooks
@@ -639,6 +616,7 @@ cd notebooks
 
 
 ```
+#hide_output
 ! nbdev_clean_nbs
 ! nbdev_fix_merge 00_github.ipynb
 ! nbdev_fix_merge 01_colabs.ipynb
@@ -649,14 +627,8 @@ cd notebooks
 ! find . -name "*.bak" -type f -delete
 ```
 
-    Succesfully merged conflicts!
-    Succesfully merged conflicts!
-    Succesfully merged conflicts!
-    Succesfully merged conflicts!
-    Succesfully merged conflicts!
-
-
 ```
+#hide_output
 # nbdev_nb2md(fname:"A notebook file name to convert", dest:"The destination folder"='.', img_path:"Folder to export images to"='', jekyll:"To use jekyll metadata for your markdown file or not"=False)
 ! nbdev_nb2md 00_github.ipynb --dest "../markdown" 
 ! nbdev_nb2md 01_colabs.ipynb --dest "../markdown" 
@@ -701,35 +673,9 @@ cd ../
 ```
 
 ```
+#hide_output
 ! git add *
 ```
-
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    The following paths are ignored by one of your .gitignore files:
-    build
-    dist
-    Use -f if you really want to add them.
-
 
 ```
 ls
@@ -749,19 +695,11 @@ ls
 ```
 
 ```
-! git commit -m "Testing nbdev yaml p3"
+! git commit -m "reverting nbdev after yaml experiments"
 ```
 
-    On branch master
-    Your branch is up to date with 'ORIGIN/master'.
-    
-    Changes not staged for commit:
-    	[31mdeleted:    MechanicalSoupIntroduction.ipynb[m
-    	[31mdeleted:    bashbasics.ipynb[m
-    	[31mdeleted:    test123/__init__.py[m
-    	[31mdeleted:    test123/_nbdev.py[m
-    
-    no changes added to commit
+    [master 355e938] reverting nbdev after yaml experiments
+     3 files changed, 151 insertions(+), 113 deletions(-)
 
 
 ```
@@ -769,11 +707,23 @@ ls
 ```
 
 ```
+#hide_output
 ! git push -u ORIGIN master
 ```
 
+    Counting objects: 8, done.
+    Delta compression using up to 2 threads.
+    Compressing objects: 100% (8/8), done.
+    Writing objects: 100% (8/8), 2.16 KiB | 246.00 KiB/s, done.
+    Total 8 (delta 7), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
+    remote: 
+    remote: GitHub found 1 vulnerability on karpatic/datalabs's default branch (1 high). To find out more, visit:[K
+    remote:      https://github.com/karpatic/datalabs/security/dependabot/docs/Gemfile.lock/kramdown/open[K
+    remote: 
+    To https://github.com/karpatic/datalabs.git
+       2e96002..355e938  master -> master
     Branch 'master' set up to track remote branch 'master' from 'ORIGIN'.
-    Everything up-to-date
 
 
 If you get the error "fatal: could not read Username for 'https://github.com': No such device or address"...
@@ -818,7 +768,7 @@ Other than that...
 Nbdev has everything else all set up! Simply run make pypi and enter your credentials when prompted (at the bottom of the terminal output). Your password will be sensored so it is safe to post this code online without clearing it.
 
 ```
-%nbdev_hide_output
+#hide_output
 ! make pypi
 ```
 

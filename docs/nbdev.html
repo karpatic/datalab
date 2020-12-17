@@ -31,15 +31,9 @@ nb_path: "notebooks/03_nbdev.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="(Non-Technical)-Introduction">(Non-Technical) Introduction<a class="anchor-link" href="#(Non-Technical)-Introduction"> </a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://mybinder.org/v2/gh/karpatic/datalab/master?filepath=%2Fnotebooks%2F03_nbdev.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a>
-<a href="https://colab.research.google.com/github/karpatic/datalab/blob/master/notebooks/03_nbdev.ipynb"><img src="https://pete88b.github.io/fastpages/assets/badges/colab.svg" alt="Binder"></a>
-<a href="https://github.com/karpatic/datalab/tree/master/notebooks/03_nbdev.ipynb"><img src="https://pete88b.github.io/fastpages/assets/badges/github.svg" alt="Binder"></a>
+<p><a href="https://mybinder.org/v2/gh/karpatic/datalab/master?filepath=%2Fnotebooks%2Findex.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a>
+<a href="https://colab.research.google.com/github/karpatic/datalab/blob/master/notebooks/index.ipynb"><img src="https://pete88b.github.io/fastpages/assets/badges/colab.svg" alt="Binder"></a>
+<a href="https://github.com/karpatic/datalab/tree/master/notebooks/index.ipynb"><img src="https://pete88b.github.io/fastpages/assets/badges/github.svg" alt="Binder"></a>
 <a href="https://github.com/ellerbrock/open-source-badges/"><img src="https://badges.frapsoft.com/os/v3/open-source.svg?v=103" alt="Open Source Love svg3"></a></p>
 <p><a href="https://github.com/karpatic/datalabs/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/all-contributors.svg?style=flat" alt="NPM License"></a>
 <a href="https://karpatic.github.io"><img src="http://img.shields.io/badge/Status-Active-green.svg" alt="Active"></a> 
@@ -52,6 +46,18 @@ nb_path: "notebooks/03_nbdev.ipynb"
 <a href="https://github.com/karpatic/datalabs"><img src="https://img.shields.io/github/followers/karpatic.svg?style=social&amp;label=Follow" alt="GitHub followers"></a></p>
 <p><a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20%E2%9C%A8%20colab%20by%20@bniajfi%20https://github.com/karpatic/datalabs%20%F0%9F%A4%97"><img src="https://img.shields.io/twitter/url/https/github.com/karpatic/datalabs.svg?style=social" alt="Tweet"></a> 
 <a href="https://twitter.com/bniajfi"><img src="https://img.shields.io/twitter/follow/bniajfi.svg?style=social" alt="Twitter Follow"></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(Non-Technical)-Introduction">(Non-Technical) Introduction<a class="anchor-link" href="#(Non-Technical)-Introduction"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://www.python.org/"><img src="http://ForTheBadge.com/images/badges/made-with-python.svg" alt="forthebadge made-with-python"></a></p>
 <p><a href="https://GitHub.com/Naereen/"><img src="http://ForTheBadge.com/images/badges/built-with-love.svg" alt="ForTheBadge built-with-love"></a> <a href="https://github.com/Naereen/StrapDown.js/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Naereen/StrapDown.js.svg" alt="GitHub license"></a></p>
 <p><a href="http://ForTheBadge.com"><img src="http://ForTheBadge.com/images/badges/powered-by-electricity.svg" alt="ForTheBadge powered-by-electricity"></a></p>
@@ -682,8 +688,7 @@ Example:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">nbdev_hide_output</span>
-<span class="o">!</span> git clone https://github.com/karpatic/thisisatemplate.git
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git clone https://github.com/karpatic/thisisatemplate.git
 </pre></div>
 
     </div>
@@ -790,8 +795,7 @@ optional arguments:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">nbdev_hide_output</span>
-<span class="o">!</span> nbdev_new <span class="s1">&#39;test123&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> nbdev_new <span class="s1">&#39;test123&#39;</span>
 </pre></div>
 
     </div>
@@ -895,7 +899,7 @@ optional arguments:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">nbdev_collapse_input</span> close
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Example form fields</span>
 <span class="c1">#@markdown Forms support many types of fields.</span>
 
 <span class="c1"># Name of the project</span>
@@ -1004,20 +1008,6 @@ optional arguments:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>UsageError: Invalid option &#34;close&#34;. Usage `%nbdev_collapse_input [open]`
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -1048,8 +1038,7 @@ optional arguments:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">nbdev_hide_output</span>
-<span class="o">!</span> mkdir ./notebooks
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> mkdir ./notebooks
 <span class="o">!</span> mv ./00_core.ipynb ./notebooks/
 <span class="o">!</span> mv index.ipynb ./notebooks/
 </pre></div>
@@ -1068,8 +1057,7 @@ optional arguments:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">nbdev_hide_output</span>
-<span class="o">!</span> mkdir ./notebooks
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> mkdir ./notebooks
 <span class="o">!</span> rm ./00_core.ipynb
 <span class="o">!</span> mv index.ipynb ./notebooks/
 </pre></div>
@@ -1112,25 +1100,7 @@ optional arguments:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">nbdev_hide_output</span>
-<span class="o">!</span> nbdev_build_lib
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> nbdev_build_lib
 </pre></div>
 
     </div>
@@ -1168,8 +1138,7 @@ optional arguments:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">nbdev_hide_output</span>
-<span class="o">!</span> git init
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git init
 </pre></div>
 
     </div>
@@ -1392,37 +1361,11 @@ Converted index.ipynb.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>nbdev_build_docs --force_all True --mk_readme True 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbdev_build_docs builds the documentation from the notebooks</span>
+<span class="o">!</span>nbdev_build_docs --force_all True --mk_readme True 
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;IPython.core.display.HTML object&gt;
-&lt;IPython.core.display.HTML object&gt;
-converting: /content/drive/My Drive/Sites/datalabs/notebooks/01_colabs.ipynb
-converting: /content/drive/My Drive/Sites/datalabs/notebooks/03_nbdev.ipynb
-&lt;IPython.core.display.HTML object&gt;
-&lt;IPython.core.display.HTML object&gt;
-converting: /content/drive/My Drive/Sites/datalabs/notebooks/index.ipynb
-converting: /content/drive/My Drive/Sites/datalabs/notebooks/00_github.ipynb
-&lt;IPython.core.display.HTML object&gt;
-&lt;IPython.core.display.HTML object&gt;
-converting: /content/drive/My Drive/Sites/datalabs/notebooks/02_scooterExploration.ipynb
-&lt;IPython.core.display.HTML object&gt;
-&lt;IPython.core.display.HTML object&gt;
-converting /content/drive/My Drive/Sites/datalabs/notebooks/index.ipynb to README.md
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1481,24 +1424,6 @@ converting /content/drive/My Drive/Sites/datalabs/notebooks/index.ipynb to READM
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Succesfully merged conflicts!
-Succesfully merged conflicts!
-Succesfully merged conflicts!
-Succesfully merged conflicts!
-Succesfully merged conflicts!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -1509,7 +1434,8 @@ Succesfully merged conflicts!
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> nbdev_nb2md 00_github.ipynb --dest <span class="s2">&quot;../markdown&quot;</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbdev_nb2md(fname:&quot;A notebook file name to convert&quot;, dest:&quot;The destination folder&quot;=&#39;.&#39;, img_path:&quot;Folder to export images to&quot;=&#39;&#39;, jekyll:&quot;To use jekyll metadata for your markdown file or not&quot;=False)</span>
+<span class="o">!</span> nbdev_nb2md 00_github.ipynb --dest <span class="s2">&quot;../markdown&quot;</span> 
 <span class="o">!</span> nbdev_nb2md 01_colabs.ipynb --dest <span class="s2">&quot;../markdown&quot;</span> 
 <span class="o">!</span> nbdev_nb2md 02_scooterExploration.ipynb --dest <span class="s2">&quot;../markdown&quot;</span> 
 <span class="o">!</span> nbdev_nb2md 03_nbdev.ipynb --dest <span class="s2">&quot;../markdown&quot;</span> 
@@ -1749,7 +1675,7 @@ CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    MA
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;Testing nbdev yaml p3&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;reverting nbdev after yaml experiments&quot;</span>
 </pre></div>
 
     </div>
@@ -1762,16 +1688,8 @@ CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    MA
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>On branch master
-Your branch is up to date with &#39;ORIGIN/master&#39;.
-
-Changes not staged for commit:
-	<span class="ansi-red-fg">deleted:    MechanicalSoupIntroduction.ipynb</span>
-	<span class="ansi-red-fg">deleted:    bashbasics.ipynb</span>
-	<span class="ansi-red-fg">deleted:    test123/__init__.py</span>
-	<span class="ansi-red-fg">deleted:    test123/_nbdev.py</span>
-
-no changes added to commit
+<pre>[master 355e938] reverting nbdev after yaml experiments
+ 3 files changed, 151 insertions(+), 113 deletions(-)
 </pre>
 </div>
 </div>
@@ -1819,8 +1737,19 @@ no changes added to commit
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;ORIGIN&#39;.
-Everything up-to-date
+<pre>Counting objects: 8, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 2.16 KiB | 246.00 KiB/s, done.
+Total 8 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
+remote: 
+remote: GitHub found 1 vulnerability on karpatic/datalabs&#39;s default branch (1 high). To find out more, visit:
+remote:      https://github.com/karpatic/datalabs/security/dependabot/docs/Gemfile.lock/kramdown/open
+remote: 
+To https://github.com/karpatic/datalabs.git
+   2e96002..355e938  master -&gt; master
+Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;ORIGIN&#39;.
 </pre>
 </div>
 </div>
@@ -1963,8 +1892,7 @@ Everything up-to-date
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">nbdev_hide_output</span>
-<span class="o">!</span> make pypi
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> make pypi
 </pre></div>
 
     </div>
