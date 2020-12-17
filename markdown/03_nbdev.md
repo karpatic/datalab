@@ -610,34 +610,17 @@ As long as you are somewhere in the folder where you are developing your library
 !nbdev_build_lib
 ```
 
-    Converted 00_github.ipynb.
-    Converted 01_colabs.ipynb.
-    Converted 02_scooterExploration.ipynb.
-    Converted 03_nbdev.ipynb.
-    Converted index.ipynb.
-
-
 ```
 # nbdev_build_docs builds the documentation from the notebooks
 !nbdev_build_docs --force_all True --mk_readme True 
 ```
 
-    <IPython.core.display.HTML object>
-    <IPython.core.display.HTML object>
-    converting: /content/drive/My Drive/Sites/datalabs/notebooks/03_nbdev.ipynb
-    converting: /content/drive/My Drive/Sites/datalabs/notebooks/01_colabs.ipynb
-    <IPython.core.display.HTML object>
-    <IPython.core.display.HTML object>
-    converting: /content/drive/My Drive/Sites/datalabs/notebooks/00_github.ipynb
-    converting: /content/drive/My Drive/Sites/datalabs/notebooks/index.ipynb
-    <IPython.core.display.HTML object>
-    <IPython.core.display.HTML object>
-    converting: /content/drive/My Drive/Sites/datalabs/notebooks/02_scooterExploration.ipynb
-
-
 ```
 cd notebooks
 ```
+
+    /content/drive/My Drive/Sites/datalabs/notebooks
+
 
 ```
 ! nbdev_clean_nbs
@@ -650,6 +633,13 @@ cd notebooks
 ! find . -name "*.bak" -type f -delete
 ```
 
+    Succesfully merged conflicts!
+    Succesfully merged conflicts!
+    Succesfully merged conflicts!
+    Succesfully merged conflicts!
+    Succesfully merged conflicts!
+
+
 ```
 # nbdev_nb2md(fname:"A notebook file name to convert", dest:"The destination folder"='.', img_path:"Folder to export images to"='', jekyll:"To use jekyll metadata for your markdown file or not"=False)
 ! nbdev_nb2md 00_github.ipynb --dest "../markdown" 
@@ -660,9 +650,29 @@ cd notebooks
 ! find . -type d -name "*files" -exec rm -rf {} \;
 ```
 
+    Traceback (most recent call last):
+      File "/usr/local/bin/nbdev_nb2md", line 8, in <module>
+        sys.exit(nbdev_nb2md())
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 104, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 671, in nbdev_nb2md
+        convert_md(fname, dest, jekyll=jekyll, img_path=img_path)
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 580, in convert_md
+        with open(Path(dest_path)/img_path/n, 'wb') as f: f.write(o)
+    FileNotFoundError: [Errno 2] No such file or directory: '../markdown/02_scooterExploration_files/output_30_1.png'
+    find: ‘./00_github_files’: No such file or directory
+    find: ‘./01_colabs_files’: No such file or directory
+    find: ‘./02_scooterExploration_files’: No such file or directory
+    find: ‘./03_nbdev_files’: No such file or directory
+    find: ‘./index_files’: No such file or directory
+
+
 ```
 cd ../
 ```
+
+    /content/drive/My Drive/Sites/datalabs
+
 
 ## Git
 
@@ -723,32 +733,11 @@ ls
 ```
 
 ```
-! git commit -m "Fixed up NBDev Section a bit"
+! git commit -m "Testing nbdev yaml"
 ```
 
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    [master b7e450e] Fixed up NBDev Section a bit
-     1 file changed, 6 insertions(+), 8 deletions(-)
+    [master 704bacb] Testing nbdev yaml
+     3 files changed, 269 insertions(+), 201 deletions(-)
 
 
 ```
@@ -759,18 +748,18 @@ ls
 ! git push -u ORIGIN master
 ```
 
-    Counting objects: 4, done.
+    Counting objects: 8, done.
     Delta compression using up to 2 threads.
-    Compressing objects: 100% (4/4), done.
-    Writing objects: 100% (4/4), 497 bytes | 497.00 KiB/s, done.
-    Total 4 (delta 3), reused 0 (delta 0)
-    remote: Resolving deltas: 100% (3/3), completed with 3 local objects.[K
+    Compressing objects: 100% (8/8), done.
+    Writing objects: 100% (8/8), 3.14 KiB | 357.00 KiB/s, done.
+    Total 8 (delta 7), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
     remote: 
     remote: GitHub found 1 vulnerability on karpatic/datalabs's default branch (1 high). To find out more, visit:[K
     remote:      https://github.com/karpatic/datalabs/security/dependabot/docs/Gemfile.lock/kramdown/open[K
     remote: 
     To https://github.com/karpatic/datalabs.git
-       66cf6a5..b7e450e  master -> master
+       b7e450e..704bacb  master -> master
     Branch 'master' set up to track remote branch 'master' from 'ORIGIN'.
 
 
