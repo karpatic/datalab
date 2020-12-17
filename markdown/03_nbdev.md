@@ -277,7 +277,7 @@ Then navigate to the drive directory where you store your projects folder.
 
 ```
 %%capture
-! cd Sites/datalabs/notebooks
+! cd drive/MyDrive/Sites/datalabs/notebooks
 ```
 
 ## Creating a New Project
@@ -584,6 +584,13 @@ you need to install the libraries in this nb that are used in your other nb.
 Enter the project if it exists. Otherwise go to the folder you want it to exist at.
 
 ```
+cd ../
+```
+
+    /content/drive/My Drive/Sites/datalabs
+
+
+```
 cd datalabs
 ```
 
@@ -614,7 +621,8 @@ As long as you are somewhere in the folder where you are developing your library
 cd notebooks
 ```
 
-    /content/drive/My Drive/Sites/datalabs/notebooks
+    [Errno 2] No such file or directory: 'notebooks'
+    /content/drive/My Drive/Sites/datalabs/datalabs
 
 
 ```
@@ -645,16 +653,91 @@ cd notebooks
         sys.exit(nbdev_nb2md())
       File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 104, in _f
         tfunc(**merge(args, args_from_prog(func, xtra)))
-      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 671, in nbdev_nb2md
-        convert_md(fname, dest, jekyll=jekyll, img_path=img_path)
-      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 580, in convert_md
-        with open(Path(dest_path)/img_path/n, 'wb') as f: f.write(o)
-    FileNotFoundError: [Errno 2] No such file or directory: '../markdown/02_scooterExploration_files/output_30_1.png'
-    find: ‘./00_github_files’: No such file or directory
-    find: ‘./01_colabs_files’: No such file or directory
-    find: ‘./02_scooterExploration_files’: No such file or directory
-    find: ‘./03_nbdev_files’: No such file or directory
-    find: ‘./index_files’: No such file or directory
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 670, in nbdev_nb2md
+        nbdev_detach(fname, dest=img_path)
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 104, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 626, in nbdev_detach
+        j = json.load(path_nb.open())
+      File "/usr/lib/python3.6/pathlib.py", line 1183, in open
+        opener=self._opener)
+      File "/usr/lib/python3.6/pathlib.py", line 1037, in _opener
+        return self._accessor.open(self, flags, mode)
+      File "/usr/lib/python3.6/pathlib.py", line 387, in wrapped
+        return strfunc(str(pathobj), *args)
+    FileNotFoundError: [Errno 2] No such file or directory: '00_github.ipynb'
+    Traceback (most recent call last):
+      File "/usr/local/bin/nbdev_nb2md", line 8, in <module>
+        sys.exit(nbdev_nb2md())
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 104, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 670, in nbdev_nb2md
+        nbdev_detach(fname, dest=img_path)
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 104, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 626, in nbdev_detach
+        j = json.load(path_nb.open())
+      File "/usr/lib/python3.6/pathlib.py", line 1183, in open
+        opener=self._opener)
+      File "/usr/lib/python3.6/pathlib.py", line 1037, in _opener
+        return self._accessor.open(self, flags, mode)
+      File "/usr/lib/python3.6/pathlib.py", line 387, in wrapped
+        return strfunc(str(pathobj), *args)
+    FileNotFoundError: [Errno 2] No such file or directory: '01_colabs.ipynb'
+    Traceback (most recent call last):
+      File "/usr/local/bin/nbdev_nb2md", line 8, in <module>
+        sys.exit(nbdev_nb2md())
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 104, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 670, in nbdev_nb2md
+        nbdev_detach(fname, dest=img_path)
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 104, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 626, in nbdev_detach
+        j = json.load(path_nb.open())
+      File "/usr/lib/python3.6/pathlib.py", line 1183, in open
+        opener=self._opener)
+      File "/usr/lib/python3.6/pathlib.py", line 1037, in _opener
+        return self._accessor.open(self, flags, mode)
+      File "/usr/lib/python3.6/pathlib.py", line 387, in wrapped
+        return strfunc(str(pathobj), *args)
+    FileNotFoundError: [Errno 2] No such file or directory: '02_scooterExploration.ipynb'
+    Traceback (most recent call last):
+      File "/usr/local/bin/nbdev_nb2md", line 8, in <module>
+        sys.exit(nbdev_nb2md())
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 104, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 670, in nbdev_nb2md
+        nbdev_detach(fname, dest=img_path)
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 104, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 626, in nbdev_detach
+        j = json.load(path_nb.open())
+      File "/usr/lib/python3.6/pathlib.py", line 1183, in open
+        opener=self._opener)
+      File "/usr/lib/python3.6/pathlib.py", line 1037, in _opener
+        return self._accessor.open(self, flags, mode)
+      File "/usr/lib/python3.6/pathlib.py", line 387, in wrapped
+        return strfunc(str(pathobj), *args)
+    FileNotFoundError: [Errno 2] No such file or directory: '03_nbdev.ipynb'
+    Traceback (most recent call last):
+      File "/usr/local/bin/nbdev_nb2md", line 8, in <module>
+        sys.exit(nbdev_nb2md())
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 104, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 670, in nbdev_nb2md
+        nbdev_detach(fname, dest=img_path)
+      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 104, in _f
+        tfunc(**merge(args, args_from_prog(func, xtra)))
+      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 626, in nbdev_detach
+        j = json.load(path_nb.open())
+      File "/usr/lib/python3.6/pathlib.py", line 1183, in open
+        opener=self._opener)
+      File "/usr/lib/python3.6/pathlib.py", line 1037, in _opener
+        return self._accessor.open(self, flags, mode)
+      File "/usr/lib/python3.6/pathlib.py", line 387, in wrapped
+        return strfunc(str(pathobj), *args)
+    FileNotFoundError: [Errno 2] No such file or directory: 'index.ipynb'
 
 
 ```
@@ -724,30 +807,11 @@ ls
 ```
 
 ```
-! git commit -m "Cover Photo"
+! git commit -m "Collapse Experiments P2"
 ```
 
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    [master b06e71c] Trying Notebook Img Folder attempt 2
-     4 files changed, 81 insertions(+), 58 deletions(-)
-     create mode 100644 docs/images/ai_of_me.jpg
+    [master 6433d98] Collapse Experiments P2
+     5 files changed, 598 insertions(+), 571 deletions(-)
 
 
 ```
@@ -759,18 +823,18 @@ ls
 ! git push -u ORIGIN master
 ```
 
-    Counting objects: 9, done.
+    Counting objects: 11, done.
     Delta compression using up to 2 threads.
-    Compressing objects: 100% (9/9), done.
-    Writing objects: 100% (9/9), 1.74 KiB | 446.00 KiB/s, done.
-    Total 9 (delta 8), reused 0 (delta 0)
-    remote: Resolving deltas: 100% (8/8), completed with 8 local objects.[K
+    Compressing objects: 100% (11/11), done.
+    Writing objects: 100% (11/11), 2.45 KiB | 501.00 KiB/s, done.
+    Total 11 (delta 10), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (10/10), completed with 9 local objects.[K
     remote: 
     remote: GitHub found 1 vulnerability on karpatic/datalabs's default branch (1 high). To find out more, visit:[K
     remote:      https://github.com/karpatic/datalabs/security/dependabot/docs/Gemfile.lock/kramdown/open[K
     remote: 
     To https://github.com/karpatic/datalabs.git
-       e079cd4..b06e71c  master -> master
+       a558c9a..0b6bbac  master -> master
     Branch 'master' set up to track remote branch 'master' from 'ORIGIN'.
 
 
@@ -815,10 +879,6 @@ Other than that...
 
 Nbdev has everything else all set up! Simply run make pypi and enter your credentials when prompted (at the bottom of the terminal output). Your password will be sensored so it is safe to post this code online without clearing it.
 
-## Misc Tests
-
-![](../../images/ai_of_me.jpg)
-
 ```
 #hide_output
 ! make pypi
@@ -828,157 +888,207 @@ Nbdev has everything else all set up! Simply run make pypi and enter your creden
 ls
 ```
 
+## Misc Tests
+
+![](../../images/ai_of_me.jpg)
+
 ```
-var = "hide"
-var
+from IPython.display import display
 ```
-
-
-
-
-    'hide'
-
-
 
 ```
 #hide
 var = "hide"
-var
+display(var)
 ```
 
 
-
-
     'hide'
-
 
 
 ```
 #hide_input
 var = "hide_input"
-var
+display(var)
 ```
-
-
 
 
     'hide_input'
 
 
-
 ```
 #hide_output
 var = "hide_output"
-var
+print('The input of this cell is visible as usual.\nHowever, the OUTPUT of this cell is collapsed by default but you can expand it!')
 ```
 
-
-
-
-    'hide_output'
-
+    The input of this cell is visible as usual.
+    However, the OUTPUT of this cell is collapsed by default but you can expand it!
 
 
 ```
 #collapse_output
 var = "collapse_output"
-var
+display(var)
 ```
 
 
-
-
     'collapse_output'
-
 
 
 ```
 #collapse_show
 var = "collapse_show"
-var
+display(var)
 ```
-
-
 
 
     'collapse_show'
 
 
-
 ```
 #collapse_hide
 var = "collapse_hide"
-var
+display(var)
 ```
-
-
 
 
     'collapse_hide'
 
 
-
 ```
-#collapse-hide
-var = "collapse-hide"
-var
+#collapse-hide 
+print('The input of this cell is visible as usual.\nHowever, the OUTPUT of this cell is collapsed by default but you can expand it!')
 ```
 
-
-
-
-    'collapse-hide'
-
+    The input of this cell is visible as usual.
+    However, the OUTPUT of this cell is collapsed by default but you can expand it!
 
 
 ```
 #collapse_input
 var = "collapse_input"
-var
+display(var)
 ```
-
-
 
 
     'collapse_input'
 
 
-
 ```
 #collapse_input open
 var = "collapse_input open"
-var
+display(var)
 ```
-
-
 
 
     'collapse_input open'
 
 
-
 ```
 #collapse_output
 var = "collapse_output"
-var
+display(var)
 ```
-
-
 
 
     'collapse_output'
 
 
-
 ```
 #collapse_output open
 var = "collapse_output open"
-var
+display(var)
 ```
-
-
 
 
     'collapse_output open'
 
+
+```
+#collapse_output
+print('The input of this cell is visible as usual.\nHowever, the OUTPUT of this cell is collapsed by default but you can expand it!')
+```
+
+    The input of this cell is visible as usual.
+    However, the OUTPUT of this cell is collapsed by default but you can expand it!
+
+
+<details>
+  <summary> summary and details together </summary>
+  details 1
+</details>
+
+<details>
+  <summary> summary and details split </summary>
+
+  summary and details split
+</details>
+
+<details>
+
+####  <summary> Entirely Split </summary>
+
+  Entirely Split
+
+</details>
+
+<details>
+  <summary> # md within html </summary>
+  **md within html**
+</details>
+
+```
+#collapse_output
+print('The input of this cell is visible as usual.\nHowever, the OUTPUT of this cell is collapsed by default but you can expand it!')
+```
+
+    The input of this cell is visible as usual.
+    However, the OUTPUT of this cell is collapsed by default but you can expand it!
+
+
+```
+%%html
+<details>
+  <summary> code html </summary>
+  code html
+</details>
+```
+
+
+<details>
+  <summary> code html </summary>
+  code html
+</details>
+
+
+```
+#collapse_output
+%%html
+<details>
+  <summary> code html collapse output </summary>
+  code html collapse output
+</details>
+```
+
+
+<details>
+  <summary> code html collapse output </summary>
+  code html collapse output
+</details>
+
+
+```
+%%html
+<details>
+  <summary> code html </summary>
+  code html no collapse
+</details>
+```
+
+
+<details>
+  <summary> code html </summary>
+  code html no collapse
+</details>
 
