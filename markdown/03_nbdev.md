@@ -1,5 +1,5 @@
 # Nbdev
-> In this chapter we learn about publishing python notebooks with nbdev. 
+> In this chapter we learn about publishing python notebooks with the <a href='http://nbdev.fast.ai/tutorial/'>![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [nbdev</a>.
 
 
 ```
@@ -29,6 +29,13 @@
 
 [![Tweet](https://img.shields.io/twitter/url/https/github.com/karpatic/datalabs.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20%E2%9C%A8%20colab%20by%20@bniajfi%20https://github.com/karpatic/datalabs%20%F0%9F%A4%97) 
 [![Twitter Follow](https://img.shields.io/twitter/follow/bniajfi.svg?style=social)](https://twitter.com/bniajfi)
+
+
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+
+[![ForTheBadge powered-by-electricity](http://ForTheBadge.com/images/badges/powered-by-electricity.svg)](http://ForTheBadge.com)
 
 Fastai, the org that created this tool, helps empower others by lowering the barrier of entry when breaking into software (AI) development. 
 
@@ -617,23 +624,15 @@ As long as you are somewhere in the folder where you are developing your library
 
     <IPython.core.display.HTML object>
     <IPython.core.display.HTML object>
-    converting: /content/drive/My Drive/Sites/datalabs/notebooks/01_colabs.ipynb
     converting: /content/drive/My Drive/Sites/datalabs/notebooks/03_nbdev.ipynb
+    converting: /content/drive/My Drive/Sites/datalabs/notebooks/01_colabs.ipynb
     <IPython.core.display.HTML object>
     <IPython.core.display.HTML object>
-    converting: /content/drive/My Drive/Sites/datalabs/notebooks/index.ipynb
     converting: /content/drive/My Drive/Sites/datalabs/notebooks/00_github.ipynb
-
-
-## Git
-
-**Before you push**: Running `nbdev_clean_nbs` will ensure the push will work. `nbdev_fix_merge` ensures it.
-
-```
-cd datalabs
-```
-
-    /content/drive/My Drive/Sites/datalabs
+    converting: /content/drive/My Drive/Sites/datalabs/notebooks/index.ipynb
+    <IPython.core.display.HTML object>
+    <IPython.core.display.HTML object>
+    converting: /content/drive/My Drive/Sites/datalabs/notebooks/02_scooterExploration.ipynb
 
 
 ```
@@ -651,13 +650,6 @@ cd notebooks
 ! find . -name "*.bak" -type f -delete
 ```
 
-    Succesfully merged conflicts!
-    Succesfully merged conflicts!
-    Succesfully merged conflicts!
-    Succesfully merged conflicts!
-    Succesfully merged conflicts!
-
-
 ```
 # nbdev_nb2md(fname:"A notebook file name to convert", dest:"The destination folder"='.', img_path:"Folder to export images to"='', jekyll:"To use jekyll metadata for your markdown file or not"=False)
 ! nbdev_nb2md 00_github.ipynb --dest "../markdown" 
@@ -672,6 +664,10 @@ cd notebooks
 cd ../
 ```
 
+## Git
+
+**Before you push**: Running `nbdev_clean_nbs` will ensure the push will work. `nbdev_fix_merge` ensures it.
+
 ( Run Once Modules, Docs and the README are created using NBDEV and have ben created but not published )
 
 ```
@@ -682,6 +678,27 @@ cd ../
 ! git add *
 ```
 
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
     The following paths are ignored by one of your .gitignore files:
     build
     dist
@@ -692,13 +709,9 @@ cd ../
 ls
 ```
 
-    [0m[01;34m00_github_files[0m/              [01;34mdatalabs[0m/     [01;34mmarkdown[0m/
-    [01;34m01_colabs_files[0m/              [01;34mdist[0m/         MechanicalSoupIntroduction.ipynb
-    [01;34m02_scooterExploration_files[0m/  [01;34mdocs[0m/         [01;34mnotebooks[0m/
-    [01;34m03_nbdev_files[0m/               [01;34mindex_files[0m/  README.md
-    bashbasics.ipynb              LICENSE       settings.ini
-    [01;34mbuild[0m/                        Makefile      setup.py
-    CONTRIBUTING.md               MANIFEST.in
+    [0m[01;34mbuild[0m/           [01;34mdist[0m/    Makefile     [01;34mnotebooks[0m/    setup.py
+    CONTRIBUTING.md  [01;34mdocs[0m/    MANIFEST.in  README.md
+    [01;34mdatalabs[0m/        LICENSE  [01;34mmarkdown[0m/    settings.ini
 
 
 ```
@@ -710,18 +723,32 @@ ls
 ```
 
 ```
-! git commit -m "Updated Formating, Added Markdown Section"
+! git commit -m "Fixed up NBDev Section a bit"
 ```
 
-    [master a8052fc] Updated Formating, Added Markdown Section
-     15 files changed, 2429 insertions(+), 365 deletions(-)
-     create mode 100644 MechanicalSoupIntroduction.ipynb
-     create mode 100644 bashbasics.ipynb
-     rename markdown/{ => 02_scooterExploration_files}/output_102_1.png (100%)
-     rename markdown/{ => 02_scooterExploration_files}/output_103_1.png (100%)
-     rename markdown/{ => 02_scooterExploration_files}/output_109_1.png (100%)
-     rename markdown/{ => 02_scooterExploration_files}/output_30_1.png (100%)
-     rename markdown/{ => 02_scooterExploration_files}/output_37_2.png (100%)
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    [master b7e450e] Fixed up NBDev Section a bit
+     1 file changed, 6 insertions(+), 8 deletions(-)
 
 
 ```
@@ -732,18 +759,18 @@ ls
 ! git push -u ORIGIN master
 ```
 
-    Counting objects: 16, done.
+    Counting objects: 4, done.
     Delta compression using up to 2 threads.
-    Compressing objects: 100% (16/16), done.
-    Writing objects: 100% (16/16), 1.48 MiB | 2.66 MiB/s, done.
-    Total 16 (delta 10), reused 0 (delta 0)
-    remote: Resolving deltas: 100% (10/10), completed with 9 local objects.[K
+    Compressing objects: 100% (4/4), done.
+    Writing objects: 100% (4/4), 497 bytes | 497.00 KiB/s, done.
+    Total 4 (delta 3), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (3/3), completed with 3 local objects.[K
     remote: 
     remote: GitHub found 1 vulnerability on karpatic/datalabs's default branch (1 high). To find out more, visit:[K
-    remote:      https://github.com/karpatic/datalabs/network/alert/docs/Gemfile.lock/kramdown/open[K
+    remote:      https://github.com/karpatic/datalabs/security/dependabot/docs/Gemfile.lock/kramdown/open[K
     remote: 
     To https://github.com/karpatic/datalabs.git
-       ed5874b..a8052fc  master -> master
+       66cf6a5..b7e450e  master -> master
     Branch 'master' set up to track remote branch 'master' from 'ORIGIN'.
 
 
