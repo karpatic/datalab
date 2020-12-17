@@ -1,13 +1,13 @@
 ---
 toc: true
 title: Nbdev
-image: images/company_logo1.png
+image: images/company_logo.png
 
-keywords: test123
+keywords: thisworks
 sidebar: home_sidebar
 
-summary: "In this chapter we learn about publishing python notebooks with the <a href='http://nbdev.fast.ai/tutorial/'>![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [nbdev</a>."
-description: "In this chapter we learn about publishing python notebooks with the <a href='http://nbdev.fast.ai/tutorial/'>![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [nbdev</a>."
+summary: "In this chapter we learn about publishing python notebooks with <a href='http://nbdev.fast.ai/tutorial/'>nbdev</a>."
+description: "In this chapter we learn about publishing python notebooks with <a href='http://nbdev.fast.ai/tutorial/'>nbdev</a>."
 nb_path: "notebooks/03_nbdev.ipynb"
 ---
 <!--
@@ -25,37 +25,6 @@ nb_path: "notebooks/03_nbdev.ipynb"
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> nbdev_upgrade
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>/bin/bash: nbdev_upgrade: command not found
-</pre>
-</div>
-</div>
-
-</div>
-</div>
 
 </div>
     {% endraw %}
@@ -1395,6 +1364,24 @@ optional arguments:
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Converted 00_github.ipynb.
+Converted 01_colabs.ipynb.
+Converted 02_scooterExploration.ipynb.
+Converted 03_nbdev.ipynb.
+Converted index.ipynb.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -1409,6 +1396,33 @@ optional arguments:
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;IPython.core.display.HTML object&gt;
+&lt;IPython.core.display.HTML object&gt;
+converting: /content/drive/My Drive/Sites/datalabs/notebooks/01_colabs.ipynb
+converting: /content/drive/My Drive/Sites/datalabs/notebooks/03_nbdev.ipynb
+&lt;IPython.core.display.HTML object&gt;
+&lt;IPython.core.display.HTML object&gt;
+converting: /content/drive/My Drive/Sites/datalabs/notebooks/index.ipynb
+converting: /content/drive/My Drive/Sites/datalabs/notebooks/00_github.ipynb
+&lt;IPython.core.display.HTML object&gt;
+&lt;IPython.core.display.HTML object&gt;
+converting: /content/drive/My Drive/Sites/datalabs/notebooks/02_scooterExploration.ipynb
+&lt;IPython.core.display.HTML object&gt;
+&lt;IPython.core.display.HTML object&gt;
+converting /content/drive/My Drive/Sites/datalabs/notebooks/index.ipynb to README.md
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1735,7 +1749,7 @@ CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    MA
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;Testing nbdev yaml&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;Testing nbdev yaml p3&quot;</span>
 </pre></div>
 
     </div>
@@ -1748,8 +1762,16 @@ CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    MA
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master 704bacb] Testing nbdev yaml
- 3 files changed, 269 insertions(+), 201 deletions(-)
+<pre>On branch master
+Your branch is up to date with &#39;ORIGIN/master&#39;.
+
+Changes not staged for commit:
+	<span class="ansi-red-fg">deleted:    MechanicalSoupIntroduction.ipynb</span>
+	<span class="ansi-red-fg">deleted:    bashbasics.ipynb</span>
+	<span class="ansi-red-fg">deleted:    test123/__init__.py</span>
+	<span class="ansi-red-fg">deleted:    test123/_nbdev.py</span>
+
+no changes added to commit
 </pre>
 </div>
 </div>
@@ -1797,19 +1819,8 @@ CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    MA
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Counting objects: 8, done.
-Delta compression using up to 2 threads.
-Compressing objects: 100% (8/8), done.
-Writing objects: 100% (8/8), 3.14 KiB | 357.00 KiB/s, done.
-Total 8 (delta 7), reused 0 (delta 0)
-remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
-remote: 
-remote: GitHub found 1 vulnerability on karpatic/datalabs&#39;s default branch (1 high). To find out more, visit:
-remote:      https://github.com/karpatic/datalabs/security/dependabot/docs/Gemfile.lock/kramdown/open
-remote: 
-To https://github.com/karpatic/datalabs.git
-   b7e450e..704bacb  master -&gt; master
-Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;ORIGIN&#39;.
+<pre>Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;ORIGIN&#39;.
+Everything up-to-date
 </pre>
 </div>
 </div>

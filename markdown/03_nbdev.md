@@ -1,12 +1,5 @@
 # Nbdev
-> In this chapter we learn about publishing python notebooks with the <a href='http://nbdev.fast.ai/tutorial/'>![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [nbdev</a>.
-
-
-```
-! nbdev_upgrade
-```
-
-    /bin/bash: nbdev_upgrade: command not found
+> In this chapter we learn about publishing python notebooks with <a href='http://nbdev.fast.ai/tutorial/'>nbdev</a>.
 
 
 ## (Non-Technical) Introduction
@@ -610,10 +603,33 @@ As long as you are somewhere in the folder where you are developing your library
 !nbdev_build_lib
 ```
 
+    Converted 00_github.ipynb.
+    Converted 01_colabs.ipynb.
+    Converted 02_scooterExploration.ipynb.
+    Converted 03_nbdev.ipynb.
+    Converted index.ipynb.
+
+
 ```
 # nbdev_build_docs builds the documentation from the notebooks
 !nbdev_build_docs --force_all True --mk_readme True 
 ```
+
+    <IPython.core.display.HTML object>
+    <IPython.core.display.HTML object>
+    converting: /content/drive/My Drive/Sites/datalabs/notebooks/01_colabs.ipynb
+    converting: /content/drive/My Drive/Sites/datalabs/notebooks/03_nbdev.ipynb
+    <IPython.core.display.HTML object>
+    <IPython.core.display.HTML object>
+    converting: /content/drive/My Drive/Sites/datalabs/notebooks/index.ipynb
+    converting: /content/drive/My Drive/Sites/datalabs/notebooks/00_github.ipynb
+    <IPython.core.display.HTML object>
+    <IPython.core.display.HTML object>
+    converting: /content/drive/My Drive/Sites/datalabs/notebooks/02_scooterExploration.ipynb
+    <IPython.core.display.HTML object>
+    <IPython.core.display.HTML object>
+    converting /content/drive/My Drive/Sites/datalabs/notebooks/index.ipynb to README.md
+
 
 ```
 cd notebooks
@@ -733,11 +749,19 @@ ls
 ```
 
 ```
-! git commit -m "Testing nbdev yaml"
+! git commit -m "Testing nbdev yaml p3"
 ```
 
-    [master 704bacb] Testing nbdev yaml
-     3 files changed, 269 insertions(+), 201 deletions(-)
+    On branch master
+    Your branch is up to date with 'ORIGIN/master'.
+    
+    Changes not staged for commit:
+    	[31mdeleted:    MechanicalSoupIntroduction.ipynb[m
+    	[31mdeleted:    bashbasics.ipynb[m
+    	[31mdeleted:    test123/__init__.py[m
+    	[31mdeleted:    test123/_nbdev.py[m
+    
+    no changes added to commit
 
 
 ```
@@ -748,19 +772,8 @@ ls
 ! git push -u ORIGIN master
 ```
 
-    Counting objects: 8, done.
-    Delta compression using up to 2 threads.
-    Compressing objects: 100% (8/8), done.
-    Writing objects: 100% (8/8), 3.14 KiB | 357.00 KiB/s, done.
-    Total 8 (delta 7), reused 0 (delta 0)
-    remote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
-    remote: 
-    remote: GitHub found 1 vulnerability on karpatic/datalabs's default branch (1 high). To find out more, visit:[K
-    remote:      https://github.com/karpatic/datalabs/security/dependabot/docs/Gemfile.lock/kramdown/open[K
-    remote: 
-    To https://github.com/karpatic/datalabs.git
-       b7e450e..704bacb  master -> master
     Branch 'master' set up to track remote branch 'master' from 'ORIGIN'.
+    Everything up-to-date
 
 
 If you get the error "fatal: could not read Username for 'https://github.com': No such device or address"...
