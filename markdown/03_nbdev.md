@@ -239,6 +239,10 @@ The 'images' folder can be used to conjure up pictures like so:
 
 These images will be added to added and displayed in the docs
 
+[](./images/ai_of_me.jpg)
+
+![](../../notebooks/images/ai_of_me.jpg)
+
 **8. Jekyll [Notes](http://nbdev.fast.ai/export2html/#add_jekyll_notes)**
 
 The following section was written using the following markups 
@@ -680,24 +684,6 @@ cd ../
     /usr/bin/python3: No module named nbstripout
     error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
     error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
     The following paths are ignored by one of your .gitignore files:
     build
     dist
@@ -722,11 +708,16 @@ ls
 ```
 
 ```
-! git commit -m "NBDEV Collapse Tests"
+! git commit -m "Cleaning up the Repo"
 ```
 
-    [master 661a8fa] NBDEV Collapse Tests
-     3 files changed, 780 insertions(+), 188 deletions(-)
+    [master 3cc317b] Cleaning up the Repo
+     5 files changed, 1 insertion(+), 3574 deletions(-)
+     delete mode 100644 MechanicalSoupIntroduction.ipynb
+     delete mode 100644 bashbasics.ipynb
+     rewrite notebooks/03_nbdev.ipynb (98%)
+     delete mode 100644 test123/__init__.py
+     delete mode 100644 test123/_nbdev.py
 
 
 ```
@@ -738,18 +729,18 @@ ls
 ! git push -u ORIGIN master
 ```
 
-    Counting objects: 8, done.
+    Counting objects: 4, done.
     Delta compression using up to 2 threads.
-    Compressing objects: 100% (8/8), done.
-    Writing objects: 100% (8/8), 1.47 KiB | 251.00 KiB/s, done.
-    Total 8 (delta 7), reused 0 (delta 0)
-    remote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
+    Compressing objects: 100% (4/4), done.
+    Writing objects: 100% (4/4), 17.11 KiB | 3.42 MiB/s, done.
+    Total 4 (delta 2), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
     remote: 
     remote: GitHub found 1 vulnerability on karpatic/datalabs's default branch (1 high). To find out more, visit:[K
     remote:      https://github.com/karpatic/datalabs/security/dependabot/docs/Gemfile.lock/kramdown/open[K
     remote: 
     To https://github.com/karpatic/datalabs.git
-       8d7ff52..25212ec  master -> master
+       a95cc46..3cc317b  master -> master
     Branch 'master' set up to track remote branch 'master' from 'ORIGIN'.
 
 
@@ -793,6 +784,12 @@ Be sure to run this final nbdev command `! nbdev_bump_version` prior to publishi
 Other than that...
 
 Nbdev has everything else all set up! Simply run make pypi and enter your credentials when prompted (at the bottom of the terminal output). Your password will be sensored so it is safe to post this code online without clearing it.
+
+## Misc Tests
+
+[](./images/ai_of_me.jpg)
+
+![](../../notebooks/images/ai_of_me.jpg)
 
 ```
 #hide_output
@@ -890,6 +887,19 @@ var
 
 
     'collapse_hide'
+
+
+
+```
+#collapse-hide
+var = "collapse-hide"
+var
+```
+
+
+
+
+    'collapse-hide'
 
 
 
