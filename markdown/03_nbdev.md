@@ -684,6 +684,24 @@ cd ../
     /usr/bin/python3: No module named nbstripout
     error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
     error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
     The following paths are ignored by one of your .gitignore files:
     build
     dist
@@ -708,16 +726,13 @@ ls
 ```
 
 ```
-! git commit -m "Cleaning up the Repo"
+! git commit -m "Trying Notebook Img Folder"
 ```
 
-    [master 3cc317b] Cleaning up the Repo
-     5 files changed, 1 insertion(+), 3574 deletions(-)
-     delete mode 100644 MechanicalSoupIntroduction.ipynb
-     delete mode 100644 bashbasics.ipynb
+    [master b3862a7] Trying Notebook Img Folder
+     6 files changed, 2234 insertions(+), 30 deletions(-)
      rewrite notebooks/03_nbdev.ipynb (98%)
-     delete mode 100644 test123/__init__.py
-     delete mode 100644 test123/_nbdev.py
+     create mode 100644 notebooks/images/ai_of_me.jpg
 
 
 ```
