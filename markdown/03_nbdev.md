@@ -612,10 +612,6 @@ As long as you are somewhere in the folder where you are developing your library
 cd notebooks
 ```
 
-    [Errno 2] No such file or directory: 'notebooks'
-    /content/drive/My Drive/Sites/datalabs/notebooks
-
-
 ```
 #hide_output
 ! nbdev_clean_nbs
@@ -639,29 +635,9 @@ cd notebooks
 ! find . -type d -name "*files" -exec rm -rf {} \;
 ```
 
-    Traceback (most recent call last):
-      File "/usr/local/bin/nbdev_nb2md", line 8, in <module>
-        sys.exit(nbdev_nb2md())
-      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 104, in _f
-        tfunc(**merge(args, args_from_prog(func, xtra)))
-      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 671, in nbdev_nb2md
-        convert_md(fname, dest, jekyll=jekyll, img_path=img_path)
-      File "/usr/local/lib/python3.6/dist-packages/nbdev/export2html.py", line 580, in convert_md
-        with open(Path(dest_path)/img_path/n, 'wb') as f: f.write(o)
-    FileNotFoundError: [Errno 2] No such file or directory: '../markdown/02_scooterExploration_files/output_30_1.png'
-    find: ‘./00_github_files’: No such file or directory
-    find: ‘./01_colabs_files’: No such file or directory
-    find: ‘./02_scooterExploration_files’: No such file or directory
-    find: ‘./03_nbdev_files’: No such file or directory
-    find: ‘./index_files’: No such file or directory
-
-
 ```
 cd ../
 ```
-
-    /content/drive/My Drive/Sites/datalabs
-
 
 ## Git
 
@@ -678,41 +654,9 @@ cd ../
 ! git add *
 ```
 
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    The following paths are ignored by one of your .gitignore files:
-    build
-    dist
-    Use -f if you really want to add them.
-
-
 ```
 ls
 ```
-
-    [0m[01;34mbuild[0m/           [01;34mdist[0m/    Makefile     [01;34mnotebooks[0m/    setup.py
-    CONTRIBUTING.md  [01;34mdocs[0m/    MANIFEST.in  README.md
-    [01;34mdatalabs[0m/        LICENSE  [01;34mmarkdown[0m/    settings.ini
-
 
 ```
 !git config --global user.name "karpatic"
@@ -723,11 +667,11 @@ ls
 ```
 
 ```
-! git commit -m "NBDEV Hide and Collapse Columns"
+! git commit -m "NBDEV Collapse Tes"
 ```
 
-    [master 8d7ff52] NBDEV Hide and Collapse Columns
-     3 files changed, 124 insertions(+), 283 deletions(-)
+    [master 25212ec] NBDEV Hide and Collapse Columns
+     3 files changed, 73 insertions(+), 50 deletions(-)
 
 
 ```
@@ -742,7 +686,7 @@ ls
     Counting objects: 8, done.
     Delta compression using up to 2 threads.
     Compressing objects: 100% (8/8), done.
-    Writing objects: 100% (8/8), 3.02 KiB | 386.00 KiB/s, done.
+    Writing objects: 100% (8/8), 1.47 KiB | 251.00 KiB/s, done.
     Total 8 (delta 7), reused 0 (delta 0)
     remote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
     remote: 
@@ -750,7 +694,7 @@ ls
     remote:      https://github.com/karpatic/datalabs/security/dependabot/docs/Gemfile.lock/kramdown/open[K
     remote: 
     To https://github.com/karpatic/datalabs.git
-       355e938..8d7ff52  master -> master
+       8d7ff52..25212ec  master -> master
     Branch 'master' set up to track remote branch 'master' from 'ORIGIN'.
 
 
@@ -803,3 +747,133 @@ Nbdev has everything else all set up! Simply run make pypi and enter your creden
 ```
 ls
 ```
+
+```
+#hide
+var = "hide"
+var
+```
+
+
+
+
+    'hide'
+
+
+
+```
+#hide_input
+var = "hide_input"
+var
+```
+
+
+
+
+    'hide_input'
+
+
+
+```
+#hide_output
+var = "hide_output"
+var
+```
+
+
+
+
+    'hide_output'
+
+
+
+```
+#collapse_output
+var = "collapse_output"
+var
+```
+
+
+
+
+    'collapse_output'
+
+
+
+```
+#collapse_show
+var = "collapse_show"
+var
+```
+
+
+
+
+    'collapse_show'
+
+
+
+```
+#collapse_hide
+var = "collapse_hide"
+var
+```
+
+
+
+
+    'collapse_hide'
+
+
+
+```
+#collapse_input
+var = "collapse_input"
+var
+```
+
+
+
+
+    'collapse_input'
+
+
+
+```
+#collapse_input open
+var = "collapse_input open"
+var
+```
+
+
+
+
+    'collapse_input open'
+
+
+
+```
+#collapse_output
+var = "collapse_output"
+var
+```
+
+
+
+
+    'collapse_output'
+
+
+
+```
+#collapse_output open
+var = "collapse_output open"
+var
+```
+
+
+
+
+    'collapse_output open'
+
+
