@@ -638,7 +638,7 @@ Example:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">capture</span>
-! cd Sites/datalabs/notebooks
+! cd drive/MyDrive/Sites/datalabs/notebooks
 </pre></div>
 
     </div>
@@ -1295,6 +1295,37 @@ optional arguments:
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">../</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/drive/My Drive/Sites/datalabs
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="n">datalabs</span>
 </pre></div>
 
@@ -1308,7 +1339,8 @@ optional arguments:
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>/content/drive/My Drive/Sites/datalabs/datalabs
+<pre>[Errno 2] No such file or directory: &#39;datalabs&#39;
+/content/drive/MyDrive/Sites/datalabs/notebooks
 </pre>
 </div>
 </div>
@@ -1682,7 +1714,7 @@ CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    MA
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;Cover Photo&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> git commit -m <span class="s2">&quot;Collapse vs Details Experiments&quot;</span>
 </pre></div>
 
     </div>
@@ -1695,27 +1727,8 @@ CONTRIBUTING.md  <span class="ansi-blue-intense-fg ansi-bold">docs</span>/    MA
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>/usr/bin/python3: No module named nbstripout
-error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed 1
-error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed
-/usr/bin/python3: No module named nbstripout
-error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed 1
-error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed
-/usr/bin/python3: No module named nbstripout
-error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed 1
-error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed
-/usr/bin/python3: No module named nbstripout
-error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed 1
-error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed
-/usr/bin/python3: No module named nbstripout
-error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed 1
-error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed
-/usr/bin/python3: No module named nbstripout
-error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed 1
-error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed
-[master b06e71c] Trying Notebook Img Folder attempt 2
- 4 files changed, 81 insertions(+), 58 deletions(-)
- create mode 100644 docs/images/ai_of_me.jpg
+<pre>[master 0b6bbac] Collapse vs Details Experiments
+ 7 files changed, 416 insertions(+), 4 deletions(-)
 </pre>
 </div>
 </div>
@@ -1763,18 +1776,18 @@ error: external filter &#39;&#34;/usr/bin/python3&#34; -m nbstripout&#39; failed
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Counting objects: 9, done.
+<pre>Counting objects: 11, done.
 Delta compression using up to 2 threads.
-Compressing objects: 100% (9/9), done.
-Writing objects: 100% (9/9), 1.74 KiB | 446.00 KiB/s, done.
-Total 9 (delta 8), reused 0 (delta 0)
-remote: Resolving deltas: 100% (8/8), completed with 8 local objects.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 2.45 KiB | 501.00 KiB/s, done.
+Total 11 (delta 10), reused 0 (delta 0)
+remote: Resolving deltas: 100% (10/10), completed with 9 local objects.
 remote: 
 remote: GitHub found 1 vulnerability on karpatic/datalabs&#39;s default branch (1 high). To find out more, visit:
 remote:      https://github.com/karpatic/datalabs/security/dependabot/docs/Gemfile.lock/kramdown/open
 remote: 
 To https://github.com/karpatic/datalabs.git
-   e079cd4..b06e71c  master -&gt; master
+   a558c9a..0b6bbac  master -&gt; master
 Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;ORIGIN&#39;.
 </pre>
 </div>
@@ -1911,19 +1924,6 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Misc-Tests">Misc Tests<a class="anchor-link" href="#Misc-Tests"> </a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="/datalabs/./images/ai_of_me.jpg" alt=""></p>
-
-</div>
-</div>
-</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1958,6 +1958,19 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Misc-Tests">Misc Tests<a class="anchor-link" href="#Misc-Tests"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/datalabs/./images/ai_of_me.jpg" alt=""></p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1965,27 +1978,10 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;hide&quot;</span>
-<span class="n">var</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;hide&#39;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -2000,7 +1996,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;hide&quot;</span>
-<span class="n">var</span>
+<span class="n">display</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2014,7 +2010,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 
 
 
-<div class="output_text output_subarea output_execute_result">
+<div class="output_text output_subarea ">
 <pre>&#39;hide&#39;</pre>
 </div>
 
@@ -2034,7 +2030,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;hide_input&quot;</span>
-<span class="n">var</span>
+<span class="n">display</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2048,7 +2044,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 
 
 
-<div class="output_text output_subarea output_execute_result">
+<div class="output_text output_subarea ">
 <pre>&#39;hide_input&#39;</pre>
 </div>
 
@@ -2068,7 +2064,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;hide_output&quot;</span>
-<span class="n">var</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The input of this cell is visible as usual.</span><span class="se">\n</span><span class="s1">However, the OUTPUT of this cell is collapsed by default but you can expand it!&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2080,12 +2076,11 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 
 <div class="output_area">
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;hide_output&#39;</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The input of this cell is visible as usual.
+However, the OUTPUT of this cell is collapsed by default but you can expand it!
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -2102,7 +2097,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;collapse_output&quot;</span>
-<span class="n">var</span>
+<span class="n">display</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2116,7 +2111,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 
 
 
-<div class="output_text output_subarea output_execute_result">
+<div class="output_text output_subarea ">
 <pre>&#39;collapse_output&#39;</pre>
 </div>
 
@@ -2136,7 +2131,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;collapse_show&quot;</span>
-<span class="n">var</span>
+<span class="n">display</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2150,7 +2145,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 
 
 
-<div class="output_text output_subarea output_execute_result">
+<div class="output_text output_subarea ">
 <pre>&#39;collapse_show&#39;</pre>
 </div>
 
@@ -2170,7 +2165,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;collapse_hide&quot;</span>
-<span class="n">var</span>
+<span class="n">display</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2184,7 +2179,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 
 
 
-<div class="output_text output_subarea output_execute_result">
+<div class="output_text output_subarea ">
 <pre>&#39;collapse_hide&#39;</pre>
 </div>
 
@@ -2203,8 +2198,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;collapse-hide&quot;</span>
-<span class="n">var</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The input of this cell is visible as usual.</span><span class="se">\n</span><span class="s1">However, the OUTPUT of this cell is collapsed by default but you can expand it!&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2216,12 +2210,11 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 
 <div class="output_area">
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;collapse-hide&#39;</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The input of this cell is visible as usual.
+However, the OUTPUT of this cell is collapsed by default but you can expand it!
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -2238,7 +2231,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;collapse_input&quot;</span>
-<span class="n">var</span>
+<span class="n">display</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2252,7 +2245,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 
 
 
-<div class="output_text output_subarea output_execute_result">
+<div class="output_text output_subarea ">
 <pre>&#39;collapse_input&#39;</pre>
 </div>
 
@@ -2272,7 +2265,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;collapse_input open&quot;</span>
-<span class="n">var</span>
+<span class="n">display</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2286,7 +2279,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 
 
 
-<div class="output_text output_subarea output_execute_result">
+<div class="output_text output_subarea ">
 <pre>&#39;collapse_input open&#39;</pre>
 </div>
 
@@ -2306,7 +2299,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;collapse_output&quot;</span>
-<span class="n">var</span>
+<span class="n">display</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2320,7 +2313,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 
 
 
-<div class="output_text output_subarea output_execute_result">
+<div class="output_text output_subarea ">
 <pre>&#39;collapse_output&#39;</pre>
 </div>
 
@@ -2340,7 +2333,7 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;collapse_output open&quot;</span>
-<span class="n">var</span>
+<span class="n">display</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2354,8 +2347,249 @@ Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39
 
 
 
-<div class="output_text output_subarea output_execute_result">
+<div class="output_text output_subarea ">
 <pre>&#39;collapse_output open&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The input of this cell is visible as usual.</span><span class="se">\n</span><span class="s1">However, the OUTPUT of this cell is collapsed by default but you can expand it!&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The input of this cell is visible as usual.
+However, the OUTPUT of this cell is collapsed by default but you can expand it!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<details>
+  <summary> summary and details together </summary>
+  details 1
+</details>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><details>
+  <summary> summary and details split </summary></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>summary and details split
+&lt;/details&gt;</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<details>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="-Entirely-Split-"><summary> Entirely Split </summary><a class="anchor-link" href="#-Entirely-Split-"> </a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Entirely Split</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&lt;/details&gt;</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<details>
+  <summary> # md within html </summary>
+  **md within html**
+</details>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The input of this cell is visible as usual.</span><span class="se">\n</span><span class="s1">However, the OUTPUT of this cell is collapsed by default but you can expand it!&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The input of this cell is visible as usual.
+However, the OUTPUT of this cell is collapsed by default but you can expand it!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">html</span>
+&lt;details&gt;
+  &lt;summary&gt; code html &lt;/summary&gt;
+  code html
+&lt;/details&gt;
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<details>
+  <summary> code html </summary>
+  code html
+</details>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">html</span>
+&lt;details&gt;
+  &lt;summary&gt; code html collapse output &lt;/summary&gt;
+  code html collapse output
+&lt;/details&gt;
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<details>
+  <summary> code html collapse output </summary>
+  code html collapse output
+</details>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">html</span>
+&lt;details&gt;
+  &lt;summary&gt; code html &lt;/summary&gt;
+  code html no collapse
+&lt;/details&gt;
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<details>
+  <summary> code html </summary>
+  code html no collapse
+</details>
 </div>
 
 </div>
