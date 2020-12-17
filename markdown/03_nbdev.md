@@ -612,6 +612,7 @@ As long as you are somewhere in the folder where you are developing your library
 cd notebooks
 ```
 
+    [Errno 2] No such file or directory: 'notebooks'
     /content/drive/My Drive/Sites/datalabs/notebooks
 
 
@@ -677,6 +678,33 @@ cd ../
 ! git add *
 ```
 
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    /usr/bin/python3: No module named nbstripout
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
+    error: external filter '"/usr/bin/python3" -m nbstripout' failed
+    The following paths are ignored by one of your .gitignore files:
+    build
+    dist
+    Use -f if you really want to add them.
+
+
 ```
 ls
 ```
@@ -695,11 +723,11 @@ ls
 ```
 
 ```
-! git commit -m "reverting nbdev after yaml experiments"
+! git commit -m "NBDEV Hide and Collapse Columns"
 ```
 
-    [master 355e938] reverting nbdev after yaml experiments
-     3 files changed, 151 insertions(+), 113 deletions(-)
+    [master 8d7ff52] NBDEV Hide and Collapse Columns
+     3 files changed, 124 insertions(+), 283 deletions(-)
 
 
 ```
@@ -714,7 +742,7 @@ ls
     Counting objects: 8, done.
     Delta compression using up to 2 threads.
     Compressing objects: 100% (8/8), done.
-    Writing objects: 100% (8/8), 2.16 KiB | 246.00 KiB/s, done.
+    Writing objects: 100% (8/8), 3.02 KiB | 386.00 KiB/s, done.
     Total 8 (delta 7), reused 0 (delta 0)
     remote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
     remote: 
@@ -722,7 +750,7 @@ ls
     remote:      https://github.com/karpatic/datalabs/security/dependabot/docs/Gemfile.lock/kramdown/open[K
     remote: 
     To https://github.com/karpatic/datalabs.git
-       2e96002..355e938  master -> master
+       355e938..8d7ff52  master -> master
     Branch 'master' set up to track remote branch 'master' from 'ORIGIN'.
 
 
