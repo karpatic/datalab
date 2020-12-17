@@ -146,14 +146,25 @@ Combine commands with with regular expressions for more power!
 
 nbdev_upgrade can be run any time there are new updates. It only needs to be ran once per update.
 
-%nbdev_collapse_input close
 ### <a name="nbflags"></a> Nbdev Flags (Mark Up/ Cell Magic) 
+
+Nbdev scripts rely on special [comments **or** magics](https://nbdev.fast.ai/tutorial/#nbdev-flags) (your choice) for cell-level handling of notebooks.
 
 Whereas Nbdev's terminal commands should be executed at a projects root directory...
 
-Content covered in this section need to be placed in the cells of other notebooks in the directory. 
+Content covered in this section need to be placed in the cells of the notebooks.
 
-Nbdev scripts rely on special [comments **or** magics](https://nbdev.fast.ai/tutorial/#nbdev-flags) (your choice) for cell-level handling of notebooks.
+Most nbdev flags define design instructions for when we create the website/ module. Some flags (`default_exp`, `autoreload`) 
+
+**1.** **Basic Comment and Magics**
+
+{% include warning.html content='Content in this section is pulled from the Fastpages [blog](https://fastpages.fast.ai/fastpages/jupyter/2020/02/21/introducing-fastpages.html#Other-Feautures) [posts](https://pete88b.github.io/fastpages/nbdev/fastai/jupyter/2020/07/24/nbdev-deep-dive.html) and the Nbdev docs. If you have any issues, you will have to scoure these sources to resolve them!' %}
+
+To gain access to [Nbdev's new 'magics'](https://pete88b.github.io/fastpages/nbdev/fastai/jupyter/2020/06/02/nbdev-magic.html) you my find it neccesary to:
+1. Execute the command `nbdev_upgrade`, only once, and then..
+2. Add `from nbdev import *` to the top of a notebook in a code-cell.
+This [article](https://pete88b.github.io/fastpages/nbdev/fastai/jupyter/2020/06/02/nbdev-magic.html) covers that. 
+3. Put Flags at the top of a cell for it to work!
 
 {% include important.html content='The list shown below was obtained from [here](https://pete88b.github.io/fastpages/nbdev/fastai/jupyter/2020/06/02/nbdev-magic.html). As always, please refer to the official source for up to date information.' %}
 
@@ -167,32 +178,11 @@ Nbdev scripts rely on special [comments **or** magics](https://nbdev.fast.ai/tut
 | `hide_output`                          | `nbdev_hide_output`         | Do not show output of a test cell in docs                                      |
 | `hide`                                 | `nbdev_hide`                | Do not show a test cell or markdown in docs                                    |
 | `default_cls_lvl`                      | `nbdev_default_class_level` | Define the default toc level of classes                                        |
-| `collapse_output` or `collapse-output` | `nbdev_collapse_output`     | Inlcude output in the docs under a collapsable element                         |
+| `collapse_output open` or `collapse-output` | `nbdev_collapse_output`     | Inlcude output in the docs under a collapsable element                         |
+| `collapse_input close` or `collapse-input` | `nbdev_collapse_output`     | Inlcude input in the docs under a collapsable element                         |
 | `collapse_show` or `collapse-show`     | `nbdev_collapse_input open` | Inlcude input in the docs under a collapsable element that is open by default |
 | `collapse_hide` or `collapse-hide`     | `nbdev_collapse_input`      | Inlcude input in the docs under a collapsable element                         |
 | `collapse`                             | `nbdev_collapse_input`      | Inlcude input in the docs under a collapsable element                         |
-
-{% include warning.html content='[nbdev_upgrade](https://nbdev.fast.ai/cli/#nbdev_upgrade) need to be ran/set up before **everything** will work properly. Enabling the #collapsable flag to work on html markup sections. This [article](https://pete88b.github.io/fastpages/nbdev/fastai/jupyter/2020/06/02/nbdev-magic.html) covers exactly how to do that. ' %}
-
-The cell `#default_exp core` cell found at the top of the `00_core.ipynb` template, defines the name of the generated module (lib_name/core.py). 
-
-Text-cells ignore all but `#hide` flags, use it for "developer-only" markdown notes that are hidden from HTML docs.
-
-Comments will show in the docs if the special comment is not the 1st thing in the cell. 
-
-To gain access to [Nbdev's new 'magics'](https://pete88b.github.io/fastpages/nbdev/fastai/jupyter/2020/06/02/nbdev-magic.html) you my find it neccesary to:
-1. Execute the command `nbdev_upgrade`, only once, and then..
-2. Add `from nbdev import *` to the top of a notebook in a code-cell.
-
-**0**. **Automated Documentation** :
-
-Functions and Classes have are automatically documented. 
-
-Class methods are not shown by default, though, so use [`show_doc(class.method`)](http://nbdev.fast.ai/showdoc/#show_doc) to do this.
-
-**1**: **Automated Document Hyperlinking** : 
-
-Nbdev will hyperlink any text cell with a backticked function name to it's sourcode on github (only if its an exported function).
 
 **2**: **Autoreloading** : (I have note tried)
 > Since you'll be often updating your modules from one notebook, and using them in another, it's helpful if your notebook automatically reads in the new modules as soon as the python file changes. 
@@ -209,11 +199,10 @@ Then this to the top of your notebook as a code cell:
 
 
 
-### Other Magic Markups and Flags
+**3. Console Scripts** are made by marking up functions using the [fastscript](https://fastscript.fast.ai/) tool and editing the settings.ini file ([example](https://github.com/fastai/nbdev/blob/554e63b1b05390a3ad2bc086d8485f98b1e63ca4/settings.ini) )
 
-{% include warning.html content='Content in this section is pulled from the Fastpages [blog](https://fastpages.fast.ai/fastpages/jupyter/2020/02/21/introducing-fastpages.html#Other-Feautures) [posts](https://pete88b.github.io/fastpages/nbdev/fastai/jupyter/2020/07/24/nbdev-deep-dive.html) and the Nbdev docs. If you have any issues, you will have to scoure these sources to resolve them!' %}
 
-**1. Anchor Links**
+**4. Anchor Links**
 > An anchor link is a web link that allows users to leapfrog to a specific point on a website page. It saves them the need to scroll and skim read – and makes navigation easier. - [Telegraph](https://www.telegraph.co.uk/branded-content/marketing-guides/what-is-anchor-link/)
 Example:
 <a name="hyperlinkingValue"></a> Both landmark and [hyperlink ](#hyperlinkingValue) have been placed on this line. Click the link for this line to zip up to the top of your screen. 
@@ -229,29 +218,40 @@ Code:
 
 
 
-**2. An 'images' folder** can be used to conjure up pictures like so:
+**5**: **Jekyll Automated Document Hyperlinking** : 
 
-`![](images/company_logo.png)`
+Mentioning an exported class with backticks `functionName` will create a hyperlink to its sourcode on github (only if its an exported function).
+
+- Functions and Classes have are automatically documented. 
+
+- Class methods are not shown by default, though, so use [`show_doc(class.method`)](http://nbdev.fast.ai/showdoc/#show_doc) to do this.
+
+**6.** **Jekyll Metadata**
+
+The cell `#default_exp` cell located at the top of a cell can also be used for
+[YAML](https://yaml.org/), a data-serialization standard, used as [Front Matter](https://assemble.io/docs/YAML-front-matter.html), that can be [used with Jekyll](https://jekyllrb.com/docs/datafiles/) to render templates.
+> In the markdown cell with the title, you can add the summary as a block quote (just put an empty block quote for an empty summary) and a list with any additional metadata you would like to add **[`get_metadata`](https://nbdev.fast.ai/export2html/#get_metadata)**
+
+**7. Jekyll Images**
+
+The 'images' folder can be used to conjure up pictures like so:
+
+`![](notebookfolder/images/company_logo.png)`
 
 These images will be added to added and displayed in the docs
 
-**3. Jekyll [Notes](http://nbdev.fast.ai/export2html/#add_jekyll_notes)**
+**8. Jekyll [Notes](http://nbdev.fast.ai/export2html/#add_jekyll_notes)**
 
 The following section was written using the following markups 
 
 ```> Note:```, ```> Warning:```, ```> Tip:``` and ```> Important: text goes here```
 {% include note.html content='This is a note.' %}{% include warning.html content='This is a warning' %}{% include tip.html content='This is a tip' %}{% include important.html content='This is an Important doc link to [`add_jekyll_notes`](/export2html#add_jekyll_notes) which should also work fine' %}
 
-### Misc Nbdev Percs
+**9. Jekyll [Search](http://nbdev.fast.ai/search/)** functionality is not covered here, but may be added.
 
-**0. [Search](http://nbdev.fast.ai/search/)** functionality is not covered here, but may be added.
+**10. Jekyll Custom Sidebar**'s for your HTML documentation can be configured using meta-markup, [JSON](https://www.json.org/json-en.html).
 
-**1. Custom Sidebar**'s for your HTML documentation can be configured using meta-markup, [JSON](https://www.json.org/json-en.html).
 > The default sidebar lists all html pages with their respective title, except the index that is named "Overview". To build a custom sidebar, set the flag custom_sidebar in your settings.ini to True then change the sidebar.json file in the doc_folder to your liking. Otherwise, the sidebar is updated at each doc build.
-
-**2. [YAML](https://yaml.org/)**, a data-serialization standard, is used as [Front Matter](https://assemble.io/docs/YAML-front-matter.html) that can be [used with Jekyll](https://jekyllrb.com/docs/datafiles/) to render templates.> In the markdown cell with the title, you can add the summary as a block quote (just put an empty block quote for an empty summary) and a list with any additional metadata you would like to add **[`get_metadata`](https://nbdev.fast.ai/export2html/#get_metadata)**
-**3. Console Scripts** are made by marking up functions using the [fastscript](https://fastscript.fast.ai/) tool and editing the settings.ini file ([example](https://github.com/fastai/nbdev/blob/554e63b1b05390a3ad2bc086d8485f98b1e63ca4/settings.ini) )
-
 
 ## Getting Started ( Run Every Time )
 
@@ -276,11 +276,7 @@ Then navigate to the drive directory where you store your projects folder.
 
 ```
 %%capture
-cd drive/'My Drive'/
-```
-
-```
-cd 
+! cd Sites/datalabs/notebooks
 ```
 
 ## Creating a New Project
@@ -549,8 +545,6 @@ In order to [add an existing project](https://docs.github.com/en/github/importin
 
 One you do create the github repo through  website, you can connect the your git repo to the github repo using this command
 
-Mentioning an exported class with backticks `functionName` will create a hyperlink to its documentation. 
-
 ```
 # Make the replacements where needed and run this! be sure to remove our password once ran.
 
@@ -599,6 +593,9 @@ Enter the project if it exists. Otherwise go to the folder you want it to exist 
 cd datalabs
 ```
 
+    /content/drive/My Drive/Sites/datalabs/datalabs
+
+
 As long as you are somewhere in the folder where you are developing your library. Both of these commands will work:
 
 ```
@@ -615,23 +612,17 @@ As long as you are somewhere in the folder where you are developing your library
 
 ```
 # nbdev_build_docs builds the documentation from the notebooks
-!nbdev_build_docs
+!nbdev_build_docs --force_all True --mk_readme True 
 ```
 
     <IPython.core.display.HTML object>
     <IPython.core.display.HTML object>
-    converting: /content/drive/My Drive/datalabs/notebooks/03_nbdev.ipynb
-    converting: /content/drive/My Drive/datalabs/notebooks/index.ipynb
+    converting: /content/drive/My Drive/Sites/datalabs/notebooks/01_colabs.ipynb
+    converting: /content/drive/My Drive/Sites/datalabs/notebooks/03_nbdev.ipynb
     <IPython.core.display.HTML object>
     <IPython.core.display.HTML object>
-    converting: /content/drive/My Drive/datalabs/notebooks/02_scooterExploration.ipynb
-    converting: /content/drive/My Drive/datalabs/notebooks/01_colabs.ipynb
-    converting: /content/drive/My Drive/datalabs/notebooks/00_github.ipynb
-    <IPython.core.display.HTML object>
-    <IPython.core.display.HTML object>
-    <IPython.core.display.HTML object>
-    <IPython.core.display.HTML object>
-    converting /content/drive/My Drive/datalabs/notebooks/index.ipynb to README.md
+    converting: /content/drive/My Drive/Sites/datalabs/notebooks/index.ipynb
+    converting: /content/drive/My Drive/Sites/datalabs/notebooks/00_github.ipynb
 
 
 ## Git
@@ -639,106 +630,46 @@ As long as you are somewhere in the folder where you are developing your library
 **Before you push**: Running `nbdev_clean_nbs` will ensure the push will work. `nbdev_fix_merge` ensures it.
 
 ```
-! nbdev_clean_nbs
-! nbdev_fix_merge notebooks/00_github.ipynb
-! nbdev_fix_merge notebooks/01_colabs.ipynb
-! nbdev_fix_merge notebooks/02_scooterExploration.ipynb
-! nbdev_fix_merge notebooks/03_nbdev.ipynb
-! nbdev_fix_merge notebooks/index.ipynb
+cd datalabs
 ```
 
-    Traceback (most recent call last):
-      File "/usr/local/bin/nbdev_clean_nbs", line 8, in <module>
-        sys.exit(nbdev_clean_nbs())
-      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 103, in _f
-        tfunc(**merge(args, args_from_prog(func, xtra)))
-      File "/usr/local/lib/python3.6/dist-packages/nbdev/clean.py", line 87, in nbdev_clean_nbs
-        clean_nb(nb, clear_all=clear_all)
-      File "/usr/local/lib/python3.6/dist-packages/nbdev/clean.py", line 51, in clean_nb
-        for c in nb['cells']: clean_cell(c, clear_all=clear_all)
-    KeyError: 'cells'
-    Traceback (most recent call last):
-      File "/usr/local/bin/nbdev_fix_merge", line 8, in <module>
-        sys.exit(nbdev_fix_merge())
-      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 103, in _f
-        tfunc(**merge(args, args_from_prog(func, xtra)))
-      File "/usr/local/lib/python3.6/dist-packages/nbdev/merge.py", line 98, in nbdev_fix_merge
-        shutil.copy(fname, fname.with_suffix('.ipynb.bak'))
-      File "/usr/lib/python3.6/shutil.py", line 245, in copy
-        copyfile(src, dst, follow_symlinks=follow_symlinks)
-      File "/usr/lib/python3.6/shutil.py", line 120, in copyfile
-        with open(src, 'rb') as fsrc:
-    FileNotFoundError: [Errno 2] No such file or directory: 'notebooks/00_github.ipynb'
-    Traceback (most recent call last):
-      File "/usr/local/bin/nbdev_fix_merge", line 8, in <module>
-        sys.exit(nbdev_fix_merge())
-      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 103, in _f
-        tfunc(**merge(args, args_from_prog(func, xtra)))
-      File "/usr/local/lib/python3.6/dist-packages/nbdev/merge.py", line 98, in nbdev_fix_merge
-        shutil.copy(fname, fname.with_suffix('.ipynb.bak'))
-      File "/usr/lib/python3.6/shutil.py", line 245, in copy
-        copyfile(src, dst, follow_symlinks=follow_symlinks)
-      File "/usr/lib/python3.6/shutil.py", line 120, in copyfile
-        with open(src, 'rb') as fsrc:
-    FileNotFoundError: [Errno 2] No such file or directory: 'notebooks/01_colabs.ipynb'
-    Traceback (most recent call last):
-      File "/usr/local/bin/nbdev_fix_merge", line 8, in <module>
-        sys.exit(nbdev_fix_merge())
-      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 103, in _f
-        tfunc(**merge(args, args_from_prog(func, xtra)))
-      File "/usr/local/lib/python3.6/dist-packages/nbdev/merge.py", line 98, in nbdev_fix_merge
-        shutil.copy(fname, fname.with_suffix('.ipynb.bak'))
-      File "/usr/lib/python3.6/shutil.py", line 245, in copy
-        copyfile(src, dst, follow_symlinks=follow_symlinks)
-      File "/usr/lib/python3.6/shutil.py", line 120, in copyfile
-        with open(src, 'rb') as fsrc:
-    FileNotFoundError: [Errno 2] No such file or directory: 'notebooks/02_scooterExploration.ipynb'
-    Traceback (most recent call last):
-      File "/usr/local/bin/nbdev_fix_merge", line 8, in <module>
-        sys.exit(nbdev_fix_merge())
-      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 103, in _f
-        tfunc(**merge(args, args_from_prog(func, xtra)))
-      File "/usr/local/lib/python3.6/dist-packages/nbdev/merge.py", line 98, in nbdev_fix_merge
-        shutil.copy(fname, fname.with_suffix('.ipynb.bak'))
-      File "/usr/lib/python3.6/shutil.py", line 245, in copy
-        copyfile(src, dst, follow_symlinks=follow_symlinks)
-      File "/usr/lib/python3.6/shutil.py", line 120, in copyfile
-        with open(src, 'rb') as fsrc:
-    FileNotFoundError: [Errno 2] No such file or directory: 'notebooks/03_nbdev.ipynb'
-    Traceback (most recent call last):
-      File "/usr/local/bin/nbdev_fix_merge", line 8, in <module>
-        sys.exit(nbdev_fix_merge())
-      File "/usr/local/lib/python3.6/dist-packages/fastcore/script.py", line 103, in _f
-        tfunc(**merge(args, args_from_prog(func, xtra)))
-      File "/usr/local/lib/python3.6/dist-packages/nbdev/merge.py", line 98, in nbdev_fix_merge
-        shutil.copy(fname, fname.with_suffix('.ipynb.bak'))
-      File "/usr/lib/python3.6/shutil.py", line 245, in copy
-        copyfile(src, dst, follow_symlinks=follow_symlinks)
-      File "/usr/lib/python3.6/shutil.py", line 120, in copyfile
-        with open(src, 'rb') as fsrc:
-    FileNotFoundError: [Errno 2] No such file or directory: 'notebooks/index.ipynb'
+    /content/drive/My Drive/Sites/datalabs
 
+
+```
+cd notebooks
+```
 
 ```
 ! nbdev_clean_nbs
+! nbdev_fix_merge 00_github.ipynb
+! nbdev_fix_merge 01_colabs.ipynb
+! nbdev_fix_merge 02_scooterExploration.ipynb
+! nbdev_fix_merge 03_nbdev.ipynb
+! nbdev_fix_merge index.ipynb
+! nbdev_clean_nbs
+! find . -name "*.bak" -type f -delete
 ```
 
-    /bin/bash: nbdev_clean_nbs: command not found
+    Succesfully merged conflicts!
+    Succesfully merged conflicts!
+    Succesfully merged conflicts!
+    Succesfully merged conflicts!
+    Succesfully merged conflicts!
 
 
 ```
-!nbdev_nb2md -h
+# nbdev_nb2md(fname:"A notebook file name to convert", dest:"The destination folder"='.', img_path:"Folder to export images to"='', jekyll:"To use jekyll metadata for your markdown file or not"=False)
+! nbdev_nb2md 00_github.ipynb --dest "../markdown" 
+! nbdev_nb2md 01_colabs.ipynb --dest "../markdown" 
+! nbdev_nb2md 02_scooterExploration.ipynb --dest "../markdown" 
+! nbdev_nb2md 03_nbdev.ipynb --dest "../markdown" 
+! nbdev_nb2md index.ipynb --dest "../markdown" 
+! find . -type d -name "*files" -exec rm -rf {} \;
 ```
 
-    /bin/bash: nbdev_nb2md: command not found
-
-
 ```
-! nbdev_nb2md notebooks/00_github.ipynb --dest "markdown" --img_path "."
-! nbdev_nb2md notebooks/01_colabs.ipynb --dest "markdown" --img_path "."
-! nbdev_nb2md notebooks/02_scooterExploration.ipynb --dest "markdown" --img_path "."
-! nbdev_nb2md notebooks/03_nbdev.ipynb --dest "markdown" --img_path "."
-! nbdev_nb2md notebooks/index.ipynb --dest "markdown" --img_path "."
+cd ../
 ```
 
 ( Run Once Modules, Docs and the README are created using NBDEV and have ben created but not published )
@@ -751,21 +682,6 @@ As long as you are somewhere in the folder where you are developing your library
 ! git add *
 ```
 
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
-    /usr/bin/python3: No module named nbstripout
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed 1
-    error: external filter '"/usr/bin/python3" -m nbstripout' failed
     The following paths are ignored by one of your .gitignore files:
     build
     dist
@@ -776,9 +692,13 @@ As long as you are somewhere in the folder where you are developing your library
 ls
 ```
 
-    [0m[01;34mbuild[0m/           [01;34mdist[0m/    Makefile     [01;34mnotebooks[0m/    setup.py
-    CONTRIBUTING.md  [01;34mdocs[0m/    MANIFEST.in  README.md
-    [01;34mdatalabs[0m/        LICENSE  [01;34mmarkdown[0m/    settings.ini
+    [0m[01;34m00_github_files[0m/              [01;34mdatalabs[0m/     [01;34mmarkdown[0m/
+    [01;34m01_colabs_files[0m/              [01;34mdist[0m/         MechanicalSoupIntroduction.ipynb
+    [01;34m02_scooterExploration_files[0m/  [01;34mdocs[0m/         [01;34mnotebooks[0m/
+    [01;34m03_nbdev_files[0m/               [01;34mindex_files[0m/  README.md
+    bashbasics.ipynb              LICENSE       settings.ini
+    [01;34mbuild[0m/                        Makefile      setup.py
+    CONTRIBUTING.md               MANIFEST.in
 
 
 ```
@@ -793,20 +713,15 @@ ls
 ! git commit -m "Updated Formating, Added Markdown Section"
 ```
 
-    [master d0a5ecb] Updated Formating, Added Markdown Section
-     23 files changed, 7975 insertions(+), 4009 deletions(-)
-     rewrite docs/scooterExploration.html (61%)
-     create mode 100644 markdown/00_github.md
-     create mode 100644 markdown/01_colabs.md
-     create mode 100644 markdown/02_scooterExploration.md
-     create mode 100644 markdown/03_nbdev.md
-     create mode 100644 markdown/index.md
-     create mode 100644 markdown/output_102_1.png
-     create mode 100644 markdown/output_103_1.png
-     create mode 100644 markdown/output_109_1.png
-     create mode 100644 markdown/output_30_1.png
-     create mode 100644 markdown/output_37_2.png
-     rewrite notebooks/03_nbdev.ipynb (68%)
+    [master a8052fc] Updated Formating, Added Markdown Section
+     15 files changed, 2429 insertions(+), 365 deletions(-)
+     create mode 100644 MechanicalSoupIntroduction.ipynb
+     create mode 100644 bashbasics.ipynb
+     rename markdown/{ => 02_scooterExploration_files}/output_102_1.png (100%)
+     rename markdown/{ => 02_scooterExploration_files}/output_103_1.png (100%)
+     rename markdown/{ => 02_scooterExploration_files}/output_109_1.png (100%)
+     rename markdown/{ => 02_scooterExploration_files}/output_30_1.png (100%)
+     rename markdown/{ => 02_scooterExploration_files}/output_37_2.png (100%)
 
 
 ```
@@ -817,18 +732,18 @@ ls
 ! git push -u ORIGIN master
 ```
 
-    Counting objects: 27, done.
+    Counting objects: 16, done.
     Delta compression using up to 2 threads.
-    Compressing objects: 100% (26/26), done.
-    Writing objects: 100% (27/27), 2.38 MiB | 2.68 MiB/s, done.
-    Total 27 (delta 17), reused 0 (delta 0)
-    remote: Resolving deltas: 100% (17/17), completed with 13 local objects.[K
+    Compressing objects: 100% (16/16), done.
+    Writing objects: 100% (16/16), 1.48 MiB | 2.66 MiB/s, done.
+    Total 16 (delta 10), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (10/10), completed with 9 local objects.[K
     remote: 
     remote: GitHub found 1 vulnerability on karpatic/datalabs's default branch (1 high). To find out more, visit:[K
     remote:      https://github.com/karpatic/datalabs/network/alert/docs/Gemfile.lock/kramdown/open[K
     remote: 
     To https://github.com/karpatic/datalabs.git
-       56b1bad..d0a5ecb  master -> master
+       ed5874b..a8052fc  master -> master
     Branch 'master' set up to track remote branch 'master' from 'ORIGIN'.
 
 
@@ -877,188 +792,6 @@ Nbdev has everything else all set up! Simply run make pypi and enter your creden
 %nbdev_hide_output
 ! make pypi
 ```
-
-    rm -rf dist
-    python setup.py sdist bdist_wheel
-    running sdist
-    running egg_info
-    creating datalabs.egg-info
-    writing datalabs.egg-info/PKG-INFO
-    writing dependency_links to datalabs.egg-info/dependency_links.txt
-    writing entry points to datalabs.egg-info/entry_points.txt
-    writing top-level names to datalabs.egg-info/top_level.txt
-    writing manifest file 'datalabs.egg-info/SOURCES.txt'
-    reading manifest template 'MANIFEST.in'
-    warning: no previously-included files matching '__pycache__' found under directory '*'
-    writing manifest file 'datalabs.egg-info/SOURCES.txt'
-    running check
-    creating datalabs-0.0.2
-    creating datalabs-0.0.2/.github
-    creating datalabs-0.0.2/.github/workflows
-    creating datalabs-0.0.2/datalabs
-    creating datalabs-0.0.2/datalabs.egg-info
-    creating datalabs-0.0.2/docs
-    creating datalabs-0.0.2/docs/_data
-    creating datalabs-0.0.2/docs/_data/sidebars
-    creating datalabs-0.0.2/docs/_includes
-    creating datalabs-0.0.2/docs/_layouts
-    creating datalabs-0.0.2/docs/css
-    creating datalabs-0.0.2/docs/css/fonts
-    creating datalabs-0.0.2/docs/fonts
-    creating datalabs-0.0.2/docs/images
-    creating datalabs-0.0.2/docs/js
-    creating datalabs-0.0.2/docs/licenses
-    creating datalabs-0.0.2/notebooks
-    copying files to datalabs-0.0.2...
-    copying .gitignore -> datalabs-0.0.2
-    copying CONTRIBUTING.md -> datalabs-0.0.2
-    copying LICENSE -> datalabs-0.0.2
-    copying MANIFEST.in -> datalabs-0.0.2
-    copying Makefile -> datalabs-0.0.2
-    copying README.md -> datalabs-0.0.2
-    copying settings.ini -> datalabs-0.0.2
-    copying setup.py -> datalabs-0.0.2
-    copying .github/workflows/main.yml -> datalabs-0.0.2/.github/workflows
-    copying datalabs/__init__.py -> datalabs-0.0.2/datalabs
-    copying datalabs/_nbdev.py -> datalabs-0.0.2/datalabs
-    copying datalabs/core.py -> datalabs-0.0.2/datalabs
-    copying datalabs.egg-info/PKG-INFO -> datalabs-0.0.2/datalabs.egg-info
-    copying datalabs.egg-info/SOURCES.txt -> datalabs-0.0.2/datalabs.egg-info
-    copying datalabs.egg-info/dependency_links.txt -> datalabs-0.0.2/datalabs.egg-info
-    copying datalabs.egg-info/entry_points.txt -> datalabs-0.0.2/datalabs.egg-info
-    copying datalabs.egg-info/not-zip-safe -> datalabs-0.0.2/datalabs.egg-info
-    copying datalabs.egg-info/top_level.txt -> datalabs-0.0.2/datalabs.egg-info
-    copying docs/.gitignore -> datalabs-0.0.2/docs
-    copying docs/Gemfile -> datalabs-0.0.2/docs
-    copying docs/Gemfile.lock -> datalabs-0.0.2/docs
-    copying docs/_config.yml -> datalabs-0.0.2/docs
-    copying docs/colabs.html -> datalabs-0.0.2/docs
-    copying docs/feed.xml -> datalabs-0.0.2/docs
-    copying docs/github.html -> datalabs-0.0.2/docs
-    copying docs/index.html -> datalabs-0.0.2/docs
-    copying docs/nbdev.html -> datalabs-0.0.2/docs
-    copying docs/scooterExploration.html -> datalabs-0.0.2/docs
-    copying docs/sidebar.json -> datalabs-0.0.2/docs
-    copying docs/sitemap.xml -> datalabs-0.0.2/docs
-    copying docs/tooltips.json -> datalabs-0.0.2/docs
-    copying docs/_data/alerts.yml -> datalabs-0.0.2/docs/_data
-    copying docs/_data/definitions.yml -> datalabs-0.0.2/docs/_data
-    copying docs/_data/glossary.yml -> datalabs-0.0.2/docs/_data
-    copying docs/_data/tags.yml -> datalabs-0.0.2/docs/_data
-    copying docs/_data/terms.yml -> datalabs-0.0.2/docs/_data
-    copying docs/_data/topnav.yml -> datalabs-0.0.2/docs/_data
-    copying docs/_data/sidebars/home_sidebar.yml -> datalabs-0.0.2/docs/_data/sidebars
-    copying docs/_includes/archive.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/callout.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/footer.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/google_analytics.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/head.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/head_print.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/image.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/important.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/initialize_shuffle.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/inline_image.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/links.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/note.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/search_google_custom.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/search_simple_jekyll.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/sidebar.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/tip.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/toc.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/topnav.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_includes/warning.html -> datalabs-0.0.2/docs/_includes
-    copying docs/_layouts/default.html -> datalabs-0.0.2/docs/_layouts
-    copying docs/_layouts/default_print.html -> datalabs-0.0.2/docs/_layouts
-    copying docs/_layouts/none.html -> datalabs-0.0.2/docs/_layouts
-    copying docs/_layouts/page.html -> datalabs-0.0.2/docs/_layouts
-    copying docs/_layouts/page_print.html -> datalabs-0.0.2/docs/_layouts
-    copying docs/css/bootstrap.min.css -> datalabs-0.0.2/docs/css
-    copying docs/css/boxshadowproperties.css -> datalabs-0.0.2/docs/css
-    copying docs/css/customstyles.css -> datalabs-0.0.2/docs/css
-    copying docs/css/font-awesome.min.css -> datalabs-0.0.2/docs/css
-    copying docs/css/modern-business.css -> datalabs-0.0.2/docs/css
-    copying docs/css/printstyles.css -> datalabs-0.0.2/docs/css
-    copying docs/css/syntax.css -> datalabs-0.0.2/docs/css
-    copying docs/css/theme-blue.css -> datalabs-0.0.2/docs/css
-    copying docs/css/theme-green.css -> datalabs-0.0.2/docs/css
-    copying docs/css/fonts/FontAwesome.otf -> datalabs-0.0.2/docs/css/fonts
-    copying docs/css/fonts/fontawesome-webfont.eot -> datalabs-0.0.2/docs/css/fonts
-    copying docs/css/fonts/fontawesome-webfont.svg -> datalabs-0.0.2/docs/css/fonts
-    copying docs/css/fonts/fontawesome-webfont.ttf -> datalabs-0.0.2/docs/css/fonts
-    copying docs/css/fonts/fontawesome-webfont.woff -> datalabs-0.0.2/docs/css/fonts
-    copying docs/css/fonts/fontawesome-webfont.woff2 -> datalabs-0.0.2/docs/css/fonts
-    copying docs/fonts/FontAwesome.otf -> datalabs-0.0.2/docs/fonts
-    copying docs/fonts/fontawesome-webfont.eot -> datalabs-0.0.2/docs/fonts
-    copying docs/fonts/fontawesome-webfont.svg -> datalabs-0.0.2/docs/fonts
-    copying docs/fonts/fontawesome-webfont.ttf -> datalabs-0.0.2/docs/fonts
-    copying docs/fonts/fontawesome-webfont.woff -> datalabs-0.0.2/docs/fonts
-    copying docs/fonts/glyphicons-halflings-regular.eot -> datalabs-0.0.2/docs/fonts
-    copying docs/fonts/glyphicons-halflings-regular.svg -> datalabs-0.0.2/docs/fonts
-    copying docs/fonts/glyphicons-halflings-regular.ttf -> datalabs-0.0.2/docs/fonts
-    copying docs/fonts/glyphicons-halflings-regular.woff -> datalabs-0.0.2/docs/fonts
-    copying docs/fonts/glyphicons-halflings-regular.woff2 -> datalabs-0.0.2/docs/fonts
-    copying docs/images/company_logo.png -> datalabs-0.0.2/docs/images
-    copying docs/images/company_logo_big.png -> datalabs-0.0.2/docs/images
-    copying docs/images/doc_example.png -> datalabs-0.0.2/docs/images
-    copying docs/images/export_example.png -> datalabs-0.0.2/docs/images
-    copying docs/images/favicon.ico -> datalabs-0.0.2/docs/images
-    copying docs/images/workflowarrow.png -> datalabs-0.0.2/docs/images
-    copying docs/js/customscripts.js -> datalabs-0.0.2/docs/js
-    copying docs/js/jekyll-search.js -> datalabs-0.0.2/docs/js
-    copying docs/js/jquery.ba-throttle-debounce.min.js -> datalabs-0.0.2/docs/js
-    copying docs/js/jquery.navgoco.min.js -> datalabs-0.0.2/docs/js
-    copying docs/js/jquery.shuffle.min.js -> datalabs-0.0.2/docs/js
-    copying docs/js/toc.js -> datalabs-0.0.2/docs/js
-    copying docs/licenses/LICENSE -> datalabs-0.0.2/docs/licenses
-    copying docs/licenses/LICENSE-BSD-NAVGOCO.txt -> datalabs-0.0.2/docs/licenses
-    copying notebooks/00_github.ipynb -> datalabs-0.0.2/notebooks
-    copying notebooks/01_colabs.ipynb -> datalabs-0.0.2/notebooks
-    copying notebooks/02_scooterExploration.ipynb -> datalabs-0.0.2/notebooks
-    copying notebooks/03_nbdev.ipynb -> datalabs-0.0.2/notebooks
-    copying notebooks/index.ipynb -> datalabs-0.0.2/notebooks
-    Writing datalabs-0.0.2/setup.cfg
-    creating dist
-    Creating tar archive
-    removing 'datalabs-0.0.2' (and everything under it)
-    running bdist_wheel
-    running build
-    running build_py
-    creating build
-    creating build/lib
-    creating build/lib/datalabs
-    copying datalabs/core.py -> build/lib/datalabs
-    copying datalabs/__init__.py -> build/lib/datalabs
-    copying datalabs/_nbdev.py -> build/lib/datalabs
-    installing to build/bdist.linux-x86_64/wheel
-    running install
-    running install_lib
-    creating build/bdist.linux-x86_64
-    creating build/bdist.linux-x86_64/wheel
-    creating build/bdist.linux-x86_64/wheel/datalabs
-    copying build/lib/datalabs/core.py -> build/bdist.linux-x86_64/wheel/datalabs
-    copying build/lib/datalabs/__init__.py -> build/bdist.linux-x86_64/wheel/datalabs
-    copying build/lib/datalabs/_nbdev.py -> build/bdist.linux-x86_64/wheel/datalabs
-    running install_egg_info
-    Copying datalabs.egg-info to build/bdist.linux-x86_64/wheel/datalabs-0.0.2-py3.6.egg-info
-    running install_scripts
-    adding license file "LICENSE" (matched pattern "LICEN[CS]E*")
-    creating build/bdist.linux-x86_64/wheel/datalabs-0.0.2.dist-info/WHEEL
-    creating 'dist/datalabs-0.0.2-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
-    adding 'datalabs/__init__.py'
-    adding 'datalabs/_nbdev.py'
-    adding 'datalabs/core.py'
-    adding 'datalabs-0.0.2.dist-info/LICENSE'
-    adding 'datalabs-0.0.2.dist-info/METADATA'
-    adding 'datalabs-0.0.2.dist-info/WHEEL'
-    adding 'datalabs-0.0.2.dist-info/entry_points.txt'
-    adding 'datalabs-0.0.2.dist-info/top_level.txt'
-    adding 'datalabs-0.0.2.dist-info/RECORD'
-    removing build/bdist.linux-x86_64/wheel
-    twine upload --repository pypi dist/*
-    /bin/sh: 1: twine: not found
-    Makefile:23: recipe for target 'pypi' failed
-    make: *** [pypi] Error 127
-
 
 ```
 ls
